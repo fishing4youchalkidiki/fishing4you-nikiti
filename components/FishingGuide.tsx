@@ -4,7 +4,7 @@ import type { Locale } from "@/lib/content";
 
 export function FishingGuide({ locale }: { locale: Locale }) {
   const guide = guideContent[locale];
-  const showFamilyMedia = false;
+  const showFamilyMedia = true;
   const familyMedia = [
     {
       number: "07",
