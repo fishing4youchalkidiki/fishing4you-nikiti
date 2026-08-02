@@ -254,7 +254,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Is fishing equipment included?",
           answer:
-            "Yes. Dimitris confirmed that fishing equipment is included. Ask whether bait and any personal items are also provided for your departure.",
+            "Yes. On the morning trip, guests received a rod, a single-hook rig, a sinker and shrimp bait. Confirm what is provided for the barbecue and evening programs.",
         },
         {
           question: "Can children join?",
@@ -442,7 +442,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Περιλαμβάνεται ο εξοπλισμός ψαρέματος;",
           answer:
-            "Ναι. Ο Δημήτρης επιβεβαίωσε ότι ο εξοπλισμός ψαρέματος περιλαμβάνεται. Ρωτήστε αν παρέχονται επίσης δόλωμα και προσωπικά είδη.",
+            "Ναι. Στην πρωινή εκδρομή παρέχονται καλάμι, αρματωσιά με ένα αγκίστρι, μολύβι και δόλωμα γαρίδα. Επιβεβαιώστε τι παρέχεται στο πρόγραμμα με μπάρμπεκιου και στο βραδινό ψάρεμα.",
         },
         {
           question: "Μπορούν να συμμετέχουν παιδιά;",
@@ -631,7 +631,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Este inclus echipamentul de pescuit?",
           answer:
-            "Da. Dimitris a confirmat că echipamentul de pescuit este inclus. Întreabă dacă sunt incluse și momeala sau alte obiecte personale necesare.",
+            "Da. În excursia de dimineață sunt oferite lanseta, montura cu un cârlig, plumbul și momeala din crevete. Confirmă ce este oferit pentru programul cu grătar și cel de seară.",
         },
         {
           question: "Pot participa copiii?",
@@ -819,7 +819,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Снасти включены?",
           answer:
-            "Да. Димитрис подтвердил, что рыболовные снасти включены. Уточните, предоставляются ли также наживка и личные принадлежности.",
+            "Да. На утренней поездке предоставляются удочка, оснастка с одним крючком, грузило и креветка для наживки. Уточните оснащение программы с барбекю и вечерней рыбалки.",
         },
         {
           question: "Можно ли с детьми?",
@@ -1007,7 +1007,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Ist die Angelausrüstung inklusive?",
           answer:
-            "Ja. Dimitris hat bestätigt, dass die Angelausrüstung inklusive ist. Fragen Sie zusätzlich nach Ködern und persönlichen Gegenständen.",
+            "Ja. Beim Morgenausflug werden Rute, Montage mit einem Haken, Gewicht und Garnelenköder gestellt. Bestätigen Sie die Ausstattung für das Grillprogramm und den Abendausflug.",
         },
         {
           question: "Können Kinder teilnehmen?",
