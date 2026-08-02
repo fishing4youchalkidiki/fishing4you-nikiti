@@ -4,6 +4,44 @@ import type { Locale } from "@/lib/content";
 
 export function FishingGuide({ locale }: { locale: Locale }) {
   const guide = guideContent[locale];
+  const showFamilyMedia = false;
+  const familyMedia = [
+    {
+      number: "07",
+      src: "/real-trip/dimitris-catch.webp",
+      alt: guide.dimitrisAlt,
+      caption: guide.dimitrisCaption,
+      className: "family-media-card-lead",
+    },
+    {
+      number: "08",
+      src: "/real-trip/dimitris-wife-catch.webp",
+      alt: guide.wifeCatchAlt,
+      caption: guide.wifeCatchCaption,
+      className: "family-media-card-wife-catch",
+    },
+    {
+      number: "09",
+      src: "/real-trip/dimitris-wife-helm.webp",
+      alt: guide.wifeHelmAlt,
+      caption: guide.wifeHelmCaption,
+      className: "family-media-card-helm",
+    },
+    {
+      number: "10",
+      src: "/real-trip/dimitris-son.webp",
+      alt: guide.sonAlt,
+      caption: guide.sonCaption,
+      className: "family-media-card-son",
+    },
+    {
+      number: "11",
+      src: "/real-trip/dimitris-dogs.webp",
+      alt: guide.dogsAlt,
+      caption: guide.dogsCaption,
+      className: "family-media-card-dogs",
+    },
+  ];
 
   return (
     <>
@@ -156,7 +194,7 @@ export function FishingGuide({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="section real-media-section" aria-labelledby="real-media-title">
+      <section id="gallery" className="section real-media-section" aria-labelledby="real-media-title">
         <div className="shell">
           <div className="section-heading real-media-heading">
             <div>
@@ -213,6 +251,86 @@ export function FishingGuide({ locale }: { locale: Locale }) {
               </figcaption>
             </figure>
           </div>
+
+          <div className="trip-highlights-grid">
+            <figure className="real-photo-card trip-highlight-card trip-highlight-rods">
+              <Image
+                src="/real-trip/rods-ready.webp"
+                alt={guide.rodsAlt}
+                fill
+                sizes="(max-width: 780px) calc(100vw - 30px), (max-width: 1050px) 48vw, 31vw"
+              />
+              <figcaption>
+                <span>04</span>
+                {guide.rodsCaption}
+              </figcaption>
+            </figure>
+
+            <figure className="real-photo-card trip-highlight-card trip-highlight-catch">
+              <Image
+                src="/real-trip/catch-table.webp"
+                alt={guide.catchAlt}
+                fill
+                sizes="(max-width: 780px) calc(100vw - 30px), (max-width: 1050px) 48vw, 31vw"
+              />
+              <figcaption>
+                <span>05</span>
+                {guide.catchCaption}
+              </figcaption>
+            </figure>
+
+            <figure className="real-video-card real-video-card-compact">
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster="/real-trip/dolphins-poster.webp"
+                aria-label={guide.dolphinTitle}
+              >
+                <source src="/real-trip/dolphins.mp4" type="video/mp4" />
+                {guide.videoFallback}
+              </video>
+              <figcaption>
+                <span>06</span>
+                <div>
+                  <strong>{guide.dolphinTitle}</strong>
+                  <p>{guide.dolphinCaption}</p>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+
+          {showFamilyMedia && (
+            <>
+              <div id="family" className="family-media-heading">
+                <p className="eyebrow eyebrow-dark">{guide.familyEyebrow}</p>
+                <div>
+                  <h3>{guide.familyTitle}</h3>
+                  <p>{guide.familyIntro}</p>
+                </div>
+              </div>
+
+              <div className="family-media-grid">
+                {familyMedia.map((item) => (
+                  <figure
+                    className={`real-photo-card family-media-card ${item.className}`}
+                    key={item.src}
+                  >
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(max-width: 780px) calc(100vw - 30px), (max-width: 1050px) 48vw, 31vw"
+                    />
+                    <figcaption>
+                      <span>{item.number}</span>
+                      {item.caption}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </section>
     </>

@@ -42,6 +42,23 @@ type GuideContent = {
   videoFallback: string;
   rodsAlt: string;
   rodsCaption: string;
+  catchAlt: string;
+  catchCaption: string;
+  dolphinTitle: string;
+  dolphinCaption: string;
+  familyEyebrow: string;
+  familyTitle: string;
+  familyIntro: string;
+  dimitrisAlt: string;
+  dimitrisCaption: string;
+  wifeCatchAlt: string;
+  wifeCatchCaption: string;
+  wifeHelmAlt: string;
+  wifeHelmCaption: string;
+  sonAlt: string;
+  sonCaption: string;
+  dogsAlt: string;
+  dogsCaption: string;
   equipmentAlt: string;
   equipmentCaption: string;
   coastAlt: string;
@@ -141,6 +158,25 @@ export const guideContent: Record<Locale, GuideContent> = {
     videoFallback: "Your browser does not support this video.",
     rodsAlt: "Fishing rods with sinkers prepared on the Fishing 4 You boat",
     rodsCaption: "Rods and bottom rigs prepared for the trip",
+    catchAlt: "A real catch from a Fishing 4 You trip on the Aegean Sea",
+    catchCaption: "A real catch from a day on the Aegean",
+    dolphinTitle: "Dolphins alongside the boat",
+    dolphinCaption:
+      "A real moment at sea. Wildlife sightings are possible, but never guaranteed.",
+    familyEyebrow: "The people behind the trip",
+    familyTitle: "Meet the Fishing 4 You family.",
+    familyIntro:
+      "Dimitris, his wife, their son and the dogs share a life shaped by the boat and the Aegean.",
+    dimitrisAlt: "Dimitris holding a large fish aboard the Fishing 4 You boat",
+    dimitrisCaption: "Dimitris and a memorable catch",
+    wifeCatchAlt: "Dimitris and his wife posing with a large fish on the boat",
+    wifeCatchCaption: "Dimitris and his wife with a catch",
+    wifeHelmAlt: "Dimitris and his wife together at the helm of the boat",
+    wifeHelmCaption: "Together at the helm",
+    sonAlt: "Dimitris with his son beside the fishing rods on the boat",
+    sonCaption: "A family moment on the water",
+    dogsAlt: "Dimitris with the dogs aboard the Fishing 4 You boat",
+    dogsCaption: "The four-legged crew",
     equipmentAlt: "Fishing rods and reels arranged on the side of the boat",
     equipmentCaption: "Fishing equipment is provided on board",
     coastAlt: "The coastline near Nikiti viewed from the Aegean Sea",
@@ -238,6 +274,25 @@ export const guideContent: Record<Locale, GuideContent> = {
     videoFallback: "Ο περιηγητής σας δεν υποστηρίζει αυτό το βίντεο.",
     rodsAlt: "Καλάμια με μολύβια έτοιμα στο σκάφος Fishing 4 You",
     rodsCaption: "Καλάμια και αρματωσιές βυθού έτοιμα για την εκδρομή",
+    catchAlt: "Πραγματική ψαριά από εκδρομή του Fishing 4 You στο Αιγαίο",
+    catchCaption: "Πραγματική ψαριά από μια μέρα στο Αιγαίο",
+    dolphinTitle: "Δελφίνια δίπλα στο σκάφος",
+    dolphinCaption:
+      "Μια πραγματική στιγμή στη θάλασσα. Η εμφάνιση άγριων ζώων είναι πιθανή, αλλά δεν είναι εγγυημένη.",
+    familyEyebrow: "Οι άνθρωποι πίσω από την εκδρομή",
+    familyTitle: "Γνωρίστε την οικογένεια του Fishing 4 You.",
+    familyIntro:
+      "Ο Δημήτρης, η σύζυγός του, ο γιος τους και τα σκυλιά μοιράζονται μια ζωή δεμένη με το σκάφος και το Αιγαίο.",
+    dimitrisAlt: "Ο Δημήτρης κρατά ένα μεγάλο ψάρι στο σκάφος Fishing 4 You",
+    dimitrisCaption: "Ο Δημήτρης με μια αξέχαστη ψαριά",
+    wifeCatchAlt: "Ο Δημήτρης και η σύζυγός του με ένα μεγάλο ψάρι στο σκάφος",
+    wifeCatchCaption: "Ο Δημήτρης και η σύζυγός του με την ψαριά",
+    wifeHelmAlt: "Ο Δημήτρης και η σύζυγός του μαζί στη γέφυρα του σκάφους",
+    wifeHelmCaption: "Μαζί στο τιμόνι",
+    sonAlt: "Ο Δημήτρης με τον γιο του δίπλα στα καλάμια στο σκάφος",
+    sonCaption: "Μια οικογενειακή στιγμή στη θάλασσα",
+    dogsAlt: "Ο Δημήτρης με τα σκυλιά στο σκάφος Fishing 4 You",
+    dogsCaption: "Το τετράποδο πλήρωμα",
     equipmentAlt: "Καλάμια και μηχανισμοί τοποθετημένα στο πλάι του σκάφους",
     equipmentCaption: "Ο εξοπλισμός ψαρέματος παρέχεται στο σκάφος",
     coastAlt: "Η ακτή κοντά στη Νικήτη όπως φαίνεται από το Αιγαίο",
@@ -335,6 +390,25 @@ export const guideContent: Record<Locale, GuideContent> = {
     videoFallback: "Browserul tău nu poate reda acest videoclip.",
     rodsAlt: "Lansete cu plumbi pregătite pe barca Fishing 4 You",
     rodsCaption: "Lansetele și monturile de fund pregătite pentru excursie",
+    catchAlt: "O captură reală dintr-o excursie Fishing 4 You pe Marea Egee",
+    catchCaption: "O captură reală dintr-o zi pe Marea Egee",
+    dolphinTitle: "Delfini lângă barcă",
+    dolphinCaption:
+      "Un moment real pe mare. Delfinii pot apărea, dar observarea lor nu este garantată.",
+    familyEyebrow: "Oamenii din spatele excursiei",
+    familyTitle: "Cunoaște familia Fishing 4 You.",
+    familyIntro:
+      "Dimitris, soția sa, fiul lor și câinii împărtășesc o viață legată de barcă și de Marea Egee.",
+    dimitrisAlt: "Dimitris ținând un pește mare la bordul bărcii Fishing 4 You",
+    dimitrisCaption: "Dimitris și o captură memorabilă",
+    wifeCatchAlt: "Dimitris și soția sa cu un pește mare pe barcă",
+    wifeCatchCaption: "Dimitris și soția sa cu captura",
+    wifeHelmAlt: "Dimitris și soția sa împreună la timona bărcii",
+    wifeHelmCaption: "Împreună la timonă",
+    sonAlt: "Dimitris cu fiul său lângă lansetele de pe barcă",
+    sonCaption: "Un moment de familie pe mare",
+    dogsAlt: "Dimitris cu câinii la bordul bărcii Fishing 4 You",
+    dogsCaption: "Echipajul cu patru lăbuțe",
     equipmentAlt: "Lansete și mulinete aranjate pe partea laterală a bărcii",
     equipmentCaption: "Echipamentul de pescuit este oferit la bord",
     coastAlt: "Coasta din apropierea localității Nikiti văzută de pe Marea Egee",
@@ -432,6 +506,25 @@ export const guideContent: Record<Locale, GuideContent> = {
     videoFallback: "Ваш браузер не поддерживает это видео.",
     rodsAlt: "Удочки с грузилами, подготовленные на лодке Fishing 4 You",
     rodsCaption: "Удочки и донные оснастки готовы к поездке",
+    catchAlt: "Настоящий улов с экскурсии Fishing 4 You в Эгейском море",
+    catchCaption: "Настоящий улов после дня в Эгейском море",
+    dolphinTitle: "Дельфины рядом с лодкой",
+    dolphinCaption:
+      "Настоящий момент в море. Диких животных можно увидеть, но это не гарантируется.",
+    familyEyebrow: "Люди, которые стоят за этой поездкой",
+    familyTitle: "Познакомьтесь с семьёй Fishing 4 You.",
+    familyIntro:
+      "Димитрис, его жена, их сын и собаки живут жизнью, связанной с лодкой и Эгейским морем.",
+    dimitrisAlt: "Димитрис держит крупную рыбу на борту лодки Fishing 4 You",
+    dimitrisCaption: "Димитрис и запоминающийся улов",
+    wifeCatchAlt: "Димитрис и его жена с крупной рыбой на лодке",
+    wifeCatchCaption: "Димитрис и его жена с уловом",
+    wifeHelmAlt: "Димитрис и его жена вместе у штурвала лодки",
+    wifeHelmCaption: "Вместе у штурвала",
+    sonAlt: "Димитрис с сыном рядом с удочками на лодке",
+    sonCaption: "Семейный момент на воде",
+    dogsAlt: "Димитрис с собаками на борту лодки Fishing 4 You",
+    dogsCaption: "Четвероногая команда",
     equipmentAlt: "Удочки и катушки, размещённые вдоль борта лодки",
     equipmentCaption: "Рыболовные снасти предоставляются на борту",
     coastAlt: "Побережье рядом с Никити, вид с Эгейского моря",
@@ -529,6 +622,25 @@ export const guideContent: Record<Locale, GuideContent> = {
     videoFallback: "Ihr Browser unterstützt dieses Video nicht.",
     rodsAlt: "Vorbereitete Angelruten mit Gewichten auf dem Fishing-4-You-Boot",
     rodsCaption: "Ruten und Grundmontagen sind für den Ausflug vorbereitet",
+    catchAlt: "Ein echter Fang von einem Fishing-4-You-Ausflug in der Ägäis",
+    catchCaption: "Ein echter Fang nach einem Tag in der Ägäis",
+    dolphinTitle: "Delfine neben dem Boot",
+    dolphinCaption:
+      "Ein echter Moment auf dem Meer. Wildtiersichtungen sind möglich, aber nie garantiert.",
+    familyEyebrow: "Die Menschen hinter dem Ausflug",
+    familyTitle: "Lernen Sie die Fishing-4-You-Familie kennen.",
+    familyIntro:
+      "Dimitris, seine Frau, ihr Sohn und die Hunde teilen ein Leben, das vom Boot und der Ägäis geprägt ist.",
+    dimitrisAlt: "Dimitris hält einen großen Fisch an Bord des Fishing-4-You-Bootes",
+    dimitrisCaption: "Dimitris und ein unvergesslicher Fang",
+    wifeCatchAlt: "Dimitris und seine Frau mit einem großen Fisch auf dem Boot",
+    wifeCatchCaption: "Dimitris und seine Frau mit dem Fang",
+    wifeHelmAlt: "Dimitris und seine Frau gemeinsam am Steuerstand des Bootes",
+    wifeHelmCaption: "Gemeinsam am Steuer",
+    sonAlt: "Dimitris mit seinem Sohn neben den Angelruten auf dem Boot",
+    sonCaption: "Ein Familienmoment auf dem Wasser",
+    dogsAlt: "Dimitris mit den Hunden an Bord des Fishing-4-You-Bootes",
+    dogsCaption: "Die vierbeinige Crew",
     equipmentAlt: "Angelruten und Rollen an der Seite des Bootes",
     equipmentCaption: "Die Angelausrüstung wird an Bord gestellt",
     coastAlt: "Die Küste bei Nikiti vom Ägäischen Meer aus gesehen",

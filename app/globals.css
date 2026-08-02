@@ -2468,6 +2468,92 @@ select:focus-visible {
   gap: 16px;
 }
 
+.trip-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.trip-highlights-grid figure {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: var(--navy-950);
+}
+
+.trip-highlight-card,
+.real-video-card-compact {
+  min-height: 520px;
+}
+
+.real-video-card-compact {
+  height: 520px;
+}
+
+.family-media-heading {
+  margin-top: 80px;
+  padding-top: 48px;
+  display: grid;
+  grid-template-columns: 0.45fr 1fr;
+  gap: 32px;
+  border-top: 1px solid rgba(6, 21, 35, 0.18);
+}
+
+.family-media-heading h3 {
+  max-width: 760px;
+  margin: 0;
+  color: var(--navy-950);
+  font-family: var(--display);
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 900;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.family-media-heading div > p {
+  max-width: 680px;
+  margin: 22px 0 0;
+  color: rgba(6, 21, 35, 0.68);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.family-media-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 360px;
+  gap: 16px;
+}
+
+.family-media-grid figure {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: var(--navy-950);
+}
+
+.family-media-card-lead {
+  grid-row: span 2;
+}
+
+.family-media-card-wife-catch img {
+  object-position: center 32%;
+}
+
+.family-media-card-helm img {
+  object-position: center 37%;
+}
+
+.family-media-card-son img {
+  object-position: center 36%;
+}
+
+.family-media-card-dogs img {
+  object-position: center 53%;
+}
+
 .real-media-grid figure {
   min-width: 0;
   margin: 0;
@@ -2541,6 +2627,14 @@ select:focus-visible {
   object-position: center 63%;
 }
 
+.trip-highlight-rods img {
+  object-position: center 60%;
+}
+
+.trip-highlight-catch img {
+  object-position: center;
+}
+
 .real-photo-card::after {
   content: "";
   position: absolute;
@@ -2590,6 +2684,36 @@ select:focus-visible {
   .bite-guide {
     grid-template-columns: 0.55fr 1fr 1fr;
   }
+
+  .trip-highlights-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .real-video-card-compact {
+    grid-column: 1 / -1;
+  }
+
+  .family-media-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .family-media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+  }
+
+  .family-media-card {
+    min-height: 520px;
+  }
+
+  .family-media-card-lead {
+    grid-row: auto;
+  }
+
+  .family-media-card:last-child {
+    min-height: 440px;
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 780px) {
@@ -2597,7 +2721,8 @@ select:focus-visible {
   .technique-grid,
   .bite-guide,
   .guide-notes,
-  .real-media-grid {
+  .real-media-grid,
+  .trip-highlights-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -2678,8 +2803,38 @@ select:focus-visible {
     grid-row: auto;
   }
 
+  .real-video-card-compact {
+    height: 620px;
+    min-height: 620px;
+    grid-column: auto;
+  }
+
+  .family-media-heading {
+    margin-top: 60px;
+    padding-top: 36px;
+  }
+
+  .family-media-heading h3 {
+    font-size: clamp(38px, 13vw, 58px);
+  }
+
+  .family-media-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .family-media-card,
+  .family-media-card:last-child {
+    min-height: 540px;
+    grid-column: auto;
+  }
+
   .real-photo-card {
     min-height: 430px;
+  }
+
+
+  .trip-highlight-card {
+    min-height: 520px;
   }
 }
 
@@ -2722,5 +2877,19 @@ select:focus-visible {
 
   .real-photo-card {
     min-height: 360px;
+  }
+
+  .trip-highlight-card,
+  .real-video-card-compact {
+    min-height: 500px;
+  }
+
+  .real-video-card-compact {
+    height: 500px;
+  }
+
+  .family-media-card,
+  .family-media-card:last-child {
+    min-height: 500px;
   }
 }
