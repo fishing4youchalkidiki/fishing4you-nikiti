@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BookingPanel } from "./BookingPanel";
+import { FishingGuide } from "./FishingGuide";
 import { content, locales, type Locale } from "@/lib/content";
+import { guideContent } from "@/lib/guide-content";
 import { siteUrl } from "@/lib/metadata";
 
 const PHONE_DISPLAY = "+30 6974 139200";
@@ -37,7 +39,7 @@ const interfaceLabels: Record<
   },
 };
 
-const conceptMedia: Record<
+export const conceptMedia: Record<
   Locale,
   {
     eyebrow: string;
@@ -147,7 +149,7 @@ const conceptMedia: Record<
   },
 };
 
-const conceptPhotos = [
+export const conceptPhotos = [
   {
     src: "/demo-concepts/successful-catch.png",
     className: "concept-catch",
@@ -169,7 +171,6 @@ const conceptPhotos = [
 export function SitePage({ locale }: { locale: Locale }) {
   const copy = content[locale];
   const labels = interfaceLabels[locale];
-  const media = conceptMedia[locale];
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -225,6 +226,7 @@ export function SitePage({ locale }: { locale: Locale }) {
 
           <nav className="desktop-nav" aria-label="Primary navigation">
             <a href="#trips">{copy.nav.trips}</a>
+            <a href="#guide">{guideContent[locale].nav}</a>
             <a href="#story">{copy.nav.story}</a>
             <a href="#gallery">{copy.nav.gallery}</a>
             <a href="#faq">{copy.nav.faq}</a>
@@ -362,6 +364,8 @@ export function SitePage({ locale }: { locale: Locale }) {
           </div>
         </section>
 
+        <FishingGuide locale={locale} />
+
         <section className="section story-section" id="story">
           <div className="shell story-grid">
             <div className="story-copy">
@@ -438,58 +442,6 @@ export function SitePage({ locale }: { locale: Locale }) {
                 </figcaption>
               </figure>
             </div>
-          </div>
-        </section>
-
-        <section className="section concept-section" aria-labelledby="concept-title">
-          <div className="shell">
-            <div className="section-heading concept-heading">
-              <div>
-                <p className="eyebrow">{media.eyebrow}</p>
-                <h2 id="concept-title">{media.title}</h2>
-              </div>
-              <p>{media.intro}</p>
-            </div>
-
-            <div className="concept-video">
-              <Image
-                src="/demo-concepts/sunrise-departure.png"
-                alt=""
-                fill
-                sizes="(max-width: 780px) calc(100vw - 30px), 1180px"
-              />
-              <div className="concept-video-shade" aria-hidden="true" />
-              <div className="concept-video-copy">
-                <span>{media.videoLabel}</span>
-                <h3>{media.videoTitle}</h3>
-                <p>{media.videoText}</p>
-              </div>
-              <span className="concept-play" aria-hidden="true">
-                ▶
-              </span>
-            </div>
-
-            <div className="concept-grid">
-              {conceptPhotos.map((photo, index) => (
-                <figure className={photo.className} key={photo.src}>
-                  <Image
-                    src={photo.src}
-                    alt=""
-                    fill
-                    sizes="(max-width: 780px) calc(100vw - 30px), 50vw"
-                  />
-                  <figcaption>
-                    <span>{media.photoLabel}</span>
-                    {media.captions[index]}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-
-            <p className="concept-disclaimer">
-              <span aria-hidden="true">i</span>
-              {media.disclaimer}
-            </p>
           </div>
         </section>
 
