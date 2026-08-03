@@ -271,6 +271,21 @@ export const content: Record<Locale, SiteContent> = {
           answer:
             "Sea departures depend on safe conditions. Confirm the current weather and the rescheduling or cancellation policy with Dimitris.",
         },
+        {
+          question: "How should I look after the shrimp bait?",
+          answer:
+            "Keep it in its container and in the shaded, cool place indicated by the crew. Take out only what you need for the next bait-up, close the container again and clean your hands before eating.",
+        },
+        {
+          question: "What should I do if I feel seasick?",
+          answer:
+            "Tell the crew early, stay in fresh air, look at the horizon, avoid reading or using your phone and take small sips of water. Ask a doctor or pharmacist before the trip if you may need medicine.",
+        },
+        {
+          question: "What happens after I catch a fish?",
+          answer:
+            "Ask Dimitris whether it will be kept or released and let the crew handle the hook when instructed. If asked to hold the fish, use wet hands, avoid its gills and keep it out of the water briefly.",
+        },
       ],
     },
     contact: {
@@ -458,6 +473,21 @@ export const content: Record<Locale, SiteContent> = {
           question: "Τι γίνεται αν αλλάξει ο καιρός;",
           answer:
             "Οι αναχωρήσεις εξαρτώνται από ασφαλείς συνθήκες. Επιβεβαιώστε τον καιρό και την πολιτική αλλαγής με τον Δημήτρη.",
+        },
+        {
+          question: "Πώς πρέπει να διατηρώ το δόλωμα γαρίδα;",
+          answer:
+            "Κρατήστε το στο δοχείο του και στο σκιερό, δροσερό σημείο που υποδεικνύει το πλήρωμα. Βγάζετε μόνο όση ποσότητα χρειάζεται για το επόμενο δόλωμα, κλείνετε ξανά το δοχείο και καθαρίζετε τα χέρια πριν φάτε.",
+        },
+        {
+          question: "Τι να κάνω αν νιώσω ναυτία;",
+          answer:
+            "Ενημερώστε έγκαιρα το πλήρωμα, μείνετε στον καθαρό αέρα, κοιτάξτε τον ορίζοντα, αποφύγετε το διάβασμα ή το κινητό και πίνετε μικρές γουλιές νερό. Για φάρμακο, συμβουλευτείτε γιατρό ή φαρμακοποιό πριν την εκδρομή.",
+        },
+        {
+          question: "Τι γίνεται αφού πιάσω ένα ψάρι;",
+          answer:
+            "Ρωτήστε τον Δημήτρη αν θα κρατηθεί ή θα απελευθερωθεί και αφήστε το πλήρωμα να χειριστεί το αγκίστρι όταν σας το ζητήσει. Αν κρατήσετε το ψάρι, βρέξτε τα χέρια, αποφύγετε τα βράγχια και περιορίστε τον χρόνο έξω από το νερό.",
         },
       ],
     },
@@ -648,6 +678,21 @@ export const content: Record<Locale, SiteContent> = {
           answer:
             "Plecările depind de condiții sigure. Confirmă vremea și politica de reprogramare sau anulare cu Dimitris.",
         },
+        {
+          question: "Cum trebuie păstrată momeala din crevete?",
+          answer:
+            "Păstreaz-o în recipient și în locul răcoros, ferit de soare, indicat de echipaj. Scoate doar cât folosești la următoarea montare, închide recipientul și curăță mâinile înainte să mănânci.",
+        },
+        {
+          question: "Ce fac dacă mi se face rău pe mare?",
+          answer:
+            "Spune echipajului din timp, stai la aer, privește orizontul, evită cititul sau telefonul și bea înghițituri mici de apă. Dacă ai putea avea nevoie de medicamente, discută înainte cu medicul sau farmacistul.",
+        },
+        {
+          question: "Ce se întâmplă după ce prind un pește?",
+          answer:
+            "Întreabă-l pe Dimitris dacă va fi păstrat sau eliberat și lasă echipajul să scoată cârligul când îți cere. Dacă ții peștele, udă mâinile, evită branhiile și limitează timpul petrecut în afara apei.",
+        },
       ],
     },
     contact: {
@@ -836,6 +881,21 @@ export const content: Record<Locale, SiteContent> = {
           answer:
             "Выходы зависят от безопасных условий. Уточните прогноз и правила переноса или отмены у Димитриса.",
         },
+        {
+          question: "Как хранить креветку для наживки?",
+          answer:
+            "Держите её в контейнере, в прохладном затенённом месте, указанном экипажем. Доставайте только порцию для следующего насаживания, снова закрывайте контейнер и очищайте руки перед едой.",
+        },
+        {
+          question: "Что делать, если меня укачивает?",
+          answer:
+            "Сразу сообщите экипажу, оставайтесь на свежем воздухе, смотрите на горизонт, не читайте и не смотрите в телефон, пейте воду небольшими глотками. По поводу лекарства заранее посоветуйтесь с врачом или фармацевтом.",
+        },
+        {
+          question: "Что происходит после поимки рыбы?",
+          answer:
+            "Спросите Димитриса, оставят рыбу или выпустят, и по указанию дайте экипажу снять крючок. Если нужно подержать рыбу, намочите руки, не касайтесь жабр и как можно меньше держите её вне воды.",
+        },
       ],
     },
     contact: {
@@ -1023,6 +1083,21 @@ export const content: Record<Locale, SiteContent> = {
           question: "Was passiert bei Wetteränderung?",
           answer:
             "Abfahrten hängen von sicheren Bedingungen ab. Klären Sie Wetter sowie Umbuchungs- oder Stornoregeln mit Dimitris.",
+        },
+        {
+          question: "Wie bewahre ich den Garnelenköder auf?",
+          answer:
+            "Bewahren Sie ihn im Behälter und an dem kühlen, schattigen Platz auf, den die Crew zeigt. Nehmen Sie nur die Menge für das nächste Beködern heraus, schließen Sie den Behälter wieder und reinigen Sie vor dem Essen die Hände.",
+        },
+        {
+          question: "Was kann ich bei Seekrankheit tun?",
+          answer:
+            "Informieren Sie die Crew frühzeitig, bleiben Sie an der frischen Luft, schauen Sie zum Horizont, vermeiden Sie Lesen oder das Handy und trinken Sie Wasser in kleinen Schlucken. Lassen Sie sich vorab ärztlich oder in der Apotheke zu Medikamenten beraten.",
+        },
+        {
+          question: "Was geschieht nach einem Fang?",
+          answer:
+            "Fragen Sie Dimitris, ob der Fisch behalten oder freigelassen wird, und lassen Sie die Crew den Haken nach Anweisung lösen. Wenn Sie den Fisch halten, befeuchten Sie die Hände, meiden Sie die Kiemen und halten Sie ihn nur kurz außerhalb des Wassers.",
         },
       ],
     },

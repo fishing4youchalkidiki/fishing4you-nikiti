@@ -5,6 +5,12 @@ type GuideStep = {
   text: string;
 };
 
+type ParticipantCard = {
+  number: string;
+  title: string;
+  text: string;
+};
+
 type GuideContent = {
   nav: string;
   eyebrow: string;
@@ -34,6 +40,11 @@ type GuideContent = {
   baitCheck: string;
   catchNote: string;
   safetyNote: string;
+  participantEyebrow: string;
+  participantTitle: string;
+  participantIntro: string;
+  participantCards: ParticipantCard[];
+  captainNote: string;
   mediaEyebrow: string;
   mediaTitle: string;
   mediaIntro: string;
@@ -149,6 +160,39 @@ export const guideContent: Record<Locale, GuideContent> = {
       "A catch can never be guaranteed. Fish activity, sea conditions, timing, attention and technique all matter.",
     safetyNote:
       "Always follow the crew's instructions. Ask about a child's age and safety arrangements before booking.",
+    participantEyebrow: "A better day at sea",
+    participantTitle: "Small habits that make the trip easier.",
+    participantIntro:
+      "The fishing technique is explained above. These practical habits help protect the bait, everyone aboard and the fish you catch.",
+    participantCards: [
+      {
+        number: "01",
+        title: "Protect the shrimp bait",
+        text: "Keep it in its container and in the shaded, cool place indicated by the crew. Take out only enough for the next bait-up, close the container again, never leave it on a hot deck and clean your hands before eating.",
+      },
+      {
+        number: "02",
+        title: "Bring the right basics",
+        text: "Bring drinking water, SPF 30+ sunscreen, a hat, sunglasses, light covering, shoes with a stable non-slip sole and any personal medication you normally need. Ask Dimitris before bringing food aboard.",
+      },
+      {
+        number: "03",
+        title: "If you feel seasick",
+        text: "Tell the crew early, stay in fresh air, look at the horizon and avoid reading or watching your phone. Take small sips of water. If you may need medicine, ask a doctor or pharmacist before the trip.",
+      },
+      {
+        number: "04",
+        title: "Hooks and a moving deck",
+        text: "Lower the rig only where the crew shows you, check that nobody is within the hook's path and never swing it across the deck. Keep loose line and hooks off the floor, and supervise children closely.",
+      },
+      {
+        number: "05",
+        title: "Let the crew handle the catch",
+        text: "Ask Dimitris whether the fish will be kept or released. If the crew asks you to hold it, use wet hands, avoid the gills, do not squeeze it and keep it out of the water for as little time as possible.",
+      },
+    ],
+    captainNote:
+      "Dimitris and the crew's instructions always take priority over this quick guide.",
     mediaEyebrow: "Real trip media",
     mediaTitle: "This is what the morning looks like.",
     mediaIntro:
@@ -265,6 +309,39 @@ export const guideContent: Record<Locale, GuideContent> = {
       "Η σύλληψη ψαριού δεν μπορεί να εγγυηθεί. Η δραστηριότητα των ψαριών, η θάλασσα, η στιγμή, η προσοχή και η τεχνική παίζουν ρόλο.",
     safetyNote:
       "Ακολουθείτε πάντα τις οδηγίες του πληρώματος. Ρωτήστε για την ηλικία του παιδιού και τα μέτρα ασφαλείας πριν την κράτηση.",
+    participantEyebrow: "Μια καλύτερη μέρα στη θάλασσα",
+    participantTitle: "Μικρές συνήθειες που κάνουν την εκδρομή ευκολότερη.",
+    participantIntro:
+      "Η τεχνική ψαρέματος εξηγείται παραπάνω. Αυτές οι πρακτικές συμβουλές βοηθούν στην προστασία του δολώματος, όλων όσοι βρίσκονται στο σκάφος και των ψαριών που πιάνετε.",
+    participantCards: [
+      {
+        number: "01",
+        title: "Προστατέψτε το δόλωμα γαρίδα",
+        text: "Κρατήστε τη γαρίδα στο δοχείο της και στο σκιερό, δροσερό σημείο που υποδεικνύει το πλήρωμα. Βγάζετε μόνο όση χρειάζεται για το επόμενο δόλωμα, κλείνετε ξανά το δοχείο, μην το αφήνετε σε ζεστό κατάστρωμα και καθαρίζετε τα χέρια πριν φάτε.",
+      },
+      {
+        number: "02",
+        title: "Φέρτε τα απαραίτητα",
+        text: "Πάρτε πόσιμο νερό, αντηλιακό SPF 30+, καπέλο, γυαλιά ηλίου, ελαφρύ ρούχο κάλυψης, παπούτσια με σταθερή αντιολισθητική σόλα και τα προσωπικά φάρμακα που χρειάζεστε συνήθως. Ρωτήστε τον Δημήτρη πριν φέρετε φαγητό στο σκάφος.",
+      },
+      {
+        number: "03",
+        title: "Αν νιώσετε ναυτία",
+        text: "Ενημερώστε έγκαιρα το πλήρωμα, μείνετε στον καθαρό αέρα, κοιτάξτε τον ορίζοντα και αποφύγετε το διάβασμα ή το κινητό. Πίνετε μικρές γουλιές νερό. Για φάρμακο, συμβουλευτείτε γιατρό ή φαρμακοποιό πριν την εκδρομή.",
+      },
+      {
+        number: "04",
+        title: "Αγκίστρια και κινούμενο κατάστρωμα",
+        text: "Κατεβάζετε την αρματωσιά μόνο εκεί που δείχνει το πλήρωμα, ελέγχετε ότι κανείς δεν βρίσκεται στην πορεία του αγκιστριού και μην το αιωρείτε πάνω από το κατάστρωμα. Κρατήστε πετονιές και αγκίστρια μακριά από το δάπεδο και επιβλέπετε στενά τα παιδιά.",
+      },
+      {
+        number: "05",
+        title: "Αφήστε το πλήρωμα να χειριστεί την ψαριά",
+        text: "Ρωτήστε τον Δημήτρη αν το ψάρι θα κρατηθεί ή θα απελευθερωθεί. Αν σας ζητηθεί να το κρατήσετε, βρέξτε τα χέρια, αποφύγετε τα βράγχια, μην το σφίγγετε και κρατήστε το έξω από το νερό όσο το δυνατόν λιγότερο.",
+      },
+    ],
+    captainNote:
+      "Οι οδηγίες του Δημήτρη και του πληρώματος έχουν πάντα προτεραιότητα έναντι αυτού του σύντομου οδηγού.",
     mediaEyebrow: "Πραγματικό υλικό εκδρομής",
     mediaTitle: "Έτσι μοιάζει το πρωινό στη θάλασσα.",
     mediaIntro:
@@ -381,6 +458,39 @@ export const guideContent: Record<Locale, GuideContent> = {
       "Captura nu poate fi garantată. Activitatea peștilor, starea mării, momentul, atenția și tehnica au toate un rol.",
     safetyNote:
       "Urmează întotdeauna instrucțiunile echipajului. Întreabă despre vârsta copilului și măsurile de siguranță înainte de rezervare.",
+    participantEyebrow: "O zi mai bună pe mare",
+    participantTitle: "Obiceiuri mici care fac excursia mai ușoară.",
+    participantIntro:
+      "Tehnica de pescuit este explicată mai sus. Aceste obiceiuri practice ajută la protejarea momelii, a tuturor celor de la bord și a peștelui prins.",
+    participantCards: [
+      {
+        number: "01",
+        title: "Protejează momeala din crevete",
+        text: "Păstreaz-o în recipient și în locul răcoros, ferit de soare, indicat de echipaj. Scoate doar cât folosești la următoarea montare, închide recipientul, nu îl lăsa pe puntea încinsă și curăță mâinile înainte să mănânci.",
+      },
+      {
+        number: "02",
+        title: "Adu lucrurile esențiale",
+        text: "Ia apă, cremă cu SPF 30+, pălărie, ochelari de soare, îmbrăcăminte ușoară de protecție, încălțăminte cu talpă stabilă antiderapantă și medicamentele personale de care ai nevoie în mod obișnuit. Întreabă-l pe Dimitris înainte să aduci mâncare la bord.",
+      },
+      {
+        number: "03",
+        title: "Dacă apare răul de mare",
+        text: "Spune echipajului din timp, stai la aer, privește orizontul și evită cititul sau telefonul. Bea înghițituri mici de apă. Dacă ai putea avea nevoie de medicamente, discută cu medicul sau farmacistul înainte de excursie.",
+      },
+      {
+        number: "04",
+        title: "Cârlige și o punte în mișcare",
+        text: "Coboară montura numai unde arată echipajul, verifică să nu fie nimeni în traiectoria cârligului și nu îl balansa peste punte. Nu lăsa fir sau cârlige pe jos și supraveghează atent copiii.",
+      },
+      {
+        number: "05",
+        title: "Lasă echipajul să manipuleze captura",
+        text: "Întreabă-l pe Dimitris dacă peștele va fi păstrat sau eliberat. Dacă echipajul îți cere să îl ții, udă mâinile, evită branhiile, nu îl strânge și ține-l în afara apei cât mai puțin timp.",
+      },
+    ],
+    captainNote:
+      "Instrucțiunile lui Dimitris și ale echipajului au întotdeauna prioritate față de acest ghid scurt.",
     mediaEyebrow: "Materiale reale din excursie",
     mediaTitle: "Așa arată o dimineață pe mare.",
     mediaIntro:
@@ -497,6 +607,39 @@ export const guideContent: Record<Locale, GuideContent> = {
       "Улов нельзя гарантировать. Важны активность рыбы, состояние моря, время, внимание и техника.",
     safetyNote:
       "Всегда выполняйте указания экипажа. До бронирования уточните возраст ребёнка и меры безопасности.",
+    participantEyebrow: "Чтобы день в море прошёл лучше",
+    participantTitle: "Простые привычки, которые делают поездку комфортнее.",
+    participantIntro:
+      "Техника рыбалки уже объяснена выше. Эти практические советы помогают беречь наживку, людей на борту и пойманную рыбу.",
+    participantCards: [
+      {
+        number: "01",
+        title: "Берегите креветку для наживки",
+        text: "Держите её в контейнере, в прохладном затенённом месте, указанном экипажем. Доставайте только порцию для следующего насаживания, снова закрывайте контейнер, не оставляйте его на горячей палубе и очищайте руки перед едой.",
+      },
+      {
+        number: "02",
+        title: "Возьмите самое необходимое",
+        text: "Возьмите питьевую воду, крем SPF 30+, головной убор, солнцезащитные очки, лёгкую закрытую одежду, обувь с устойчивой нескользящей подошвой и личные лекарства, которые вам обычно нужны. Заранее спросите Димитриса о еде на борту.",
+      },
+      {
+        number: "03",
+        title: "Если вас укачивает",
+        text: "Сразу сообщите экипажу, оставайтесь на свежем воздухе, смотрите на горизонт и не читайте и не смотрите в телефон. Пейте воду небольшими глотками. По поводу лекарства заранее посоветуйтесь с врачом или фармацевтом.",
+      },
+      {
+        number: "04",
+        title: "Крючки и движущаяся палуба",
+        text: "Опускайте оснастку только там, где показывает экипаж, убедитесь, что на пути крючка никого нет, и не размахивайте им над палубой. Не оставляйте леску и крючки на полу и внимательно следите за детьми.",
+      },
+      {
+        number: "05",
+        title: "Доверьте улов экипажу",
+        text: "Спросите Димитриса, оставят рыбу или выпустят. Если экипаж просит подержать её, намочите руки, не касайтесь жабр, не сжимайте рыбу и как можно меньше держите её вне воды.",
+      },
+    ],
+    captainNote:
+      "Указания Димитриса и экипажа всегда важнее этого краткого руководства.",
     mediaEyebrow: "Настоящие материалы поездки",
     mediaTitle: "Так выглядит утро в море.",
     mediaIntro:
@@ -613,6 +756,39 @@ export const guideContent: Record<Locale, GuideContent> = {
       "Ein Fang kann nicht garantiert werden. Fischaktivität, Seegang, Zeitpunkt, Aufmerksamkeit und Technik spielen zusammen.",
     safetyNote:
       "Befolgen Sie immer die Anweisungen der Crew. Fragen Sie vor der Buchung nach dem Alter des Kindes und den Sicherheitsvorkehrungen.",
+    participantEyebrow: "Für einen besseren Tag auf dem Meer",
+    participantTitle: "Kleine Gewohnheiten, die den Ausflug leichter machen.",
+    participantIntro:
+      "Die Angeltechnik wird oben erklärt. Diese praktischen Hinweise schützen den Köder, alle Personen an Bord und die gefangenen Fische.",
+    participantCards: [
+      {
+        number: "01",
+        title: "Garnelenköder schützen",
+        text: "Bewahren Sie ihn im Behälter und an dem kühlen, schattigen Platz auf, den die Crew zeigt. Nehmen Sie nur die Menge für das nächste Beködern heraus, schließen Sie den Behälter wieder, lassen Sie ihn nicht auf dem heißen Deck stehen und reinigen Sie vor dem Essen die Hände.",
+      },
+      {
+        number: "02",
+        title: "Das Richtige mitbringen",
+        text: "Bringen Sie Trinkwasser, Sonnenschutz SPF 30+, Kopfbedeckung, Sonnenbrille, leichte bedeckende Kleidung, Schuhe mit stabiler rutschfester Sohle und Ihre üblicherweise benötigten persönlichen Medikamente mit. Fragen Sie Dimitris vorab nach Essen an Bord.",
+      },
+      {
+        number: "03",
+        title: "Wenn Ihnen seekrank wird",
+        text: "Informieren Sie die Crew frühzeitig, bleiben Sie an der frischen Luft, schauen Sie zum Horizont und vermeiden Sie Lesen oder das Handy. Trinken Sie Wasser in kleinen Schlucken. Lassen Sie sich vor der Tour ärztlich oder in der Apotheke zu Medikamenten beraten.",
+      },
+      {
+        number: "04",
+        title: "Haken und bewegtes Deck",
+        text: "Senken Sie die Montage nur dort ab, wo die Crew es zeigt, achten Sie darauf, dass niemand im Weg des Hakens steht, und schwingen Sie ihn nie über das Deck. Halten Sie lose Schnur und Haken vom Boden fern und beaufsichtigen Sie Kinder aufmerksam.",
+      },
+      {
+        number: "05",
+        title: "Den Fang der Crew überlassen",
+        text: "Fragen Sie Dimitris, ob der Fisch behalten oder freigelassen wird. Wenn die Crew Sie bittet, ihn zu halten, befeuchten Sie die Hände, meiden Sie die Kiemen, drücken Sie ihn nicht und halten Sie ihn so kurz wie möglich außerhalb des Wassers.",
+      },
+    ],
+    captainNote:
+      "Die Anweisungen von Dimitris und der Crew haben immer Vorrang vor diesem kurzen Leitfaden.",
     mediaEyebrow: "Echte Aufnahmen vom Ausflug",
     mediaTitle: "So sieht ein Morgen auf dem Meer aus.",
     mediaIntro:

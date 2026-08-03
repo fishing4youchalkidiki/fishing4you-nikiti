@@ -199,12 +199,31 @@ export function SitePage({ locale }: { locale: Locale }) {
     },
   };
 
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: copy.faq.items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqStructuredData).replace(/</g, "\\u003c"),
         }}
       />
 
@@ -216,7 +235,7 @@ export function SitePage({ locale }: { locale: Locale }) {
         <div className="shell header-inner">
           <Link className="brand" href={`/${locale}`} aria-label={labels.home}>
             <span className="brand-mark" aria-hidden="true">
-              F4Y
+              <Image src="/brand/f4y-logo-192.png" alt="" width={52} height={52} priority />
             </span>
             <span className="brand-copy">
               <strong>Fishing 4 You</strong>
@@ -406,7 +425,7 @@ export function SitePage({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section className="section gallery-section" id="gallery">
+        <section className="section gallery-section" id="boat-gallery">
           <div className="shell">
             <div className="section-heading gallery-heading">
               <div>
@@ -560,7 +579,9 @@ export function SitePage({ locale }: { locale: Locale }) {
       <footer className="site-footer">
         <div className="shell footer-top">
           <Link className="brand brand-footer" href={`/${locale}`}>
-            <span className="brand-mark">F4Y</span>
+            <span className="brand-mark" aria-hidden="true">
+              <Image src="/brand/f4y-logo-192.png" alt="" width={52} height={52} />
+            </span>
             <span className="brand-copy">
               <strong>Fishing 4 You</strong>
               <small>{copy.footer.tagline}</small>

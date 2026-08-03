@@ -56,9 +56,9 @@ export function makeMetadata(locale: Locale): Metadata {
       siteName: "Fishing 4 You Nikiti",
       images: [
         {
-          url: "/og.png",
-          width: 1730,
-          height: 909,
+          url: "/og-brand.png",
+          width: 1200,
+          height: 630,
           alt: "Fishing 4 You — authentic fishing trips in Nikiti",
         },
       ],
@@ -67,7 +67,7 @@ export function makeMetadata(locale: Locale): Metadata {
       card: "summary_large_image",
       title: copy.metaTitle,
       description: copy.metaDescription,
-      images: ["/og.png"],
+      images: ["/og-brand.png"],
     },
   };
 }

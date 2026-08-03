@@ -1,9 +1,15 @@
 import Image from "next/image";
 import { guideContent } from "@/lib/guide-content";
+import {
+  approvedGalleryContent,
+  approvedGalleryMedia,
+  techniqueMedia,
+} from "@/lib/gallery-content";
 import type { Locale } from "@/lib/content";
 
 export function FishingGuide({ locale }: { locale: Locale }) {
   const guide = guideContent[locale];
+  const gallery = approvedGalleryContent[locale];
   const showFamilyMedia = true;
   const familyMedia = [
     {
@@ -105,20 +111,20 @@ export function FishingGuide({ locale }: { locale: Locale }) {
                   <path d="M260 262 C222 270 206 292 206 324" stroke="#f7fbff" strokeWidth="3" fill="none" />
                   <path
                     d="M206 324 C206 362 252 360 246 324 C243 306 231 300 222 300"
-                    stroke="#ff6833"
+                    stroke="#65b7dc"
                     strokeWidth="8"
                     strokeLinecap="round"
                     fill="none"
                   />
                   <path
                     d="M184 278 C156 267 138 279 144 301 C150 323 181 329 211 310 C196 309 185 301 184 278 Z"
-                    fill="#ffc98a"
+                    fill="#b9d9e2"
                   />
-                  <path d="M147 292 C128 286 116 294 108 305" stroke="#ffc98a" strokeWidth="6" strokeLinecap="round" />
+                  <path d="M147 292 C128 286 116 294 108 305" stroke="#b9d9e2" strokeWidth="6" strokeLinecap="round" />
                   <circle cx="174" cy="286" r="4" fill="#061523" />
                   <path
                     d="M260 430 C236 448 234 482 260 499 C286 482 284 448 260 430 Z"
-                    fill="#ff6833"
+                    fill="#65b7dc"
                   />
                   <circle cx="260" cy="430" r="7" fill="#f7fbff" />
 
@@ -153,6 +159,30 @@ export function FishingGuide({ locale }: { locale: Locale }) {
                 ))}
               </ol>
             </article>
+          </div>
+
+          <div className="technique-media-block" aria-labelledby="technique-media-title">
+            <h3 id="technique-media-title">{gallery.techniqueTitle}</h3>
+            <div className="technique-media-strip">
+              {techniqueMedia.map((item) => {
+                const text = gallery.techniqueItems[item.key];
+
+                return (
+                  <figure className="real-photo-card technique-media-card" key={item.src}>
+                    <Image
+                      src={item.src}
+                      alt={text.alt}
+                      fill
+                      sizes="(max-width: 780px) calc(100vw - 30px), (max-width: 1050px) 31vw, 360px"
+                    />
+                    <figcaption>
+                      <span>{item.number}</span>
+                      {text.caption}
+                    </figcaption>
+                  </figure>
+                );
+              })}
+            </div>
           </div>
 
           <div className="bite-guide">
@@ -191,6 +221,35 @@ export function FishingGuide({ locale }: { locale: Locale }) {
               {guide.safetyNote}
             </p>
           </div>
+
+          <section
+            className="participant-guide"
+            id="trip-tips"
+            aria-labelledby="participant-guide-title"
+          >
+            <div className="participant-guide-heading">
+              <div>
+                <p className="eyebrow">{guide.participantEyebrow}</p>
+                <h3 id="participant-guide-title">{guide.participantTitle}</h3>
+              </div>
+              <p>{guide.participantIntro}</p>
+            </div>
+
+            <div className="participant-guide-grid">
+              {guide.participantCards.map((card) => (
+                <article className="participant-card" key={card.number}>
+                  <span>{card.number}</span>
+                  <h4>{card.title}</h4>
+                  <p>{card.text}</p>
+                </article>
+              ))}
+            </div>
+
+            <p className="captain-note">
+              <span aria-hidden="true">!</span>
+              {guide.captainNote}
+            </p>
+          </section>
         </div>
       </section>
 
@@ -331,6 +390,36 @@ export function FishingGuide({ locale }: { locale: Locale }) {
               </div>
             </>
           )}
+
+          <div className="approved-gallery-heading" id="approved-gallery">
+            <p className="eyebrow eyebrow-dark">{gallery.eyebrow}</p>
+            <div>
+              <h3>{gallery.title}</h3>
+              <p>{gallery.intro}</p>
+              <small>{gallery.privacyNote}</small>
+            </div>
+          </div>
+
+          <div className="approved-gallery-grid">
+            {approvedGalleryMedia.map((item) => {
+              const text = gallery.items[item.key];
+
+              return (
+                <figure className="real-photo-card approved-gallery-card" key={item.src}>
+                  <Image
+                    src={item.src}
+                    alt={text.alt}
+                    fill
+                    sizes="(max-width: 780px) calc(100vw - 30px), (max-width: 1050px) 48vw, 31vw"
+                  />
+                  <figcaption>
+                    <span>{item.number}</span>
+                    {text.caption}
+                  </figcaption>
+                </figure>
+              );
+            })}
+          </div>
         </div>
       </section>
     </>
