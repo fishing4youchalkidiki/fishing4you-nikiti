@@ -2765,13 +2765,13 @@ select:focus-visible {
   grid-row: span 2;
 }
 
-.approved-gallery-card:nth-child(9) img,
 .approved-gallery-card:nth-child(11) img,
-.approved-gallery-card:nth-child(12) img {
+.approved-gallery-card:nth-child(13) img,
+.approved-gallery-card:nth-child(15) img {
   object-position: center 28%;
 }
 
-.approved-gallery-card:nth-child(13) img {
+.approved-gallery-card:nth-child(16) img {
   object-position: center 62%;
 }
 

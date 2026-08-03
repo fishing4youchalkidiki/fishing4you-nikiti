@@ -213,7 +213,7 @@ export const content: Record<Locale, SiteContent> = {
       signAlt: "Fishing 4 You information sign in Nikiti",
       boatCaption: "Fishing 4 You on the water",
       signCaption: "The current trip information in Nikiti",
-      note: "More photos from recent trips will be added soon.",
+      note: "More real moments from recent trips continue in the gallery below.",
     },
     booking: {
       eyebrow: "Plan your trip",
@@ -416,7 +416,7 @@ export const content: Record<Locale, SiteContent> = {
       signAlt: "Πινακίδα πληροφοριών Fishing 4 You στη Νικήτη",
       boatCaption: "Το Fishing 4 You στη θάλασσα",
       signCaption: "Οι τρέχουσες πληροφορίες εκδρομών στη Νικήτη",
-      note: "Σύντομα θα προστεθούν περισσότερες φωτογραφίες.",
+      note: "Περισσότερες αληθινές στιγμές από πρόσφατες εκδρομές συνεχίζονται στη συλλογή παρακάτω.",
     },
     booking: {
       eyebrow: "Οργανώστε την εκδρομή",
@@ -620,7 +620,7 @@ export const content: Record<Locale, SiteContent> = {
       signAlt: "Afișul informativ Fishing 4 You din Nikiti",
       boatCaption: "Fishing 4 You pe mare",
       signCaption: "Informațiile actuale despre excursii în Nikiti",
-      note: "Mai multe fotografii din excursii vor fi adăugate în curând.",
+      note: "Mai multe momente reale din excursii recente continuă în galeria de mai jos.",
     },
     booking: {
       eyebrow: "Planifică excursia",
@@ -823,7 +823,7 @@ export const content: Record<Locale, SiteContent> = {
       signAlt: "Информационная вывеска Fishing 4 You в Никити",
       boatCaption: "Fishing 4 You в море",
       signCaption: "Актуальная информация об экскурсиях в Никити",
-      note: "Скоро появятся новые фотографии с поездок.",
+      note: "Больше настоящих моментов из недавних поездок — в галерее ниже.",
     },
     booking: {
       eyebrow: "Спланируйте поездку",
@@ -1026,7 +1026,7 @@ export const content: Record<Locale, SiteContent> = {
       signAlt: "Fishing 4 You Informationsschild in Nikiti",
       boatCaption: "Fishing 4 You auf dem Meer",
       signCaption: "Die aktuellen Tourinformationen in Nikiti",
-      note: "Weitere Fotos von den Touren folgen in Kürze.",
+      note: "Weitere echte Momente von aktuellen Touren finden Sie in der Galerie weiter unten.",
     },
     booking: {
       eyebrow: "Tour planen",
