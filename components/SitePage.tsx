@@ -312,6 +312,7 @@ export function SitePage({ locale }: { locale: Locale }) {
                   alt={copy.gallery.boatAlt}
                   fill
                   priority
+                  fetchPriority="high"
                   quality={82}
                   sizes="(max-width: 780px) calc(100vw - 48px), (max-width: 1050px) 42vw, 520px"
                 />

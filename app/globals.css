@@ -2760,8 +2760,7 @@ select:focus-visible {
 }
 
 .approved-gallery-card:nth-child(4),
-.approved-gallery-card:nth-child(6),
-.approved-gallery-card:nth-child(11) {
+.approved-gallery-card:nth-child(6) {
   grid-row: span 2;
 }
 
@@ -3215,5 +3214,12 @@ select:focus-visible {
   .technique-media-card:last-child,
   .approved-gallery-card:nth-child(n) {
     min-height: 360px;
+  }
+}
+
+@media (max-width: 780px) {
+  .approved-gallery-card.approved-gallery-card--full-frame {
+    min-height: 0;
+    aspect-ratio: 1 / 1;
   }
 }

@@ -213,7 +213,7 @@ export const content: Record<Locale, SiteContent> = {
       signAlt: "Fishing 4 You information sign in Nikiti",
       boatCaption: "Fishing 4 You on the water",
       signCaption: "The current trip information in Nikiti",
-      note: "More real moments from recent trips continue in the gallery below.",
+      note: "These are the real Fishing 4 You boat and the current meeting-point sign in Nikiti.",
     },
     booking: {
       eyebrow: "Plan your trip",
@@ -416,7 +416,7 @@ export const content: Record<Locale, SiteContent> = {
       signAlt: "Πινακίδα πληροφοριών Fishing 4 You στη Νικήτη",
       boatCaption: "Το Fishing 4 You στη θάλασσα",
       signCaption: "Οι τρέχουσες πληροφορίες εκδρομών στη Νικήτη",
-      note: "Περισσότερες αληθινές στιγμές από πρόσφατες εκδρομές συνεχίζονται στη συλλογή παρακάτω.",
+      note: "Αυτά είναι το πραγματικό σκάφος Fishing 4 You και η σημερινή πινακίδα του σημείου συνάντησης στη Νικήτη.",
     },
     booking: {
       eyebrow: "Οργανώστε την εκδρομή",
@@ -620,7 +620,7 @@ export const content: Record<Locale, SiteContent> = {
       signAlt: "Afișul informativ Fishing 4 You din Nikiti",
       boatCaption: "Fishing 4 You pe mare",
       signCaption: "Informațiile actuale despre excursii în Nikiti",
-      note: "Mai multe momente reale din excursii recente continuă în galeria de mai jos.",
+      note: "Acestea sunt barca reală Fishing 4 You și afișul actual al punctului de întâlnire din Nikiti.",
     },
     booking: {
       eyebrow: "Planifică excursia",
@@ -823,7 +823,7 @@ export const content: Record<Locale, SiteContent> = {
       signAlt: "Информационная вывеска Fishing 4 You в Никити",
       boatCaption: "Fishing 4 You в море",
       signCaption: "Актуальная информация об экскурсиях в Никити",
-      note: "Больше настоящих моментов из недавних поездок — в галерее ниже.",
+      note: "Это настоящая лодка Fishing 4 You и актуальная вывеска у места встречи в Никити.",
     },
     booking: {
       eyebrow: "Спланируйте поездку",
@@ -1026,7 +1026,7 @@ export const content: Record<Locale, SiteContent> = {
       signAlt: "Fishing 4 You Informationsschild in Nikiti",
       boatCaption: "Fishing 4 You auf dem Meer",
       signCaption: "Die aktuellen Tourinformationen in Nikiti",
-      note: "Weitere echte Momente von aktuellen Touren finden Sie in der Galerie weiter unten.",
+      note: "Das sind das echte Fishing-4-You-Boot und das aktuelle Schild am Treffpunkt in Nikiti.",
     },
     booking: {
       eyebrow: "Tour planen",

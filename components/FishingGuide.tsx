@@ -268,8 +268,8 @@ export function FishingGuide({ locale }: { locale: Locale }) {
               <video
                 controls
                 playsInline
-                preload="metadata"
-                poster="/real-trip/rods-at-sea.jpg"
+                preload="none"
+                poster="/real-trip/rods-at-sea-poster.webp"
                 aria-label={guide.videoTitle}
               >
                 <source src="/real-trip/leaving-nikiti.mp4" type="video/mp4" />
@@ -342,7 +342,7 @@ export function FishingGuide({ locale }: { locale: Locale }) {
               <video
                 controls
                 playsInline
-                preload="metadata"
+                preload="none"
                 poster="/real-trip/dolphins-poster.webp"
                 aria-label={guide.dolphinTitle}
               >
@@ -405,7 +405,10 @@ export function FishingGuide({ locale }: { locale: Locale }) {
               const text = gallery.items[item.key];
 
               return (
-                <figure className="real-photo-card approved-gallery-card" key={item.src}>
+                <figure
+                  className={`real-photo-card approved-gallery-card${item.key === "largeCatch" ? " approved-gallery-card--full-frame" : ""}`}
+                  key={item.src}
+                >
                   <Image
                     src={item.src}
                     alt={text.alt}
