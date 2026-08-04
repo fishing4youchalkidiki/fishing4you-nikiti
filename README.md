@@ -54,24 +54,25 @@ host.
 
 ## Confirmed by Dimitris
 
+- Morning and night fishing are €40 per person
 - Morning fishing: equipment, bait, espresso coffee, water, juice for children
 - Night fishing: equipment, bait, one beer per adult, juice for children
+- **The barbecue cruise is priced per boat, not per person: €600 flat for
+  11:30–18:30, for up to 10 guests.** One guest or ten, it is €600. The boat
+  may not carry more than 10 people; larger groups have to ask Dimitris.
 - Barbecue cruise stops: Spathies (swim), Neos Marmaras (about one hour ashore
   while the captain prepares traditional kakavia), then the Porto Carras coves,
   reachable only by boat
 - Barbecue cruise food: fish, shrimp, salads, tzatziki, skordalia, feta, fried
   zucchini, Mantinia wine, soft drinks, beer, water
-- Morning and night fishing are €40 per person
+- Payment is in cash
 
 ## Still to confirm before launch
 
-- Whether the quoted €600 barbecue-program price is the total boat price
-- Barbecue-program maximum group size
 - Whether the shared Nikiti Marina location is the permanent meeting point
 - Minimum age and child-safety conditions
-- Boat's licensed passenger capacity
 - Weather, cancellation and rescheduling policy
-- Spoken languages and payment methods
+- Languages Dimitris speaks
 
 Unconfirmed details use cautious wording on the site.
 

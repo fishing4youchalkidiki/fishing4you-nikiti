@@ -136,7 +136,7 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Start with the first light, spend a generous day on the water, or discover the quiet Aegean after dark.",
       priceNote:
-        "Morning and night fishing are €40 per person with equipment and bait included. A €600 price was quoted for the barbecue program; confirm whether this is the total boat price and the permitted group size.",
+        "Morning and night fishing are €40 per person, with equipment and bait included. The barbecue cruise is €600 for the whole boat, for up to 10 guests — the same price whether one person comes or ten. Payment is in cash.",
     },
     tours: [
       {
@@ -158,7 +158,7 @@ export const content: Record<Locale, SiteContent> = {
         duration: "7 hours",
         description:
           "Swim at Spathies, explore Neos Marmaras while the captain prepares traditional kakavia, then enjoy a generous meal at the boat-only coves of Porto Carras.",
-        highlights: ["€600 price quoted", "3 stops", "Full meal & drinks"],
+        highlights: ["€600 for the boat", "Up to 10 guests", "3 stops", "Full meal & drinks"],
         tone: "day",
       },
       {
@@ -184,7 +184,7 @@ export const content: Record<Locale, SiteContent> = {
         "Dimitris is your contact for availability, the meeting point and everything you should know before departure.",
       boatTitle: "The boat",
       boatText:
-        "The boat shown here is the real Fishing 4 You boat. Departure capacity is advertised for groups of 3 to 10 people.",
+        "The boat shown here is the real Fishing 4 You boat. It takes a maximum of 10 guests per departure.",
     },
     reasons: {
       title: "Why guests choose direct",
@@ -197,7 +197,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           number: "02",
           title: "Small-group feeling",
-          text: "The advertised group size is between 3 and 10 guests per departure.",
+          text: "A maximum of 10 guests per departure, so the boat never feels crowded.",
         },
         {
           number: "03",
@@ -249,7 +249,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Is the price €40 for every trip?",
           answer:
-            "Dimitris confirmed €40 per person for morning and night fishing. He quoted €600 for the barbecue program; please confirm whether this is the total boat price and the permitted group size.",
+            "Morning and night fishing are €40 per person. The barbecue cruise is priced per boat: €600 for the full day from 11:30 to 18:30, for up to 10 guests. That price does not change with the size of the group — one guest or ten, it is €600. The boat cannot take more than 10 people; talk to Dimitris if you are a larger group. Payment is in cash.",
         },
         {
           question: "Is fishing equipment included?",
@@ -344,7 +344,7 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Ξεκινήστε με το πρώτο φως, περάστε μια γεμάτη μέρα στο νερό ή γνωρίστε το ήσυχο Αιγαίο μετά το σκοτάδι.",
       priceNote:
-        "Το πρωινό και το νυχτερινό ψάρεμα κοστίζουν 40€ ανά άτομο με εξοπλισμό και δολώματα. Για το πρόγραμμα με μπάρμπεκιου αναφέρθηκε τιμή 600€· επιβεβαιώστε αν είναι η συνολική τιμή του σκάφους και τον επιτρεπόμενο αριθμό ατόμων.",
+        "Το πρωινό και το νυχτερινό ψάρεμα κοστίζουν 40€ ανά άτομο, με εξοπλισμό και δολώματα. Η κρουαζιέρα με μπάρμπεκιου κοστίζει 600€ για ολόκληρο το σκάφος, έως 10 άτομα — η ίδια τιμή είτε έρθει ένα άτομο είτε δέκα. Η πληρωμή γίνεται μετρητά.",
     },
     tours: [
       {
@@ -366,7 +366,7 @@ export const content: Record<Locale, SiteContent> = {
         duration: "7 ώρες",
         description:
           "Κολύμπι στις Σπαθιές, βόλτα στον Νέο Μαρμαρά όσο ο καπετάνιος ετοιμάζει παραδοσιακή κακαβιά και πλούσιο γεύμα στα Λιμανάκια του Πόρτο Καρράς.",
-        highlights: ["Αναφέρθηκε τιμή 600€", "3 στάσεις", "Πλήρες γεύμα & ποτά"],
+        highlights: ["600€ για το σκάφος", "Έως 10 άτομα", "3 στάσεις", "Πλήρες γεύμα & ποτά"],
         tone: "day",
       },
       {
@@ -392,7 +392,7 @@ export const content: Record<Locale, SiteContent> = {
         "Ο Δημήτρης σας ενημερώνει για διαθεσιμότητα, σημείο συνάντησης και όσα χρειάζεται να γνωρίζετε.",
       boatTitle: "Το σκάφος",
       boatText:
-        "Το σκάφος στη φωτογραφία είναι το πραγματικό σκάφος του Fishing 4 You. Η διαφημιζόμενη χωρητικότητα είναι 3 έως 10 άτομα.",
+        "Το σκάφος στη φωτογραφία είναι το πραγματικό σκάφος του Fishing 4 You. Δέχεται το πολύ 10 άτομα ανά αναχώρηση.",
     },
     reasons: {
       title: "Γιατί απευθείας κράτηση",
@@ -405,7 +405,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           number: "02",
           title: "Αίσθηση μικρής ομάδας",
-          text: "Το διαφημιζόμενο μέγεθος ομάδας είναι από 3 έως 10 άτομα.",
+          text: "Το πολύ 10 άτομα ανά αναχώρηση, ώστε το σκάφος να μη γεμίζει ποτέ.",
         },
         {
           number: "03",
@@ -457,7 +457,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Η τιμή είναι 40€ για κάθε εκδρομή;",
           answer:
-            "Ο Δημήτρης επιβεβαίωσε 40€ ανά άτομο για το πρωινό και το νυχτερινό ψάρεμα. Για το πρόγραμμα με μπάρμπεκιου ανέφερε 600€· επιβεβαιώστε αν πρόκειται για τη συνολική τιμή του σκάφους και τον επιτρεπόμενο αριθμό ατόμων.",
+            "Το πρωινό και το νυχτερινό ψάρεμα κοστίζουν 40€ ανά άτομο. Η κρουαζιέρα με μπάρμπεκιου χρεώνεται ανά σκάφος: 600€ για όλη την ημέρα, από τις 11:30 έως τις 18:30, έως 10 άτομα. Η τιμή δεν αλλάζει με τον αριθμό των ατόμων — ένα άτομο ή δέκα, είναι 600€. Το σκάφος δεν μπορεί να δεχτεί περισσότερα από 10 άτομα· αν είστε μεγαλύτερη παρέα, μιλήστε με τον Δημήτρη. Η πληρωμή γίνεται μετρητά.",
         },
         {
           question: "Περιλαμβάνεται ο εξοπλισμός ψαρέματος;",
@@ -553,7 +553,7 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Pornește la prima lumină, petrece o zi întreagă pe apă sau descoperă liniștea Mării Egee după lăsarea nopții.",
       priceNote:
-        "Pescuitul de dimineață și cel de noapte costă 40 € de persoană, cu echipament și momeală incluse. Pentru programul cu grătar a fost comunicat prețul de 600 €; confirmă dacă este totalul pentru barcă și numărul permis de persoane.",
+        "Pescuitul de dimineață și cel de noapte costă 40 € de persoană, cu echipament și momeală incluse. Croaziera cu grătar costă 600 € pentru toată barca, pentru maximum 10 persoane — același preț fie că vine o persoană, fie zece. Plata se face cash.",
     },
     tours: [
       {
@@ -575,7 +575,7 @@ export const content: Record<Locale, SiteContent> = {
         duration: "7 ore",
         description:
           "Înot la Spathies, o plimbare prin Neos Marmaras cât căpitanul pregătește supa tradițională kakavia, apoi o masă bogată în golfurile Porto Carras accesibile doar cu barca.",
-        highlights: ["Preț comunicat: 600 €", "3 opriri", "Masă completă & băuturi"],
+        highlights: ["600 € pentru barcă", "Maximum 10 persoane", "3 opriri", "Masă completă & băuturi"],
         tone: "day",
       },
       {
@@ -601,7 +601,7 @@ export const content: Record<Locale, SiteContent> = {
         "Dimitris îți confirmă disponibilitatea, punctul de întâlnire și tot ce trebuie să știi înainte de plecare.",
       boatTitle: "Barca",
       boatText:
-        "Barca din fotografie este barca reală Fishing 4 You. Capacitatea afișată este pentru grupuri de 3 până la 10 persoane.",
+        "Barca din fotografie este barca reală Fishing 4 You. Ia maximum 10 persoane la fiecare plecare.",
     },
     reasons: {
       title: "De ce să rezervi direct",
@@ -614,7 +614,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           number: "02",
           title: "Atmosferă de grup restrâns",
-          text: "Dimensiunea afișată a grupului este între 3 și 10 persoane.",
+          text: "Maximum 10 persoane la fiecare plecare, ca barca să nu fie niciodată aglomerată.",
         },
         {
           number: "03",
@@ -666,7 +666,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Prețul este 40 € pentru fiecare excursie?",
           answer:
-            "Dimitris a confirmat 40 € de persoană pentru pescuitul de dimineață și de noapte. Pentru programul cu grătar a comunicat 600 €; trebuie confirmat dacă este prețul total pentru barcă și numărul permis de persoane.",
+            "Pescuitul de dimineață și cel de noapte costă 40 € de persoană. Croaziera cu grătar se plătește pe barcă: 600 € pentru toată ziua, de la 11:30 la 18:30, pentru maximum 10 persoane. Prețul nu se schimbă în funcție de numărul de participanți — o persoană sau zece, tot 600 € sunt. Barca nu poate lua mai mult de 10 persoane; dacă sunteți un grup mai mare, vorbiți cu Dimitris. Plata se face cash.",
         },
         {
           question: "Este inclus echipamentul de pescuit?",
@@ -761,7 +761,7 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Выйдите с первым светом, проведите день на воде или откройте для себя тихое Эгейское море ночью.",
       priceNote:
-        "Утренняя и ночная рыбалка стоят 40 € с человека, снасти и наживка включены. Для программы с барбекю была названа цена 600 €; уточните, является ли это общей ценой за лодку и сколько человек может участвовать.",
+        "Утренняя и ночная рыбалка стоят 40 € с человека, снасти и наживка включены. Круиз с барбекю стоит 600 € за всю лодку, до 10 человек — цена одна и та же, приедет один человек или десять. Оплата наличными.",
     },
     tours: [
       {
@@ -783,7 +783,7 @@ export const content: Record<Locale, SiteContent> = {
         duration: "7 часов",
         description:
           "Купание у Спатьес, прогулка по Неос-Мармарасу, пока капитан готовит традиционную какавию, затем щедрый обед в бухтах Порто-Каррас, доступных только с моря.",
-        highlights: ["Названа цена 600 €", "3 остановки", "Полный обед и напитки"],
+        highlights: ["600 € за лодку", "До 10 человек", "3 остановки", "Полный обед и напитки"],
         tone: "day",
       },
       {
@@ -809,7 +809,7 @@ export const content: Record<Locale, SiteContent> = {
         "Димитрис подтвердит наличие мест, точку встречи и всё, что нужно знать до выхода.",
       boatTitle: "Лодка",
       boatText:
-        "На фотографии настоящая лодка Fishing 4 You. Заявленный размер группы — от 3 до 10 человек.",
+        "На фотографии настоящая лодка Fishing 4 You. На борт принимается не более 10 гостей за выход.",
     },
     reasons: {
       title: "Почему удобно бронировать напрямую",
@@ -822,7 +822,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           number: "02",
           title: "Небольшая группа",
-          text: "Заявленный размер группы — от 3 до 10 гостей.",
+          text: "Не более 10 гостей за выход, поэтому на лодке никогда не бывает тесно.",
         },
         {
           number: "03",
@@ -874,7 +874,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Цена 40 € действует на все программы?",
           answer:
-            "Димитрис подтвердил 40 € с человека за утреннюю и ночную рыбалку. Для программы с барбекю он назвал 600 €; уточните, является ли это общей ценой за лодку и сколько человек может участвовать.",
+            "Утренняя и ночная рыбалка стоят 40 € с человека. Круиз с барбекю оплачивается за лодку: 600 € за весь день, с 11:30 до 18:30, до 10 человек. Цена не зависит от числа участников — один человек или десять, это 600 €. Лодка не может взять больше 10 человек; если вас больше, свяжитесь с Димитрисом. Оплата наличными.",
         },
         {
           question: "Снасти включены?",
@@ -969,7 +969,7 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Starten Sie im ersten Licht, verbringen Sie einen ganzen Tag auf dem Wasser oder erleben Sie die ruhige Ägäis bei Nacht.",
       priceNote:
-        "Morgen- und Nachtangeln kosten 40 € pro Person; Ausrüstung und Köder sind inklusive. Für das Barbecue-Programm wurden 600 € genannt. Bitte bestätigen Sie, ob dies der Gesamtpreis für das Boot ist und wie viele Personen teilnehmen können.",
+        "Morgen- und Nachtangeln kosten 40 € pro Person, Ausrüstung und Köder inklusive. Die Barbecue-Ausfahrt kostet 600 € für das ganze Boot, für bis zu 10 Gäste — derselbe Preis, ob eine Person mitkommt oder zehn. Bezahlt wird bar.",
     },
     tours: [
       {
@@ -991,7 +991,7 @@ export const content: Record<Locale, SiteContent> = {
         duration: "7 Stunden",
         description:
           "Schwimmen bei Spathies, ein Spaziergang durch Neos Marmaras, während der Kapitän traditionelle Kakavia zubereitet, danach ein großzügiges Essen in den nur per Boot erreichbaren Buchten von Porto Carras.",
-        highlights: ["Genannter Preis: 600 €", "3 Stopps", "Komplettes Essen & Getränke"],
+        highlights: ["600 € für das Boot", "Bis zu 10 Gäste", "3 Stopps", "Komplettes Essen & Getränke"],
         tone: "day",
       },
       {
@@ -1017,7 +1017,7 @@ export const content: Record<Locale, SiteContent> = {
         "Dimitris bestätigt Verfügbarkeit, Treffpunkt und alles, was Sie vor der Abfahrt wissen sollten.",
       boatTitle: "Das Boot",
       boatText:
-        "Das abgebildete Boot ist das echte Fishing 4 You Boot. Die angegebene Gruppengröße beträgt 3 bis 10 Personen.",
+        "Das abgebildete Boot ist das echte Fishing 4 You Boot. Es nimmt höchstens 10 Gäste pro Ausfahrt.",
     },
     reasons: {
       title: "Warum direkt anfragen",
@@ -1030,7 +1030,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           number: "02",
           title: "Kleine Gruppen",
-          text: "Die angegebene Gruppengröße liegt zwischen 3 und 10 Gästen.",
+          text: "Höchstens 10 Gäste pro Ausfahrt, damit es an Bord nie eng wird.",
         },
         {
           number: "03",
@@ -1082,7 +1082,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Gilt der Preis von 40 € für jede Tour?",
           answer:
-            "Dimitris hat 40 € pro Person für Morgen- und Nachtangeln bestätigt. Für das Barbecue-Programm nannte er 600 €; bitte klären Sie, ob dies der Gesamtpreis für das Boot ist und wie viele Personen teilnehmen können.",
+            "Morgen- und Nachtangeln kosten 40 € pro Person. Die Barbecue-Ausfahrt wird pro Boot berechnet: 600 € für den ganzen Tag von 11:30 bis 18:30 Uhr, für bis zu 10 Gäste. Der Preis ändert sich nicht mit der Gruppengröße — ein Gast oder zehn, es sind 600 €. Mehr als 10 Personen kann das Boot nicht aufnehmen; sprechen Sie bei einer größeren Gruppe mit Dimitris. Bezahlt wird bar.",
         },
         {
           question: "Ist die Angelausrüstung inklusive?",
