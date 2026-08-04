@@ -10,32 +10,42 @@ const PHONE_DISPLAY = "+30 6974 139200";
 const PHONE_LINK = "+306974139200";
 const interfaceLabels: Record<
   Locale,
-  { skip: string; language: string; home: string }
+  { skip: string; language: string; home: string; backToTop: string; createdBy: string }
 > = {
   en: {
     skip: "Skip to content",
     language: "Select language",
     home: "Fishing 4 You home",
+    backToTop: "Back to top",
+    createdBy: "Created by",
   },
   el: {
     skip: "Μετάβαση στο περιεχόμενο",
     language: "Επιλογή γλώσσας",
     home: "Αρχική σελίδα Fishing 4 You",
+    backToTop: "Επιστροφή στην κορυφή",
+    createdBy: "Δημιουργήθηκε από",
   },
   ro: {
     skip: "Sari la conținut",
     language: "Selectează limba",
     home: "Pagina principală Fishing 4 You",
+    backToTop: "Înapoi sus",
+    createdBy: "Creat de",
   },
   ru: {
     skip: "Перейти к содержимому",
     language: "Выбрать язык",
     home: "Главная страница Fishing 4 You",
+    backToTop: "Вернуться наверх",
+    createdBy: "Создано",
   },
   de: {
     skip: "Zum Inhalt springen",
     language: "Sprache auswählen",
     home: "Fishing 4 You Startseite",
+    backToTop: "Nach oben",
+    createdBy: "Erstellt von",
   },
 };
 
@@ -226,6 +236,8 @@ export function SitePage({ locale }: { locale: Locale }) {
           __html: JSON.stringify(faqStructuredData).replace(/</g, "\\u003c"),
         }}
       />
+
+      <span className="top-anchor" id="top" aria-hidden="true" />
 
       <a className="skip-link" href="#main-content">
         {labels.skip}
@@ -599,8 +611,20 @@ export function SitePage({ locale }: { locale: Locale }) {
         <div className="shell footer-bottom">
           <span>© {new Date().getFullYear()} Fishing 4 You. {copy.footer.rights}</span>
           <span>{copy.footer.verified}</span>
+          <span className="footer-credit">
+            {labels.createdBy}{" "}
+            <a href="https://pagolander.com/" target="_blank" rel="noreferrer">
+              Pagolander
+            </a>
+          </span>
         </div>
       </footer>
+
+      <a className="back-to-top" href="#top" aria-label={labels.backToTop}>
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="m6 14 6-6 6 6" />
+        </svg>
+      </a>
 
       <a
         className="mobile-whatsapp"

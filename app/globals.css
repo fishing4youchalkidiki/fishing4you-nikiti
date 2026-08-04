@@ -1620,6 +1620,62 @@ select:focus-visible {
   font-size: 9px;
 }
 
+.footer-credit {
+  white-space: nowrap;
+}
+
+.footer-credit a {
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-color: rgba(101, 183, 220, 0.62);
+  text-underline-offset: 3px;
+}
+
+.footer-credit a:hover {
+  color: var(--orange-light);
+}
+
+.top-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.back-to-top {
+  position: fixed;
+  z-index: 39;
+  right: 24px;
+  bottom: 24px;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  background: var(--navy-800);
+  color: var(--white);
+  box-shadow: 0 14px 36px rgba(6, 21, 35, 0.25);
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.back-to-top:hover {
+  background: var(--sea-500);
+  transform: translateY(-2px);
+}
+
+.back-to-top svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .mobile-whatsapp {
   position: fixed;
   z-index: 40;
@@ -2982,6 +3038,13 @@ select:focus-visible {
 }
 
 @media (max-width: 780px) {
+  .back-to-top {
+    right: 10px;
+    bottom: 70px;
+    width: 48px;
+    height: 48px;
+  }
+
   .journey-list,
   .technique-grid,
   .bite-guide,
