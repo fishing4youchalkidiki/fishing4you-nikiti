@@ -57,17 +57,17 @@ type GuideContent = {
   catchCaption: string;
   dolphinTitle: string;
   dolphinCaption: string;
-  familyEyebrow: string;
-  familyTitle: string;
-  familyIntro: string;
+  crewEyebrow: string;
+  crewTitle: string;
+  crewIntro: string;
   dimitrisAlt: string;
   dimitrisCaption: string;
-  wifeCatchAlt: string;
-  wifeCatchCaption: string;
-  wifeHelmAlt: string;
-  wifeHelmCaption: string;
-  sonAlt: string;
-  sonCaption: string;
+  crewCatchAlt: string;
+  crewCatchCaption: string;
+  crewHelmAlt: string;
+  crewHelmCaption: string;
+  crewRodsAlt: string;
+  crewRodsCaption: string;
   dogsAlt: string;
   dogsCaption: string;
   equipmentAlt: string;
@@ -207,18 +207,18 @@ export const guideContent: Record<Locale, GuideContent> = {
     dolphinTitle: "Dolphins alongside the boat",
     dolphinCaption:
       "A real moment at sea. Wildlife sightings are possible, but never guaranteed.",
-    familyEyebrow: "The people behind the trip",
-    familyTitle: "Meet the Fishing 4 You family.",
-    familyIntro:
-      "Dimitris, his wife, their son and the dogs share a life shaped by the boat and the Aegean.",
+    crewEyebrow: "The people behind the trip",
+    crewTitle: "Meet our Fishing 4 You crew.",
+    crewIntro:
+      "Meet the people and four-legged companions who share a life shaped by the boat and the Aegean.",
     dimitrisAlt: "Dimitris holding a large fish aboard the Fishing 4 You boat",
     dimitrisCaption: "Dimitris and a memorable catch",
-    wifeCatchAlt: "Dimitris and his wife posing with a large fish on the boat",
-    wifeCatchCaption: "Dimitris and his wife with a catch",
-    wifeHelmAlt: "Dimitris and his wife together at the helm of the boat",
-    wifeHelmCaption: "Together at the helm",
-    sonAlt: "Dimitris with his son beside the fishing rods on the boat",
-    sonCaption: "A family moment on the water",
+    crewCatchAlt: "Our crew posing with a large fish on the boat",
+    crewCatchCaption: "Our crew with a catch",
+    crewHelmAlt: "Our crew together at the helm of the boat",
+    crewHelmCaption: "Our crew at the helm",
+    crewRodsAlt: "Our crew beside the fishing rods on the boat",
+    crewRodsCaption: "Our crew on the water",
     dogsAlt: "Dimitris with the dogs aboard the Fishing 4 You boat",
     dogsCaption: "The four-legged crew",
     equipmentAlt: "Fishing rods and reels arranged on the side of the boat",
@@ -356,18 +356,18 @@ export const guideContent: Record<Locale, GuideContent> = {
     dolphinTitle: "Δελφίνια δίπλα στο σκάφος",
     dolphinCaption:
       "Μια πραγματική στιγμή στη θάλασσα. Η εμφάνιση άγριων ζώων είναι πιθανή, αλλά δεν είναι εγγυημένη.",
-    familyEyebrow: "Οι άνθρωποι πίσω από την εκδρομή",
-    familyTitle: "Γνωρίστε την οικογένεια του Fishing 4 You.",
-    familyIntro:
-      "Ο Δημήτρης, η σύζυγός του, ο γιος τους και τα σκυλιά μοιράζονται μια ζωή δεμένη με το σκάφος και το Αιγαίο.",
+    crewEyebrow: "Οι άνθρωποι πίσω από την εκδρομή",
+    crewTitle: "Γνωρίστε το πλήρωμά μας στο Fishing 4 You.",
+    crewIntro:
+      "Γνωρίστε τους ανθρώπους και τους τετράποδους συντρόφους που μοιράζονται μια ζωή δεμένη με το σκάφος και το Αιγαίο.",
     dimitrisAlt: "Ο Δημήτρης κρατά ένα μεγάλο ψάρι στο σκάφος Fishing 4 You",
     dimitrisCaption: "Ο Δημήτρης με μια αξέχαστη ψαριά",
-    wifeCatchAlt: "Ο Δημήτρης και η σύζυγός του με ένα μεγάλο ψάρι στο σκάφος",
-    wifeCatchCaption: "Ο Δημήτρης και η σύζυγός του με την ψαριά",
-    wifeHelmAlt: "Ο Δημήτρης και η σύζυγός του μαζί στη γέφυρα του σκάφους",
-    wifeHelmCaption: "Μαζί στο τιμόνι",
-    sonAlt: "Ο Δημήτρης με τον γιο του δίπλα στα καλάμια στο σκάφος",
-    sonCaption: "Μια οικογενειακή στιγμή στη θάλασσα",
+    crewCatchAlt: "Το πλήρωμά μας με ένα μεγάλο ψάρι στο σκάφος",
+    crewCatchCaption: "Το πλήρωμά μας με την ψαριά",
+    crewHelmAlt: "Το πλήρωμά μας μαζί στη γέφυρα του σκάφους",
+    crewHelmCaption: "Το πλήρωμά μας στο τιμόνι",
+    crewRodsAlt: "Το πλήρωμά μας δίπλα στα καλάμια στο σκάφος",
+    crewRodsCaption: "Το πλήρωμά μας στη θάλασσα",
     dogsAlt: "Ο Δημήτρης με τα σκυλιά στο σκάφος Fishing 4 You",
     dogsCaption: "Το τετράποδο πλήρωμα",
     equipmentAlt: "Καλάμια και μηχανισμοί τοποθετημένα στο πλάι του σκάφους",
@@ -505,18 +505,18 @@ export const guideContent: Record<Locale, GuideContent> = {
     dolphinTitle: "Delfini lângă barcă",
     dolphinCaption:
       "Un moment real pe mare. Delfinii pot apărea, dar observarea lor nu este garantată.",
-    familyEyebrow: "Oamenii din spatele excursiei",
-    familyTitle: "Cunoaște familia Fishing 4 You.",
-    familyIntro:
-      "Dimitris, soția sa, fiul lor și câinii împărtășesc o viață legată de barcă și de Marea Egee.",
+    crewEyebrow: "Oamenii din spatele excursiei",
+    crewTitle: "Cunoaște echipajul nostru Fishing 4 You.",
+    crewIntro:
+      "Cunoaște oamenii și companionii lor patrupezi, uniți de viața pe barcă și de Marea Egee.",
     dimitrisAlt: "Dimitris ținând un pește mare la bordul bărcii Fishing 4 You",
     dimitrisCaption: "Dimitris și o captură memorabilă",
-    wifeCatchAlt: "Dimitris și soția sa cu un pește mare pe barcă",
-    wifeCatchCaption: "Dimitris și soția sa cu captura",
-    wifeHelmAlt: "Dimitris și soția sa împreună la timona bărcii",
-    wifeHelmCaption: "Împreună la timonă",
-    sonAlt: "Dimitris cu fiul său lângă lansetele de pe barcă",
-    sonCaption: "Un moment de familie pe mare",
+    crewCatchAlt: "Echipajul nostru cu un pește mare pe barcă",
+    crewCatchCaption: "Echipajul nostru cu captura",
+    crewHelmAlt: "Echipajul nostru împreună la timona bărcii",
+    crewHelmCaption: "Echipajul nostru la timonă",
+    crewRodsAlt: "Echipajul nostru lângă lansetele de pe barcă",
+    crewRodsCaption: "Echipajul nostru pe mare",
     dogsAlt: "Dimitris cu câinii la bordul bărcii Fishing 4 You",
     dogsCaption: "Echipajul cu patru lăbuțe",
     equipmentAlt: "Lansete și mulinete aranjate pe partea laterală a bărcii",
@@ -654,18 +654,18 @@ export const guideContent: Record<Locale, GuideContent> = {
     dolphinTitle: "Дельфины рядом с лодкой",
     dolphinCaption:
       "Настоящий момент в море. Диких животных можно увидеть, но это не гарантируется.",
-    familyEyebrow: "Люди, которые стоят за этой поездкой",
-    familyTitle: "Познакомьтесь с семьёй Fishing 4 You.",
-    familyIntro:
-      "Димитрис, его жена, их сын и собаки живут жизнью, связанной с лодкой и Эгейским морем.",
+    crewEyebrow: "Люди, которые стоят за этой поездкой",
+    crewTitle: "Познакомьтесь с нашей командой Fishing 4 You.",
+    crewIntro:
+      "Познакомьтесь с людьми и их четвероногими спутниками, чья жизнь связана с лодкой и Эгейским морем.",
     dimitrisAlt: "Димитрис держит крупную рыбу на борту лодки Fishing 4 You",
     dimitrisCaption: "Димитрис и запоминающийся улов",
-    wifeCatchAlt: "Димитрис и его жена с крупной рыбой на лодке",
-    wifeCatchCaption: "Димитрис и его жена с уловом",
-    wifeHelmAlt: "Димитрис и его жена вместе у штурвала лодки",
-    wifeHelmCaption: "Вместе у штурвала",
-    sonAlt: "Димитрис с сыном рядом с удочками на лодке",
-    sonCaption: "Семейный момент на воде",
+    crewCatchAlt: "Наша команда с крупной рыбой на лодке",
+    crewCatchCaption: "Наша команда с уловом",
+    crewHelmAlt: "Наша команда вместе у штурвала лодки",
+    crewHelmCaption: "Наша команда у штурвала",
+    crewRodsAlt: "Наша команда рядом с удочками на лодке",
+    crewRodsCaption: "Наша команда в море",
     dogsAlt: "Димитрис с собаками на борту лодки Fishing 4 You",
     dogsCaption: "Четвероногая команда",
     equipmentAlt: "Удочки и катушки, размещённые вдоль борта лодки",
@@ -803,18 +803,18 @@ export const guideContent: Record<Locale, GuideContent> = {
     dolphinTitle: "Delfine neben dem Boot",
     dolphinCaption:
       "Ein echter Moment auf dem Meer. Wildtiersichtungen sind möglich, aber nie garantiert.",
-    familyEyebrow: "Die Menschen hinter dem Ausflug",
-    familyTitle: "Lernen Sie die Fishing-4-You-Familie kennen.",
-    familyIntro:
-      "Dimitris, seine Frau, ihr Sohn und die Hunde teilen ein Leben, das vom Boot und der Ägäis geprägt ist.",
+    crewEyebrow: "Die Menschen hinter dem Ausflug",
+    crewTitle: "Lernen Sie unsere Fishing-4-You-Crew kennen.",
+    crewIntro:
+      "Lernen Sie die Menschen und ihre vierbeinigen Begleiter kennen, deren Leben vom Boot und der Ägäis geprägt ist.",
     dimitrisAlt: "Dimitris hält einen großen Fisch an Bord des Fishing-4-You-Bootes",
     dimitrisCaption: "Dimitris und ein unvergesslicher Fang",
-    wifeCatchAlt: "Dimitris und seine Frau mit einem großen Fisch auf dem Boot",
-    wifeCatchCaption: "Dimitris und seine Frau mit dem Fang",
-    wifeHelmAlt: "Dimitris und seine Frau gemeinsam am Steuerstand des Bootes",
-    wifeHelmCaption: "Gemeinsam am Steuer",
-    sonAlt: "Dimitris mit seinem Sohn neben den Angelruten auf dem Boot",
-    sonCaption: "Ein Familienmoment auf dem Wasser",
+    crewCatchAlt: "Unsere Crew mit einem großen Fisch auf dem Boot",
+    crewCatchCaption: "Unsere Crew mit dem Fang",
+    crewHelmAlt: "Unsere Crew gemeinsam am Steuerstand des Bootes",
+    crewHelmCaption: "Unsere Crew am Steuer",
+    crewRodsAlt: "Unsere Crew neben den Angelruten auf dem Boot",
+    crewRodsCaption: "Unsere Crew auf dem Wasser",
     dogsAlt: "Dimitris mit den Hunden an Bord des Fishing-4-You-Bootes",
     dogsCaption: "Die vierbeinige Crew",
     equipmentAlt: "Angelruten und Rollen an der Seite des Bootes",

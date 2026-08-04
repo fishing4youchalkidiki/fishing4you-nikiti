@@ -136,7 +136,7 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Start with the first light, spend a generous day on the water, or discover the quiet Aegean after dark.",
       priceNote:
-        "Morning and evening fishing are €40 per person and equipment is included. A €600 price was quoted for the barbecue program; confirm whether this is the total boat price, as well as its hours and group size.",
+        "Morning and night fishing are €40 per person with equipment and bait included. A €600 price was quoted for the barbecue program; confirm whether this is the total boat price and the permitted group size.",
     },
     tours: [
       {
@@ -146,8 +146,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "07:00 — 10:30",
         duration: "3.5 hours",
         description:
-          "An early departure for cooler air, calm water and a relaxed start to your day in Nikiti.",
-        highlights: ["€40 per person", "Equipment included", "Minimum 3 guests"],
+          "An early fishing departure with equipment and bait provided, plus espresso coffee, water and juice for children.",
+        highlights: ["€40 per person", "Equipment & bait", "Drinks included", "Minimum 3 guests"],
         tone: "sunrise",
       },
       {
@@ -157,8 +157,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "11:30 — 18:30",
         duration: "7 hours",
         description:
-          "The longest experience: a day shaped around fishing, open water and a barbecue at sea.",
-        highlights: ["€600 price quoted", "Barbecue", "Confirm final details"],
+          "Swim at Spathies, explore Neos Marmaras while the captain prepares traditional kakavia, then enjoy a generous meal at the boat-only coves of Porto Carras.",
+        highlights: ["€600 price quoted", "3 stops", "Full meal & drinks"],
         tone: "day",
       },
       {
@@ -168,8 +168,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "21:00 — 00:30",
         duration: "3.5 hours",
         description:
-          "Leave the busy shore behind and experience fishing in the stillness of the sea after sunset.",
-        highlights: ["€40 per person", "Equipment included", "After-sunset departure"],
+          "Fish after sunset with equipment and bait provided, plus one beer per adult and juice for children.",
+        highlights: ["€40 per person", "Equipment & bait", "Beer or children’s juice"],
         tone: "night",
       },
     ],
@@ -249,12 +249,17 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Is the price €40 for every trip?",
           answer:
-            "Dimitris confirmed €40 per person for morning and evening fishing. He quoted €600 for the barbecue program, but please confirm whether this is the total boat price and what it includes.",
+            "Dimitris confirmed €40 per person for morning and night fishing. He quoted €600 for the barbecue program; please confirm whether this is the total boat price and the permitted group size.",
         },
         {
           question: "Is fishing equipment included?",
           answer:
-            "Yes. On the morning trip, guests received a rod, a single-hook rig, a sinker and shrimp bait. Confirm what is provided for the barbecue and evening programs.",
+            "Yes. Fishing equipment and bait are provided on the morning and night fishing trips. The morning trip also includes espresso coffee, water and juice for children. Night fishing includes one beer per adult and juice for children.",
+        },
+        {
+          question: "What happens on the barbecue cruise?",
+          answer:
+            "The first stop is Spathies for swimming. The second is Neos Marmaras for about one hour ashore while the captain prepares traditional kakavia fish soup. The third is the Porto Carras coves, accessible only by boat, where the remaining meal is prepared: fish, shrimp, salads, tzatziki, skordalia, feta, fried zucchini, wine, soft drinks, beer and water.",
         },
         {
           question: "Can children join?",
@@ -339,7 +344,7 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Ξεκινήστε με το πρώτο φως, περάστε μια γεμάτη μέρα στο νερό ή γνωρίστε το ήσυχο Αιγαίο μετά το σκοτάδι.",
       priceNote:
-        "Το πρωινό και το βραδινό ψάρεμα κοστίζουν 40€ ανά άτομο και ο εξοπλισμός περιλαμβάνεται. Για το πρόγραμμα με μπάρμπεκιου αναφέρθηκε τιμή 600€· επιβεβαιώστε αν είναι η συνολική τιμή του σκάφους, καθώς και το ωράριο και τον αριθμό ατόμων.",
+        "Το πρωινό και το νυχτερινό ψάρεμα κοστίζουν 40€ ανά άτομο με εξοπλισμό και δολώματα. Για το πρόγραμμα με μπάρμπεκιου αναφέρθηκε τιμή 600€· επιβεβαιώστε αν είναι η συνολική τιμή του σκάφους και τον επιτρεπόμενο αριθμό ατόμων.",
     },
     tours: [
       {
@@ -349,8 +354,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "07:00 — 10:30",
         duration: "3,5 ώρες",
         description:
-          "Πρωινή αναχώρηση για δροσερό αέρα, ήρεμα νερά και ένα χαλαρό ξεκίνημα της ημέρας στη Νικήτη.",
-        highlights: ["40€ ανά άτομο", "Ο εξοπλισμός περιλαμβάνεται", "Ελάχιστο 3 άτομα"],
+          "Πρωινή αναχώρηση για ψάρεμα με εξοπλισμό και δολώματα, καφέ εσπρέσο, νερό και χυμό για τα παιδιά.",
+        highlights: ["40€ ανά άτομο", "Εξοπλισμός & δολώματα", "Ποτά περιλαμβάνονται", "Ελάχιστο 3 άτομα"],
         tone: "sunrise",
       },
       {
@@ -360,8 +365,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "11:30 — 18:30",
         duration: "7 ώρες",
         description:
-          "Η μεγαλύτερη εμπειρία: μια μέρα με ψάρεμα, ανοιχτή θάλασσα και μπάρμπεκιου πάνω στο νερό.",
-        highlights: ["Αναφέρθηκε τιμή 600€", "Μπάρμπεκιου", "Επιβεβαίωση λεπτομερειών"],
+          "Κολύμπι στις Σπαθιές, βόλτα στον Νέο Μαρμαρά όσο ο καπετάνιος ετοιμάζει παραδοσιακή κακαβιά και πλούσιο γεύμα στα Λιμανάκια του Πόρτο Καρράς.",
+        highlights: ["Αναφέρθηκε τιμή 600€", "3 στάσεις", "Πλήρες γεύμα & ποτά"],
         tone: "day",
       },
       {
@@ -371,8 +376,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "21:00 — 00:30",
         duration: "3,5 ώρες",
         description:
-          "Αφήστε πίσω την πολυσύχναστη ακτή και ζήστε το ψάρεμα στην ηρεμία της θάλασσας μετά τη δύση.",
-        highlights: ["40€ ανά άτομο", "Ο εξοπλισμός περιλαμβάνεται", "Μετά τη δύση"],
+          "Νυχτερινό ψάρεμα με εξοπλισμό και δολώματα, μία μπύρα ανά ενήλικα και χυμό για τα παιδιά.",
+        highlights: ["40€ ανά άτομο", "Εξοπλισμός & δολώματα", "Μπύρα ή παιδικός χυμός"],
         tone: "night",
       },
     ],
@@ -452,12 +457,17 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Η τιμή είναι 40€ για κάθε εκδρομή;",
           answer:
-            "Ο Δημήτρης επιβεβαίωσε 40€ ανά άτομο για το πρωινό και το βραδινό ψάρεμα. Για το πρόγραμμα με μπάρμπεκιου ανέφερε 600€, αλλά χρειάζεται επιβεβαίωση αν πρόκειται για τη συνολική τιμή του σκάφους και τι περιλαμβάνει.",
+            "Ο Δημήτρης επιβεβαίωσε 40€ ανά άτομο για το πρωινό και το νυχτερινό ψάρεμα. Για το πρόγραμμα με μπάρμπεκιου ανέφερε 600€· επιβεβαιώστε αν πρόκειται για τη συνολική τιμή του σκάφους και τον επιτρεπόμενο αριθμό ατόμων.",
         },
         {
           question: "Περιλαμβάνεται ο εξοπλισμός ψαρέματος;",
           answer:
-            "Ναι. Στην πρωινή εκδρομή παρέχονται καλάμι, αρματωσιά με ένα αγκίστρι, μολύβι και δόλωμα γαρίδα. Επιβεβαιώστε τι παρέχεται στο πρόγραμμα με μπάρμπεκιου και στο βραδινό ψάρεμα.",
+            "Ναι. Στο πρωινό και στο νυχτερινό ψάρεμα παρέχονται εξοπλισμός και δολώματα. Το πρωινό περιλαμβάνει επίσης καφέ εσπρέσο, νερό και χυμό για τα παιδιά. Το νυχτερινό ψάρεμα περιλαμβάνει μία μπύρα ανά ενήλικα και χυμό για τα παιδιά.",
+        },
+        {
+          question: "Τι περιλαμβάνει η εκδρομή με μπάρμπεκιου;",
+          answer:
+            "Η πρώτη στάση είναι στις Σπαθιές για κολύμπι. Η δεύτερη είναι στον Νέο Μαρμαρά για περίπου μία ώρα βόλτα, όσο ο καπετάνιος ετοιμάζει παραδοσιακή κακαβιά. Η τρίτη είναι στα Λιμανάκια του Πόρτο Καρράς, με πρόσβαση μόνο από τη θάλασσα, όπου ετοιμάζονται ψάρια, γαρίδες, σαλάτες, τζατζίκι, σκορδαλιά, φέτα, τηγανητά κολοκυθάκια, κρασί, αναψυκτικά, μπύρες και νερό.",
         },
         {
           question: "Μπορούν να συμμετέχουν παιδιά;",
@@ -543,7 +553,7 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Pornește la prima lumină, petrece o zi întreagă pe apă sau descoperă liniștea Mării Egee după lăsarea nopții.",
       priceNote:
-        "Pescuitul de dimineață și cel de seară costă 40 € de persoană, iar echipamentul este inclus. Pentru programul cu grătar a fost comunicat prețul de 600 €; confirmă dacă este totalul pentru barcă, programul exact și numărul de persoane.",
+        "Pescuitul de dimineață și cel de noapte costă 40 € de persoană, cu echipament și momeală incluse. Pentru programul cu grătar a fost comunicat prețul de 600 €; confirmă dacă este totalul pentru barcă și numărul permis de persoane.",
     },
     tours: [
       {
@@ -553,8 +563,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "07:00 — 10:30",
         duration: "3,5 ore",
         description:
-          "O plecare matinală pentru aer răcoros, apă liniștită și un început relaxat de zi în Nikiti.",
-        highlights: ["40 € de persoană", "Echipament inclus", "Minimum 3 persoane"],
+          "Pescuit de dimineață cu echipament și momeală, cafea espresso, apă și suc pentru copii.",
+        highlights: ["40 € de persoană", "Echipament & momeală", "Băuturi incluse", "Minimum 3 persoane"],
         tone: "sunrise",
       },
       {
@@ -564,8 +574,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "11:30 — 18:30",
         duration: "7 ore",
         description:
-          "Cea mai lungă experiență: o zi construită în jurul pescuitului, mării deschise și unui grătar pe apă.",
-        highlights: ["Preț comunicat: 600 €", "Grătar", "Confirmă detaliile finale"],
+          "Înot la Spathies, o plimbare prin Neos Marmaras cât căpitanul pregătește supa tradițională kakavia, apoi o masă bogată în golfurile Porto Carras accesibile doar cu barca.",
+        highlights: ["Preț comunicat: 600 €", "3 opriri", "Masă completă & băuturi"],
         tone: "day",
       },
       {
@@ -575,8 +585,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "21:00 — 00:30",
         duration: "3,5 ore",
         description:
-          "Lasă în urmă agitația de pe mal și descoperă pescuitul în liniștea mării după apus.",
-        highlights: ["40 € de persoană", "Echipament inclus", "Plecare după apus"],
+          "Pescuit după apus cu echipament și momeală, o bere pentru fiecare adult și suc pentru copii.",
+        highlights: ["40 € de persoană", "Echipament & momeală", "Bere sau suc pentru copii"],
         tone: "night",
       },
     ],
@@ -656,12 +666,17 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Prețul este 40 € pentru fiecare excursie?",
           answer:
-            "Dimitris a confirmat 40 € de persoană pentru pescuitul de dimineață și seară. Pentru programul cu grătar a comunicat 600 €, dar trebuie confirmat dacă este prețul total pentru barcă și ce include.",
+            "Dimitris a confirmat 40 € de persoană pentru pescuitul de dimineață și de noapte. Pentru programul cu grătar a comunicat 600 €; trebuie confirmat dacă este prețul total pentru barcă și numărul permis de persoane.",
         },
         {
           question: "Este inclus echipamentul de pescuit?",
           answer:
-            "Da. În excursia de dimineață sunt oferite lanseta, montura cu un cârlig, plumbul și momeala din crevete. Confirmă ce este oferit pentru programul cu grătar și cel de seară.",
+            "Da. La pescuitul de dimineață și de noapte sunt oferite echipamentul și momeala. Dimineața sunt incluse și cafea espresso, apă și suc pentru copii. Pescuitul de noapte include o bere pentru fiecare adult și suc pentru copii.",
+        },
+        {
+          question: "Ce include croaziera cu grătar?",
+          answer:
+            "Prima oprire este la Spathies pentru înot. A doua este în Neos Marmaras, pentru aproximativ o oră de plimbare, timp în care căpitanul pregătește supa tradițională de pește kakavia. A treia oprire este în golfurile Porto Carras, accesibile numai cu barca, unde sunt pregătite pește, creveți, salate, tzatziki, skordalia, feta, dovlecei prăjiți, vin, băuturi răcoritoare, bere și apă.",
         },
         {
           question: "Pot participa copiii?",
@@ -746,7 +761,7 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Выйдите с первым светом, проведите день на воде или откройте для себя тихое Эгейское море ночью.",
       priceNote:
-        "Утренняя и вечерняя рыбалка стоят 40 € с человека, снасти включены. Для программы с барбекю была названа цена 600 €; уточните, является ли это общей ценой за лодку, а также время и размер группы.",
+        "Утренняя и ночная рыбалка стоят 40 € с человека, снасти и наживка включены. Для программы с барбекю была названа цена 600 €; уточните, является ли это общей ценой за лодку и сколько человек может участвовать.",
     },
     tours: [
       {
@@ -756,8 +771,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "07:00 — 10:30",
         duration: "3,5 часа",
         description:
-          "Ранний выход, прохладный воздух, спокойная вода и приятное начало дня в Никити.",
-        highlights: ["40 € с человека", "Снасти включены", "Минимум 3 гостя"],
+          "Утренняя рыбалка со снастями и наживкой, кофе эспрессо, водой и соком для детей.",
+        highlights: ["40 € с человека", "Снасти и наживка", "Напитки включены", "Минимум 3 гостя"],
         tone: "sunrise",
       },
       {
@@ -767,8 +782,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "11:30 — 18:30",
         duration: "7 часов",
         description:
-          "Самая продолжительная программа: рыбалка, открытое море и барбекю на воде.",
-        highlights: ["Названа цена 600 €", "Барбекю", "Уточнить детали"],
+          "Купание у Спатьес, прогулка по Неос-Мармарасу, пока капитан готовит традиционную какавию, затем щедрый обед в бухтах Порто-Каррас, доступных только с моря.",
+        highlights: ["Названа цена 600 €", "3 остановки", "Полный обед и напитки"],
         tone: "day",
       },
       {
@@ -778,8 +793,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "21:00 — 00:30",
         duration: "3,5 часа",
         description:
-          "Оставьте шумный берег позади и почувствуйте тишину моря после заката.",
-        highlights: ["40 € с человека", "Снасти включены", "После заката"],
+          "Ночная рыбалка со снастями и наживкой, одной бутылкой пива для каждого взрослого и соком для детей.",
+        highlights: ["40 € с человека", "Снасти и наживка", "Пиво или детский сок"],
         tone: "night",
       },
     ],
@@ -859,12 +874,17 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Цена 40 € действует на все программы?",
           answer:
-            "Димитрис подтвердил 40 € с человека за утреннюю и вечернюю рыбалку. Для программы с барбекю он назвал 600 €, но нужно уточнить, является ли это общей ценой за лодку и что включено.",
+            "Димитрис подтвердил 40 € с человека за утреннюю и ночную рыбалку. Для программы с барбекю он назвал 600 €; уточните, является ли это общей ценой за лодку и сколько человек может участвовать.",
         },
         {
           question: "Снасти включены?",
           answer:
-            "Да. На утренней поездке предоставляются удочка, оснастка с одним крючком, грузило и креветка для наживки. Уточните оснащение программы с барбекю и вечерней рыбалки.",
+            "Да. На утренней и ночной рыбалке предоставляются снасти и наживка. Утренняя поездка также включает кофе эспрессо, воду и сок для детей. Ночная рыбалка включает одно пиво для каждого взрослого и сок для детей.",
+        },
+        {
+          question: "Что входит в круиз с барбекю?",
+          answer:
+            "Первая остановка — Спатьес для купания. Вторая — Неос-Мармарас, где можно гулять около часа, пока капитан готовит традиционный рыбный суп какавия. Третья — бухты Порто-Каррас, доступные только с моря, где готовят рыбу, креветки, салаты, дзадзики, скордалию, фету, жареные кабачки, а также подают вино, прохладительные напитки, пиво и воду.",
         },
         {
           question: "Можно ли с детьми?",
@@ -949,7 +969,7 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Starten Sie im ersten Licht, verbringen Sie einen ganzen Tag auf dem Wasser oder erleben Sie die ruhige Ägäis bei Nacht.",
       priceNote:
-        "Morgen- und Abendangeln kosten 40 € pro Person; die Ausrüstung ist inklusive. Für das Barbecue-Programm wurden 600 € genannt. Bitte bestätigen Sie, ob dies der Gesamtpreis für das Boot ist, sowie Zeiten und Gruppengröße.",
+        "Morgen- und Nachtangeln kosten 40 € pro Person; Ausrüstung und Köder sind inklusive. Für das Barbecue-Programm wurden 600 € genannt. Bitte bestätigen Sie, ob dies der Gesamtpreis für das Boot ist und wie viele Personen teilnehmen können.",
     },
     tours: [
       {
@@ -959,8 +979,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "07:00 — 10:30",
         duration: "3,5 Stunden",
         description:
-          "Eine frühe Abfahrt mit kühler Luft, ruhigem Wasser und einem entspannten Start in den Tag.",
-        highlights: ["40 € pro Person", "Ausrüstung inklusive", "Mindestens 3 Gäste"],
+          "Morgenangeln mit Ausrüstung und Ködern sowie Espresso, Wasser und Saft für Kinder.",
+        highlights: ["40 € pro Person", "Ausrüstung & Köder", "Getränke inklusive", "Mindestens 3 Gäste"],
         tone: "sunrise",
       },
       {
@@ -970,8 +990,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "11:30 — 18:30",
         duration: "7 Stunden",
         description:
-          "Das längste Erlebnis: ein Tag rund ums Angeln, das offene Meer und ein Barbecue auf dem Wasser.",
-        highlights: ["Genannter Preis: 600 €", "Barbecue", "Details bestätigen"],
+          "Schwimmen bei Spathies, ein Spaziergang durch Neos Marmaras, während der Kapitän traditionelle Kakavia zubereitet, danach ein großzügiges Essen in den nur per Boot erreichbaren Buchten von Porto Carras.",
+        highlights: ["Genannter Preis: 600 €", "3 Stopps", "Komplettes Essen & Getränke"],
         tone: "day",
       },
       {
@@ -981,8 +1001,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "21:00 — 00:30",
         duration: "3,5 Stunden",
         description:
-          "Lassen Sie die belebte Küste zurück und erleben Sie die Stille des Meeres nach Sonnenuntergang.",
-        highlights: ["40 € pro Person", "Ausrüstung inklusive", "Nach Sonnenuntergang"],
+          "Nachtangeln mit Ausrüstung und Ködern sowie einem Bier pro Erwachsenen und Saft für Kinder.",
+        highlights: ["40 € pro Person", "Ausrüstung & Köder", "Bier oder Kindersaft"],
         tone: "night",
       },
     ],
@@ -1062,12 +1082,17 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Gilt der Preis von 40 € für jede Tour?",
           answer:
-            "Dimitris hat 40 € pro Person für Morgen- und Abendangeln bestätigt. Für das Barbecue-Programm nannte er 600 €; bitte klären Sie, ob dies der Gesamtpreis für das Boot ist und was enthalten ist.",
+            "Dimitris hat 40 € pro Person für Morgen- und Nachtangeln bestätigt. Für das Barbecue-Programm nannte er 600 €; bitte klären Sie, ob dies der Gesamtpreis für das Boot ist und wie viele Personen teilnehmen können.",
         },
         {
           question: "Ist die Angelausrüstung inklusive?",
           answer:
-            "Ja. Beim Morgenausflug werden Rute, Montage mit einem Haken, Gewicht und Garnelenköder gestellt. Bestätigen Sie die Ausstattung für das Grillprogramm und den Abendausflug.",
+            "Ja. Beim Morgen- und Nachtangeln werden Ausrüstung und Köder gestellt. Der Morgenausflug umfasst außerdem Espresso, Wasser und Saft für Kinder. Beim Nachtangeln gibt es ein Bier pro Erwachsenen und Saft für Kinder.",
+        },
+        {
+          question: "Was beinhaltet die Barbecue-Kreuzfahrt?",
+          answer:
+            "Der erste Stopp ist Spathies zum Schwimmen. Der zweite ist Neos Marmaras für etwa eine Stunde Landgang, während der Kapitän traditionelle Kakavia-Fischsuppe zubereitet. Der dritte Stopp sind die nur per Boot erreichbaren Buchten von Porto Carras. Dort werden Fisch, Garnelen, Salate, Tzatziki, Skordalia, Feta und frittierte Zucchini sowie Wein, Softdrinks, Bier und Wasser serviert.",
         },
         {
           question: "Können Kinder teilnehmen?",

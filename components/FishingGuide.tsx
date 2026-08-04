@@ -10,42 +10,41 @@ import type { Locale } from "@/lib/content";
 export function FishingGuide({ locale }: { locale: Locale }) {
   const guide = guideContent[locale];
   const gallery = approvedGalleryContent[locale];
-  const showFamilyMedia = true;
-  const familyMedia = [
+  const crewMedia = [
     {
       number: "07",
       src: "/real-trip/dimitris-catch.webp",
       alt: guide.dimitrisAlt,
       caption: guide.dimitrisCaption,
-      className: "family-media-card-lead",
+      className: "crew-media-card-lead",
     },
     {
       number: "08",
-      src: "/real-trip/dimitris-wife-catch.webp",
-      alt: guide.wifeCatchAlt,
-      caption: guide.wifeCatchCaption,
-      className: "family-media-card-wife-catch",
+      src: "/real-trip/crew-catch.webp",
+      alt: guide.crewCatchAlt,
+      caption: guide.crewCatchCaption,
+      className: "crew-media-card-catch",
     },
     {
       number: "09",
-      src: "/real-trip/dimitris-wife-helm.webp",
-      alt: guide.wifeHelmAlt,
-      caption: guide.wifeHelmCaption,
-      className: "family-media-card-helm",
+      src: "/real-trip/crew-helm.webp",
+      alt: guide.crewHelmAlt,
+      caption: guide.crewHelmCaption,
+      className: "crew-media-card-helm",
     },
     {
       number: "10",
-      src: "/real-trip/dimitris-son.webp",
-      alt: guide.sonAlt,
-      caption: guide.sonCaption,
-      className: "family-media-card-son",
+      src: "/real-trip/crew-rods.webp",
+      alt: guide.crewRodsAlt,
+      caption: guide.crewRodsCaption,
+      className: "crew-media-card-rods",
     },
     {
       number: "11",
       src: "/real-trip/dimitris-dogs.webp",
       alt: guide.dogsAlt,
       caption: guide.dogsCaption,
-      className: "family-media-card-dogs",
+      className: "crew-media-card-dogs",
     },
   ];
 
@@ -359,37 +358,33 @@ export function FishingGuide({ locale }: { locale: Locale }) {
             </figure>
           </div>
 
-          {showFamilyMedia && (
-            <>
-              <div id="family" className="family-media-heading">
-                <p className="eyebrow eyebrow-dark">{guide.familyEyebrow}</p>
-                <div>
-                  <h3>{guide.familyTitle}</h3>
-                  <p>{guide.familyIntro}</p>
-                </div>
-              </div>
+          <div id="crew" className="crew-media-heading">
+            <p className="eyebrow eyebrow-dark">{guide.crewEyebrow}</p>
+            <div>
+              <h3>{guide.crewTitle}</h3>
+              <p>{guide.crewIntro}</p>
+            </div>
+          </div>
 
-              <div className="family-media-grid">
-                {familyMedia.map((item) => (
-                  <figure
-                    className={`real-photo-card family-media-card ${item.className}`}
-                    key={item.src}
-                  >
-                    <Image
-                      src={item.src}
-                      alt={item.alt}
-                      fill
-                      sizes="(max-width: 780px) calc(100vw - 30px), (max-width: 1050px) 48vw, 31vw"
-                    />
-                    <figcaption>
-                      <span>{item.number}</span>
-                      {item.caption}
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-            </>
-          )}
+          <div className="crew-media-grid">
+            {crewMedia.map((item) => (
+              <figure
+                className={`real-photo-card crew-media-card ${item.className}`}
+                key={item.src}
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 780px) calc(100vw - 30px), (max-width: 1050px) 48vw, 31vw"
+                />
+                <figcaption>
+                  <span>{item.number}</span>
+                  {item.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
 
           <div className="approved-gallery-heading" id="approved-gallery">
             <p className="eyebrow eyebrow-dark">{gallery.eyebrow}</p>

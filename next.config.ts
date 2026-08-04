@@ -13,7 +13,23 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "base-uri 'self'; frame-ancestors 'none'; object-src 'none'",
+            value: [
+              "default-src 'self'",
+              "base-uri 'self'",
+              "frame-ancestors 'none'",
+              "object-src 'none'",
+              // Next.js inlines its hydration payload and next/image writes inline
+              // style attributes, so both need 'unsafe-inline' without a nonce.
+              "script-src 'self' 'unsafe-inline'",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data:",
+              "media-src 'self'",
+              "font-src 'self' data:",
+              "connect-src 'self'",
+              "form-action 'self'",
+              "manifest-src 'self'",
+              "upgrade-insecure-requests",
+            ].join("; "),
           },
           {
             key: "Referrer-Policy",

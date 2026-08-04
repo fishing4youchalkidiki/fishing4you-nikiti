@@ -584,10 +584,6 @@ select:focus-visible {
   contain-intrinsic-block-size: auto 1000px;
 }
 
-.concept-section {
-  contain-intrinsic-block-size: auto 1900px;
-}
-
 .booking-section {
   contain-intrinsic-block-size: auto 1050px;
 }
@@ -1011,203 +1007,6 @@ select:focus-visible {
   color: var(--orange);
   font-size: 9px;
   letter-spacing: 0.1em;
-}
-
-.concept-section {
-  position: relative;
-  overflow: hidden;
-  background: var(--navy-950);
-  color: var(--white);
-}
-
-.concept-section::before {
-  content: "";
-  position: absolute;
-  top: -340px;
-  right: -250px;
-  width: 720px;
-  height: 720px;
-  border: 1px solid rgba(185, 217, 226, 0.13);
-  border-radius: 50%;
-}
-
-.concept-heading {
-  position: relative;
-  z-index: 2;
-}
-
-.concept-heading h2 {
-  max-width: 780px;
-}
-
-.concept-heading > p {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.concept-video {
-  position: relative;
-  min-height: 590px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: var(--navy-800);
-}
-
-.concept-video img,
-.concept-grid img {
-  object-fit: cover;
-  transition: transform 700ms ease;
-}
-
-.concept-video:hover img,
-.concept-grid figure:hover img {
-  transform: scale(1.025);
-}
-
-.concept-video-shade {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(6, 21, 35, 0.86), rgba(6, 21, 35, 0.12) 70%),
-    linear-gradient(0deg, rgba(6, 21, 35, 0.58), transparent 52%);
-}
-
-.concept-video-copy {
-  position: absolute;
-  z-index: 2;
-  left: clamp(26px, 5vw, 72px);
-  bottom: clamp(28px, 5vw, 66px);
-  max-width: 650px;
-}
-
-.concept-video-copy > span,
-.concept-grid figcaption span {
-  display: block;
-  margin-bottom: 12px;
-  color: var(--orange-light);
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.concept-video-copy h3 {
-  max-width: 620px;
-  margin: 0;
-  font-family: var(--display);
-  font-size: clamp(38px, 5.2vw, 70px);
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  line-height: 0.96;
-  text-transform: uppercase;
-}
-
-.concept-video-copy p {
-  max-width: 520px;
-  margin: 18px 0 0;
-  color: rgba(255, 255, 255, 0.74);
-  font-size: 14px;
-  line-height: 1.65;
-}
-
-.concept-play {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  right: clamp(28px, 8vw, 112px);
-  width: 82px;
-  height: 82px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 50%;
-  background: rgba(255, 253, 248, 0.14);
-  color: var(--white);
-  font-size: 24px;
-  text-indent: 4px;
-  transform: translateY(-50%);
-  backdrop-filter: blur(8px);
-}
-
-.concept-grid {
-  margin-top: 16px;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr 0.85fr;
-  grid-template-rows: 360px 360px;
-  gap: 16px;
-}
-
-.concept-grid figure {
-  position: relative;
-  min-width: 0;
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: var(--navy-800);
-}
-
-.concept-grid figure::after {
-  content: "";
-  position: absolute;
-  inset: 35% 0 0;
-  background: linear-gradient(to top, rgba(6, 21, 35, 0.92), transparent);
-}
-
-.concept-catch {
-  grid-row: 1 / 3;
-}
-
-.concept-barbecue {
-  grid-column: 2 / 4;
-}
-
-.concept-catch img {
-  object-position: center;
-}
-
-.concept-barbecue img {
-  object-position: center 48%;
-}
-
-.concept-night img {
-  object-position: center;
-}
-
-.concept-grid figcaption {
-  position: absolute;
-  z-index: 2;
-  right: 24px;
-  bottom: 24px;
-  left: 24px;
-  font-family: var(--display);
-  font-size: clamp(18px, 2vw, 28px);
-  font-weight: 900;
-  letter-spacing: -0.035em;
-  line-height: 1.05;
-  text-transform: uppercase;
-}
-
-.concept-disclaimer {
-  max-width: 980px;
-  margin: 30px 0 0;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 11px;
-  line-height: 1.7;
-}
-
-.concept-disclaimer span {
-  width: 22px;
-  height: 22px;
-  display: grid;
-  place-items: center;
-  flex: 0 0 22px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 50%;
-  color: var(--orange-light);
-  font-size: 9px;
-  font-weight: 900;
 }
 
 .booking-section {
@@ -1736,14 +1535,6 @@ select:focus-visible {
     height: 570px;
   }
 
-  .concept-video {
-    min-height: 520px;
-  }
-
-  .concept-grid {
-    grid-template-rows: 310px 310px;
-  }
-
   .booking-grid {
     grid-template-columns: 0.7fr 1.3fr;
   }
@@ -1893,42 +1684,6 @@ select:focus-visible {
     height: 500px !important;
   }
 
-  .concept-video {
-    min-height: 520px;
-  }
-
-  .concept-video-shade {
-    background:
-      linear-gradient(0deg, rgba(6, 21, 35, 0.9), rgba(6, 21, 35, 0.08) 78%),
-      linear-gradient(90deg, rgba(6, 21, 35, 0.3), transparent);
-  }
-
-  .concept-play {
-    top: 34px;
-    right: 26px;
-    width: 62px;
-    height: 62px;
-    font-size: 18px;
-    transform: none;
-  }
-
-  .concept-video-copy {
-    right: 26px;
-  }
-
-  .concept-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-  }
-
-  .concept-grid figure,
-  .concept-catch,
-  .concept-barbecue {
-    min-height: 390px;
-    grid-column: auto;
-    grid-row: auto;
-  }
-
   .booking-form {
     padding: 24px;
   }
@@ -2041,20 +1796,6 @@ select:focus-visible {
 
   .gallery-sign {
     height: 460px !important;
-  }
-
-  .concept-video {
-    min-height: 480px;
-  }
-
-  .concept-video-copy h3 {
-    font-size: clamp(34px, 10.5vw, 46px);
-  }
-
-  .concept-grid figure,
-  .concept-catch,
-  .concept-barbecue {
-    min-height: 330px;
   }
 }
 
@@ -2695,7 +2436,7 @@ select:focus-visible {
   height: 520px;
 }
 
-.family-media-heading {
+.crew-media-heading {
   margin-top: 80px;
   padding-top: 48px;
   display: grid;
@@ -2704,7 +2445,7 @@ select:focus-visible {
   border-top: 1px solid rgba(6, 21, 35, 0.18);
 }
 
-.family-media-heading h3 {
+.crew-media-heading h3 {
   max-width: 760px;
   margin: 0;
   color: var(--navy-950);
@@ -2715,7 +2456,7 @@ select:focus-visible {
   text-transform: uppercase;
 }
 
-.family-media-heading div > p {
+.crew-media-heading div > p {
   max-width: 680px;
   margin: 22px 0 0;
   color: rgba(6, 21, 35, 0.68);
@@ -2723,7 +2464,7 @@ select:focus-visible {
   line-height: 1.7;
 }
 
-.family-media-grid {
+.crew-media-grid {
   margin-top: 34px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2731,30 +2472,30 @@ select:focus-visible {
   gap: 16px;
 }
 
-.family-media-grid figure {
+.crew-media-grid figure {
   min-width: 0;
   margin: 0;
   overflow: hidden;
   background: var(--navy-950);
 }
 
-.family-media-card-lead {
+.crew-media-card-lead {
   grid-row: span 2;
 }
 
-.family-media-card-wife-catch img {
+.crew-media-card-catch img {
   object-position: center 32%;
 }
 
-.family-media-card-helm img {
+.crew-media-card-helm img {
   object-position: center 37%;
 }
 
-.family-media-card-son img {
+.crew-media-card-rods img {
   object-position: center 36%;
 }
 
-.family-media-card-dogs img {
+.crew-media-card-dogs img {
   object-position: center 53%;
 }
 
@@ -2986,7 +2727,7 @@ select:focus-visible {
     grid-column: 1 / -1;
   }
 
-  .family-media-heading {
+  .crew-media-heading {
     grid-template-columns: 1fr;
   }
 
@@ -3018,20 +2759,20 @@ select:focus-visible {
     grid-column: 1 / -1;
   }
 
-  .family-media-grid {
+  .crew-media-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-auto-rows: auto;
   }
 
-  .family-media-card {
+  .crew-media-card {
     min-height: 520px;
   }
 
-  .family-media-card-lead {
+  .crew-media-card-lead {
     grid-row: auto;
   }
 
-  .family-media-card:last-child {
+  .crew-media-card:last-child {
     min-height: 440px;
     grid-column: 1 / -1;
   }
@@ -3163,16 +2904,16 @@ select:focus-visible {
     grid-column: auto;
   }
 
-  .family-media-heading {
+  .crew-media-heading {
     margin-top: 60px;
     padding-top: 36px;
   }
 
-  .family-media-heading h3 {
+  .crew-media-heading h3 {
     font-size: clamp(38px, 13vw, 58px);
   }
 
-  .family-media-grid {
+  .crew-media-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -3202,8 +2943,8 @@ select:focus-visible {
     grid-auto-rows: auto;
   }
 
-  .family-media-card,
-  .family-media-card:last-child {
+  .crew-media-card,
+  .crew-media-card:last-child {
     min-height: 540px;
     grid-column: auto;
   }
@@ -3268,8 +3009,8 @@ select:focus-visible {
     height: 500px;
   }
 
-  .family-media-card,
-  .family-media-card:last-child {
+  .crew-media-card,
+  .crew-media-card:last-child {
     min-height: 500px;
   }
 

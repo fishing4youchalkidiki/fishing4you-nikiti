@@ -36,27 +36,46 @@ npm run build
 Import the GitHub repository into Vercel. The standard Next.js settings are
 detected automatically.
 
-Set `NEXT_PUBLIC_SITE_URL` to the final production URL, for example:
+Set `NEXT_PUBLIC_SITE_URL` to the production URL, with no `www.` and no
+trailing slash:
 
 ```text
-https://your-domain.com
+https://fishing4younikiti.com
 ```
 
-This is used for canonical URLs, sitemap links and social metadata. Vercel's
-production URL is used automatically when the custom value is not set.
+This is used for canonical URLs, `hreflang` links, the sitemap and social
+metadata. Without it the build falls back to Vercel's generated URL, or to
+`http://localhost:3000` locally — so it must be set before launch.
 
-## Content to confirm before launch
+In Vercel, set `fishing4younikiti.com` as the primary domain and let `www`
+redirect to it, so the canonical links never point at a redirecting host.
+
+## Confirmed by Dimitris
+
+- Morning fishing: equipment, bait, espresso coffee, water, juice for children
+- Night fishing: equipment, bait, one beer per adult, juice for children
+- Barbecue cruise stops: Spathies (swim), Neos Marmaras (about one hour ashore
+  while the captain prepares traditional kakavia), then the Porto Carras coves,
+  reachable only by boat
+- Barbecue cruise food: fish, shrimp, salads, tzatziki, skordalia, feta, fried
+  zucchini, Mantinia wine, soft drinks, beer, water
+- Morning and night fishing are €40 per person
+
+## Still to confirm before launch
 
 - Whether the quoted €600 barbecue-program price is the total boat price
-- Barbecue-program hours, maximum group size and exact inclusions
-- Whether bait is included with the confirmed fishing equipment
-- Food and drinks included
+- Barbecue-program maximum group size
 - Whether the shared Nikiti Marina location is the permanent meeting point
 - Minimum age and child-safety conditions
 - Boat's licensed passenger capacity
 - Weather, cancellation and rescheduling policy
 - Spoken languages and payment methods
 
-Morning and evening fishing are currently presented at €40 per person, with
-equipment included, based on information shared directly by Dimitris. Other
-unconfirmed details use cautious wording.
+Unconfirmed details use cautious wording on the site.
+
+## Guest photo consent
+
+`photo-review-for-dimitris/` and `website-photos-awaiting-dimitris-approval/`
+hold original guest photos and are git-ignored on purpose — they must never be
+committed or published. Only files Dimitris has approved are copied into
+`public/real-trip/`, with faces blurred where he asked for it.

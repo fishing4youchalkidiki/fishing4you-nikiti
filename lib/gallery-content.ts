@@ -7,22 +7,22 @@ export const techniqueMedia = [
 ] as const;
 
 export const approvedGalleryMedia = [
-  { key: "veronika", number: "06", src: "/real-trip/group-veronika-clear.webp" },
-  { key: "groupSea", number: "08", src: "/real-trip/group-trip-dimitris-visible.webp" },
-  { key: "guestCatch", number: "10", src: "/real-trip/guest-catch-private.webp" },
-  { key: "guestTrophy", number: "11", src: "/real-trip/guest-trophy-fish.webp" },
-  { key: "guestFishing", number: "12", src: "/real-trip/guest-fishing.webp" },
-  { key: "underway", number: "13", src: "/real-trip/boat-at-sea-private.webp" },
-  { key: "youngAngler", number: "14", src: "/real-trip/young-angler-private.webp" },
-  { key: "rigTogether", number: "15", src: "/real-trip/rig-preparation-private.webp" },
-  { key: "barbecue", number: "17", src: "/real-trip/barbecue-meal-private.webp" },
-  { key: "groupCatch", number: "18", src: "/real-trip/group-catch-private.webp" },
-  { key: "largeCatch", number: "19", src: "/real-trip/young-guest-large-catch-private.webp" },
-  { key: "dimitrisFish", number: "20", src: "/real-trip/dimitris-large-fish.webp" },
-  { key: "mealAboard", number: "21", src: "/real-trip/meal-on-board-private.webp" },
-  { key: "womanFishing", number: "22", src: "/real-trip/woman-fishing-face-blurred.webp" },
-  { key: "trophy", number: "23", src: "/real-trip/dimitris-trophy-catch.webp" },
-  { key: "soup", number: "24", src: "/real-trip/fresh-fish-soup.webp" },
+  { key: "veronika", number: "12", src: "/real-trip/group-veronika-clear.webp" },
+  { key: "groupSea", number: "13", src: "/real-trip/group-trip-dimitris-visible.webp" },
+  { key: "guestCatch", number: "14", src: "/real-trip/guest-catch-private.webp" },
+  { key: "guestTrophy", number: "15", src: "/real-trip/guest-trophy-fish.webp" },
+  { key: "guestFishing", number: "16", src: "/real-trip/guest-fishing.webp" },
+  { key: "underway", number: "17", src: "/real-trip/boat-at-sea-private.webp" },
+  { key: "youngAngler", number: "18", src: "/real-trip/young-angler-private.webp" },
+  { key: "rigTogether", number: "19", src: "/real-trip/rig-preparation-private.webp" },
+  { key: "barbecue", number: "20", src: "/real-trip/barbecue-meal-private.webp" },
+  { key: "groupCatch", number: "21", src: "/real-trip/group-catch-private.webp" },
+  { key: "largeCatch", number: "22", src: "/real-trip/young-guest-large-catch-private.webp" },
+  { key: "dimitrisFish", number: "23", src: "/real-trip/dimitris-large-fish.webp" },
+  { key: "mealAboard", number: "24", src: "/real-trip/meal-on-board-private.webp" },
+  { key: "womanFishing", number: "25", src: "/real-trip/woman-fishing-face-blurred.webp" },
+  { key: "trophy", number: "26", src: "/real-trip/dimitris-trophy-catch.webp" },
+  { key: "soup", number: "27", src: "/real-trip/fresh-fish-soup.webp" },
 ] as const;
 
 type TechniqueKey = (typeof techniqueMedia)[number]["key"];
