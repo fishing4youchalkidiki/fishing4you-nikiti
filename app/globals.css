@@ -16,6 +16,10 @@
   --line: rgba(10, 32, 51, 0.14);
   --orange: #65b7dc;
   --orange-light: #a8d8eb;
+  /* Cork brown, sampled from the rod handle in the logo and darkened until
+     white text clears 6:1. Used for the two "go here / go now" actions. */
+  --cork: #8a5730;
+  --cork-dark: #6f4526;
   --white: #ffffff;
   --shell: min(1180px, calc(100vw - 48px));
   --display: "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
@@ -307,6 +311,15 @@ select:focus-visible {
   color: var(--navy-950);
 }
 
+.button-cork {
+  background: var(--cork);
+  color: var(--white);
+}
+
+.button-cork:hover {
+  background: var(--cork-dark);
+}
+
 .button-outline {
   border-color: rgba(255, 255, 255, 0.34);
   color: var(--white);
@@ -481,28 +494,21 @@ select:focus-visible {
   position: absolute;
   top: 8px;
   left: 0;
-  width: 92px;
-  height: 92px;
-  display: grid;
-  place-content: center;
-  gap: 2px;
+  width: 104px;
+  height: 104px;
   border-radius: 50%;
-  background: var(--orange);
-  color: var(--navy-950);
-  text-align: center;
-  transform: rotate(-9deg);
+  overflow: hidden;
+  /* The logo's own rim is navy and would sink into the navy hero, so keep the
+     bright ring the drawn badge used to provide. */
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.92),
+    0 10px 26px rgba(0, 0, 0, 0.38);
 }
 
-.hero-stamp strong {
-  font-family: var(--display);
-  font-size: 28px;
-  line-height: 1;
-}
-
-.hero-stamp span {
-  font-size: 7px;
-  font-weight: 900;
-  letter-spacing: 0.1em;
+.hero-stamp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-local-note {
@@ -1351,15 +1357,37 @@ select:focus-visible {
   gap: 10px;
 }
 
+/* Finding the boat is the whole point of this card, but this used to be an
+   11px text row under a hairline and guests missed it. It is now a button in
+   its own right, alongside WhatsApp and Viber rather than beneath them. */
 .map-link {
-  min-height: 44px;
-  padding-top: 20px;
+  margin-top: 14px;
+  min-height: 52px;
+  padding: 0 22px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 11px;
-  font-weight: 800;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 999px;
+  background: var(--cork);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.map-link:hover {
+  background: var(--cork-dark);
+  transform: translateY(-2px);
+}
+
+.map-link svg {
+  flex: none;
+  width: 17px;
+  height: 17px;
 }
 
 .site-footer {
@@ -1766,12 +1794,8 @@ select:focus-visible {
   }
 
   .hero-stamp {
-    width: 76px;
-    height: 76px;
-  }
-
-  .hero-stamp strong {
-    font-size: 23px;
+    width: 84px;
+    height: 84px;
   }
 
   .fact strong {

@@ -177,7 +177,7 @@ export function SitePage({ locale }: { locale: Locale }) {
               </h1>
               <p className="hero-description">{copy.hero.description}</p>
               <div className="hero-buttons">
-                <a className="button button-accent" href="#booking">
+                <a className="button button-cork" href="#booking">
                   {copy.hero.primary}
                   <span aria-hidden="true">↗</span>
                 </a>
@@ -200,10 +200,13 @@ export function SitePage({ locale }: { locale: Locale }) {
                   sizes="(max-width: 780px) calc(100vw - 48px), (max-width: 1050px) 42vw, 520px"
                 />
               </div>
-              <div className="hero-stamp">
-                <span>40°13′ N</span>
-                <strong>F4Y</strong>
-                <span>23°40′ E</span>
+              <div className="hero-stamp" aria-hidden="true">
+                <Image
+                  src="/brand/f4y-logo-192.png"
+                  alt=""
+                  width={104}
+                  height={104}
+                />
               </div>
               <div className="hero-local-note">
                 <span className="pulse-dot" aria-hidden="true" />
@@ -452,6 +455,15 @@ export function SitePage({ locale }: { locale: Locale }) {
                 target="_blank"
                 rel="noreferrer"
               >
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                  />
+                  <circle cx="12" cy="10" r="2.6" fill="currentColor" />
+                </svg>
                 {copy.contact.map}
                 <span aria-hidden="true">↗</span>
               </a>

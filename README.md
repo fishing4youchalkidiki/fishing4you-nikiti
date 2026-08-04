@@ -40,15 +40,17 @@ Set `NEXT_PUBLIC_SITE_URL` to the production URL, with no `www.` and no
 trailing slash:
 
 ```text
-https://fishing4younikiti.com
+https://fishing4youchalkidiki.com
 ```
 
 This is used for canonical URLs, `hreflang` links, the sitemap and social
-metadata. Without it the build falls back to Vercel's generated URL, or to
-`http://localhost:3000` locally — so it must be set before launch.
+metadata. Without it the build falls back to Vercel's generated URL — which
+is how the live site briefly advertised itself as `fishing4you-nikiti.vercel.app`
+in every canonical tag and sitemap entry.
 
-In Vercel, set `fishing4younikiti.com` as the primary domain and let `www`
-redirect to it, so the canonical links never point at a redirecting host.
+`fishing4youchalkidiki.com` is the primary domain; `www` and the `.vercel.app`
+host both 308-redirect to it, so canonical links never point at a redirecting
+host.
 
 ## Confirmed by Dimitris
 
