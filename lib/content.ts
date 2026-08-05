@@ -157,8 +157,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "11:30 — 18:30",
         duration: "7 hours",
         description:
-          "Swim at Spathies, explore Neos Marmaras while the captain prepares traditional kakavia, then enjoy a generous meal at the boat-only coves of Porto Carras.",
-        highlights: ["€600 for the boat", "Up to 10 guests", "3 stops", "Full meal & drinks"],
+          "Swim at Spathies, explore Neos Marmaras while the captain prepares traditional kakavia, share a generous meal at the boat-only coves of Porto Carras, then finish with a last swim at Kelyfos island.",
+        highlights: ["€600 for the boat", "Up to 10 guests", "4 stops", "Full meal & drinks"],
         tone: "day",
       },
       {
@@ -259,12 +259,12 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "What happens on the barbecue cruise?",
           answer:
-            "The first stop is Spathies for swimming. The second is Neos Marmaras for about one hour ashore while the captain prepares traditional kakavia fish soup. The third is the Porto Carras coves, accessible only by boat, where the remaining meal is prepared: fish, shrimp, salads, tzatziki, skordalia, feta, fried zucchini, wine, soft drinks, beer and water.",
+            "The first stop is Spathies for swimming. The second is Neos Marmaras for about one hour ashore while the captain prepares traditional kakavia fish soup. The third is the Porto Carras coves, accessible only by boat, where the remaining meal is prepared: fish, shrimp, salads, tzatziki, skordalia, feta, fried zucchini, wine, soft drinks, beer and water. The last stop is Kelyfos island, for one more swim before heading back.",
         },
         {
           question: "Can children join?",
           answer:
-            "The sign advertises groups of 3 to 10 people but does not state a minimum age. Share the child’s age before booking so suitability and safety can be confirmed.",
+            "Yes. Life jackets are carried on board. No minimum age has been set, so tell Dimitris the child’s age when you book and he will confirm what suits.",
         },
         {
           question: "Where does the boat leave from?",
@@ -274,7 +274,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "What happens if the weather changes?",
           answer:
-            "Sea departures depend on safe conditions. Confirm the current weather and the rescheduling or cancellation policy with Dimitris.",
+            "Departures only go ahead in safe conditions. If the day does not work out, Dimitris returns your money. A booking can also be cancelled free of charge up to 5 hours before departure.",
         },
         {
           question: "How should I look after the shrimp bait?",
@@ -365,8 +365,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "11:30 — 18:30",
         duration: "7 ώρες",
         description:
-          "Κολύμπι στις Σπαθιές, βόλτα στον Νέο Μαρμαρά όσο ο καπετάνιος ετοιμάζει παραδοσιακή κακαβιά και πλούσιο γεύμα στα Λιμανάκια του Πόρτο Καρράς.",
-        highlights: ["600€ για το σκάφος", "Έως 10 άτομα", "3 στάσεις", "Πλήρες γεύμα & ποτά"],
+          "Κολύμπι στις Σπαθιές, βόλτα στον Νέο Μαρμαρά όσο ο καπετάνιος ετοιμάζει παραδοσιακή κακαβιά, πλούσιο γεύμα στα Λιμανάκια του Πόρτο Καρράς και τελευταία στάση η Κελυφός για ένα ακόμη μπάνιο.",
+        highlights: ["600€ για το σκάφος", "Έως 10 άτομα", "4 στάσεις", "Πλήρες γεύμα & ποτά"],
         tone: "day",
       },
       {
@@ -467,12 +467,12 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Τι περιλαμβάνει η εκδρομή με μπάρμπεκιου;",
           answer:
-            "Η πρώτη στάση είναι στις Σπαθιές για κολύμπι. Η δεύτερη είναι στον Νέο Μαρμαρά για περίπου μία ώρα βόλτα, όσο ο καπετάνιος ετοιμάζει παραδοσιακή κακαβιά. Η τρίτη είναι στα Λιμανάκια του Πόρτο Καρράς, με πρόσβαση μόνο από τη θάλασσα, όπου ετοιμάζονται ψάρια, γαρίδες, σαλάτες, τζατζίκι, σκορδαλιά, φέτα, τηγανητά κολοκυθάκια, κρασί, αναψυκτικά, μπύρες και νερό.",
+            "Η πρώτη στάση είναι στις Σπαθιές για κολύμπι. Η δεύτερη είναι στον Νέο Μαρμαρά για περίπου μία ώρα βόλτα, όσο ο καπετάνιος ετοιμάζει παραδοσιακή κακαβιά. Η τρίτη είναι στα Λιμανάκια του Πόρτο Καρράς, με πρόσβαση μόνο από τη θάλασσα, όπου ετοιμάζονται ψάρια, γαρίδες, σαλάτες, τζατζίκι, σκορδαλιά, φέτα, τηγανητά κολοκυθάκια, κρασί, αναψυκτικά, μπύρες και νερό. Τελευταία στάση είναι το νησί Κελυφός, για ένα ακόμη μπάνιο πριν την επιστροφή.",
         },
         {
           question: "Μπορούν να συμμετέχουν παιδιά;",
           answer:
-            "Δεν αναφέρεται ελάχιστη ηλικία. Δηλώστε την ηλικία του παιδιού πριν την κράτηση για επιβεβαίωση καταλληλότητας και ασφάλειας.",
+            "Ναι. Υπάρχουν σωσίβια στο σκάφος. Δεν έχει οριστεί ελάχιστη ηλικία, οπότε πείτε στον Δημήτρη την ηλικία του παιδιού με την κράτηση και θα σας πει τι ταιριάζει.",
         },
         {
           question: "Από πού φεύγει το σκάφος;",
@@ -482,7 +482,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Τι γίνεται αν αλλάξει ο καιρός;",
           answer:
-            "Οι αναχωρήσεις εξαρτώνται από ασφαλείς συνθήκες. Επιβεβαιώστε τον καιρό και την πολιτική αλλαγής με τον Δημήτρη.",
+            "Οι αναχωρήσεις γίνονται μόνο με ασφαλείς συνθήκες. Αν δεν βολεύει η μέρα, ο Δημήτρης επιστρέφει τα χρήματα. Η κράτηση ακυρώνεται επίσης χωρίς χρέωση έως 5 ώρες πριν την αναχώρηση.",
         },
         {
           question: "Πώς πρέπει να διατηρώ το δόλωμα γαρίδα;",
@@ -574,8 +574,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "11:30 — 18:30",
         duration: "7 ore",
         description:
-          "Înot la Spathies, o plimbare prin Neos Marmaras cât căpitanul pregătește supa tradițională kakavia, apoi o masă bogată în golfurile Porto Carras accesibile doar cu barca.",
-        highlights: ["600 € pentru barcă", "Maximum 10 persoane", "3 opriri", "Masă completă & băuturi"],
+          "Înot la Spathies, o plimbare prin Neos Marmaras cât căpitanul pregătește supa tradițională kakavia, o masă bogată în golfurile Porto Carras accesibile doar cu barca, iar la final o baie la insula Kelyfos.",
+        highlights: ["600 € pentru barcă", "Maximum 10 persoane", "4 opriri", "Masă completă & băuturi"],
         tone: "day",
       },
       {
@@ -676,12 +676,12 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Ce include croaziera cu grătar?",
           answer:
-            "Prima oprire este la Spathies pentru înot. A doua este în Neos Marmaras, pentru aproximativ o oră de plimbare, timp în care căpitanul pregătește supa tradițională de pește kakavia. A treia oprire este în golfurile Porto Carras, accesibile numai cu barca, unde sunt pregătite pește, creveți, salate, tzatziki, skordalia, feta, dovlecei prăjiți, vin, băuturi răcoritoare, bere și apă.",
+            "Prima oprire este la Spathies pentru înot. A doua este în Neos Marmaras, pentru aproximativ o oră de plimbare, timp în care căpitanul pregătește supa tradițională de pește kakavia. A treia oprire este în golfurile Porto Carras, accesibile numai cu barca, unde sunt pregătite pește, creveți, salate, tzatziki, skordalia, feta, dovlecei prăjiți, vin, băuturi răcoritoare, bere și apă. Ultima oprire este insula Kelyfos, pentru încă o baie înainte de întoarcere.",
         },
         {
           question: "Pot participa copiii?",
           answer:
-            "Afișul nu menționează o vârstă minimă. Transmite vârsta copilului înainte de rezervare pentru confirmarea siguranței.",
+            "Da. La bord există veste de salvare. Nu este stabilită o vârstă minimă, așa că spune-i lui Dimitris vârsta copilului la rezervare și îți confirmă ce este potrivit.",
         },
         {
           question: "De unde pleacă barca?",
@@ -691,7 +691,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Ce se întâmplă dacă se schimbă vremea?",
           answer:
-            "Plecările depind de condiții sigure. Confirmă vremea și politica de reprogramare sau anulare cu Dimitris.",
+            "Plecările au loc doar în condiții sigure. Dacă ziua nu se potrivește, Dimitris restituie banii. Rezervarea se poate anula și fără costuri cu până la 5 ore înainte de plecare.",
         },
         {
           question: "Cum trebuie păstrată momeala din crevete?",
@@ -782,8 +782,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "11:30 — 18:30",
         duration: "7 часов",
         description:
-          "Купание у Спатьес, прогулка по Неос-Мармарасу, пока капитан готовит традиционную какавию, затем щедрый обед в бухтах Порто-Каррас, доступных только с моря.",
-        highlights: ["600 € за лодку", "До 10 человек", "3 остановки", "Полный обед и напитки"],
+          "Купание у Спатьес, прогулка по Неос-Мармарасу, пока капитан готовит традиционную какавию, щедрый обед в бухтах Порто-Каррас, доступных только с моря, и напоследок купание у острова Келифос.",
+        highlights: ["600 € за лодку", "До 10 человек", "4 остановки", "Полный обед и напитки"],
         tone: "day",
       },
       {
@@ -884,12 +884,12 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Что входит в круиз с барбекю?",
           answer:
-            "Первая остановка — Спатьес для купания. Вторая — Неос-Мармарас, где можно гулять около часа, пока капитан готовит традиционный рыбный суп какавия. Третья — бухты Порто-Каррас, доступные только с моря, где готовят рыбу, креветки, салаты, дзадзики, скордалию, фету, жареные кабачки, а также подают вино, прохладительные напитки, пиво и воду.",
+            "Первая остановка — Спатьес для купания. Вторая — Неос-Мармарас, где можно гулять около часа, пока капитан готовит традиционный рыбный суп какавия. Третья — бухты Порто-Каррас, доступные только с моря, где готовят рыбу, креветки, салаты, дзадзики, скордалию, фету, жареные кабачки, а также подают вино, прохладительные напитки, пиво и воду. Последняя остановка — остров Келифос, где можно искупаться ещё раз перед возвращением.",
         },
         {
           question: "Можно ли с детьми?",
           answer:
-            "Минимальный возраст не указан. Сообщите возраст ребёнка до бронирования, чтобы уточнить безопасность и условия участия.",
+            "Да. На борту есть спасательные жилеты. Минимальный возраст не установлен, поэтому сообщите Димитрису возраст ребёнка при бронировании, и он подтвердит, что подойдёт.",
         },
         {
           question: "Откуда отправляется лодка?",
@@ -899,7 +899,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Что будет при плохой погоде?",
           answer:
-            "Выходы зависят от безопасных условий. Уточните прогноз и правила переноса или отмены у Димитриса.",
+            "Выходы в море возможны только при безопасных условиях. Если день не подходит, Димитрис возвращает деньги. Бронирование также можно отменить бесплатно не позднее чем за 5 часов до выхода.",
         },
         {
           question: "Как хранить креветку для наживки?",
@@ -990,8 +990,8 @@ export const content: Record<Locale, SiteContent> = {
         time: "11:30 — 18:30",
         duration: "7 Stunden",
         description:
-          "Schwimmen bei Spathies, ein Spaziergang durch Neos Marmaras, während der Kapitän traditionelle Kakavia zubereitet, danach ein großzügiges Essen in den nur per Boot erreichbaren Buchten von Porto Carras.",
-        highlights: ["600 € für das Boot", "Bis zu 10 Gäste", "3 Stopps", "Komplettes Essen & Getränke"],
+          "Schwimmen bei Spathies, ein Spaziergang durch Neos Marmaras, während der Kapitän traditionelle Kakavia zubereitet, ein großzügiges Essen in den nur per Boot erreichbaren Buchten von Porto Carras und zum Abschluss ein Bad bei der Insel Kelyfos.",
+        highlights: ["600 € für das Boot", "Bis zu 10 Gäste", "4 Stopps", "Komplettes Essen & Getränke"],
         tone: "day",
       },
       {
@@ -1092,12 +1092,12 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Was beinhaltet die Barbecue-Kreuzfahrt?",
           answer:
-            "Der erste Stopp ist Spathies zum Schwimmen. Der zweite ist Neos Marmaras für etwa eine Stunde Landgang, während der Kapitän traditionelle Kakavia-Fischsuppe zubereitet. Der dritte Stopp sind die nur per Boot erreichbaren Buchten von Porto Carras. Dort werden Fisch, Garnelen, Salate, Tzatziki, Skordalia, Feta und frittierte Zucchini sowie Wein, Softdrinks, Bier und Wasser serviert.",
+            "Der erste Stopp ist Spathies zum Schwimmen. Der zweite ist Neos Marmaras für etwa eine Stunde Landgang, während der Kapitän traditionelle Kakavia-Fischsuppe zubereitet. Der dritte Stopp sind die nur per Boot erreichbaren Buchten von Porto Carras. Dort werden Fisch, Garnelen, Salate, Tzatziki, Skordalia, Feta und frittierte Zucchini sowie Wein, Softdrinks, Bier und Wasser serviert. Letzter Stopp ist die Insel Kelyfos, für ein weiteres Bad vor der Rückfahrt.",
         },
         {
           question: "Können Kinder teilnehmen?",
           answer:
-            "Ein Mindestalter ist nicht angegeben. Nennen Sie vor der Buchung das Alter des Kindes, damit Eignung und Sicherheit bestätigt werden können.",
+            "Ja. An Bord sind Rettungswesten vorhanden. Ein Mindestalter ist nicht festgelegt, nennen Sie Dimitris bei der Buchung daher das Alter des Kindes, damit er bestätigen kann, was passt.",
         },
         {
           question: "Wo fährt das Boot ab?",
@@ -1107,7 +1107,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Was passiert bei Wetteränderung?",
           answer:
-            "Abfahrten hängen von sicheren Bedingungen ab. Klären Sie Wetter sowie Umbuchungs- oder Stornoregeln mit Dimitris.",
+            "Ausfahrten finden nur bei sicheren Bedingungen statt. Passt der Tag nicht, erstattet Dimitris das Geld. Eine Buchung lässt sich außerdem bis 5 Stunden vor der Abfahrt kostenfrei stornieren.",
         },
         {
           question: "Wie bewahre ich den Garnelenköder auf?",

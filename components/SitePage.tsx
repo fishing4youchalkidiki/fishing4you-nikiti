@@ -434,7 +434,7 @@ export function SitePage({ locale }: { locale: Locale }) {
               </div>
               <div className="contact-buttons">
                 <a
-                  className="button button-accent"
+                  className="button button-whatsapp"
                   href={`https://wa.me/${PHONE_LINK.replace("+", "")}`}
                   target="_blank"
                   rel="noreferrer"

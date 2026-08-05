@@ -94,7 +94,7 @@ export function BookingPanel({ copy, tours }: BookingPanelProps) {
         </select>
       </label>
 
-      <button className="button button-accent booking-submit" type="submit">
+      <button className="button button-whatsapp booking-submit" type="submit">
         {copy.button}
         <span aria-hidden="true">↗</span>
       </button>

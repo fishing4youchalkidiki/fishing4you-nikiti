@@ -306,11 +306,6 @@ select:focus-visible {
   color: var(--white);
 }
 
-.button-accent {
-  background: var(--orange);
-  color: var(--navy-950);
-}
-
 .button-cork {
   background: var(--cork);
   color: var(--white);
@@ -318,6 +313,17 @@ select:focus-visible {
 
 .button-cork:hover {
   background: var(--cork-dark);
+}
+
+/* WhatsApp's own green, so the action is recognised without being read —
+   it carries 9.3:1 against the navy label, where white text would fail. */
+.button-whatsapp {
+  background: #25d366;
+  color: var(--navy-950);
+}
+
+.button-whatsapp:hover {
+  background: #1eb955;
 }
 
 .button-outline {
