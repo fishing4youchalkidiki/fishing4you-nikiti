@@ -37,6 +37,11 @@ export function makeMetadata(locale: Locale): Metadata {
       index: true,
       follow: true,
     },
+    // Google Search Console ownership. Rendered on every locale so verification
+    // holds whichever URL Google fetches first.
+    verification: {
+      google: "mCmMIktZsmul-GLJad0_FHs8MZdcFam5CjxUSIpVBlw",
+    },
     alternates: {
       canonical: `/${locale}`,
       languages: {
