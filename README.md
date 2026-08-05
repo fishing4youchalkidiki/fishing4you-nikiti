@@ -81,10 +81,14 @@ host.
 Dimitris also runs winter tuna trips from a different base, at different
 prices. He will send the details when he wants them published.
 
+## Languages
+
+Dimitris speaks Greek and very little English. He answers WhatsApp messages
+in any language using Google Translate, which is why the site keeps the
+booking flow to a single prefilled message rather than a conversation.
+
 ## Still to confirm
 
-- Languages Dimitris speaks, and how he answers messages in German, Russian
-  and Romanian
 - Where his existing reviews are (he says there are a few)
 - Registered company name, address and ΑΦΜ, needed for the legal page and
   for Google Business Profile
