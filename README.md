@@ -67,12 +67,27 @@ host.
   zucchini, Mantinia wine, soft drinks, beer, water
 - Payment is in cash
 
-## Still to confirm before launch
+- Kelyfos island is the fourth and last stop of the barbecue cruise
+- If the day does not work out the money is returned; a booking can be
+  cancelled free of charge up to 5 hours before departure
+- Life jackets are on board. No minimum age, but under-16s need an adult
+- Nikiti Marina is the summer berth, not a fixed address. The boat moves with
+  the season, so Dimitris sends the live location on WhatsApp before each
+  departure. The Nikiti address stays in the contact card and the JSON-LD
+  because that is where he is during the tourist season.
 
-- Whether the shared Nikiti Marina location is the permanent meeting point
-- Minimum age and child-safety conditions
-- Weather, cancellation and rescheduling policy
-- Languages Dimitris speaks
+## Not on the site yet
+
+Dimitris also runs winter tuna trips from a different base, at different
+prices. He will send the details when he wants them published.
+
+## Still to confirm
+
+- Languages Dimitris speaks, and how he answers messages in German, Russian
+  and Romanian
+- Where his existing reviews are (he says there are a few)
+- Registered company name, address and ΑΦΜ, needed for the legal page and
+  for Google Business Profile
 
 Unconfirmed details use cautious wording on the site.
 

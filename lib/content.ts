@@ -269,7 +269,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Where does the boat leave from?",
           answer:
-            "The service is based in Nikiti, Halkidiki. The exact meeting point is confirmed directly after you choose a date.",
+            "Fishing 4 You is based at Nikiti Marina, which is the meeting point through the summer season. The boat moves at other times of the year, so Dimitris sends the exact location on WhatsApp before your departure.",
         },
         {
           question: "What happens if the weather changes?",
@@ -298,7 +298,7 @@ export const content: Record<Locale, SiteContent> = {
       description: "Send a message, confirm the details and meet Dimitris in Nikiti.",
       locationLabel: "Based in",
       location: "Nikiti Marina, 630 88, Halkidiki, Greece",
-      meetingNote: "Location shared by Dimitris; confirm it for your selected departure.",
+      meetingNote: "Dimitris sends the exact spot on WhatsApp before departure — the berth changes with the season.",
       phoneLabel: "Phone",
       map: "Open the shared location in Maps",
       whatsapp: "WhatsApp",
@@ -477,7 +477,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Από πού φεύγει το σκάφος;",
           answer:
-            "Η υπηρεσία βρίσκεται στη Νικήτη Χαλκιδικής. Το ακριβές σημείο συνάντησης επιβεβαιώνεται μετά την επιλογή ημερομηνίας.",
+            "Το Fishing 4 You έχει βάση τη μαρίνα Νικήτης, που είναι και το σημείο συνάντησης όλη τη θερινή σεζόν. Το σκάφος μετακινείται άλλες εποχές του χρόνου, γι’ αυτό ο Δημήτρης στέλνει την ακριβή τοποθεσία στο WhatsApp πριν την αναχώρηση.",
         },
         {
           question: "Τι γίνεται αν αλλάξει ο καιρός;",
@@ -507,7 +507,7 @@ export const content: Record<Locale, SiteContent> = {
         "Στείλτε μήνυμα, επιβεβαιώστε τις λεπτομέρειες και συναντήστε τον Δημήτρη στη Νικήτη.",
       locationLabel: "Βρισκόμαστε",
       location: "Μαρίνα Νικήτης, 630 88, Χαλκιδική, Ελλάδα",
-      meetingNote: "Το σημείο κοινοποιήθηκε από τον Δημήτρη· επιβεβαιώστε το για την αναχώρησή σας.",
+      meetingNote: "Ο Δημήτρης στέλνει την ακριβή τοποθεσία στο WhatsApp πριν την αναχώρηση — το σημείο αλλάζει ανάλογα με την εποχή.",
       phoneLabel: "Τηλέφωνο",
       map: "Άνοιγμα κοινοποιημένης τοποθεσίας",
       whatsapp: "WhatsApp",
@@ -686,7 +686,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "De unde pleacă barca?",
           answer:
-            "Serviciul se află în Nikiti, Halkidiki. Punctul exact de întâlnire este confirmat după alegerea datei.",
+            "Fishing 4 You are baza la Marina Nikiti, care este și punctul de întâlnire pe tot sezonul de vară. Barca se mută în alte perioade ale anului, așa că Dimitris trimite locația exactă pe WhatsApp înainte de plecare.",
         },
         {
           question: "Ce se întâmplă dacă se schimbă vremea?",
@@ -715,7 +715,7 @@ export const content: Record<Locale, SiteContent> = {
       description: "Trimite un mesaj, confirmă detaliile și întâlnește-l pe Dimitris în Nikiti.",
       locationLabel: "Locație",
       location: "Marina Nikiti, 630 88, Halkidiki, Grecia",
-      meetingNote: "Locație trimisă de Dimitris; confirm-o pentru plecarea aleasă.",
+      meetingNote: "Dimitris trimite locația exactă pe WhatsApp înainte de plecare — locul se schimbă în funcție de sezon.",
       phoneLabel: "Telefon",
       map: "Deschide locația trimisă în Maps",
       whatsapp: "WhatsApp",
@@ -894,7 +894,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Откуда отправляется лодка?",
           answer:
-            "Услуга находится в Никити, Халкидики. Точное место встречи сообщается после выбора даты.",
+            "База Fishing 4 You — марина Никити, там же место встречи весь летний сезон. В другое время года лодка стоит в других местах, поэтому точную локацию Димитрис присылает в WhatsApp перед выходом.",
         },
         {
           question: "Что будет при плохой погоде?",
@@ -923,7 +923,7 @@ export const content: Record<Locale, SiteContent> = {
       description: "Напишите, уточните детали и встретьтесь с Димитрисом в Никити.",
       locationLabel: "Место",
       location: "Марина Никити, 630 88, Халкидики, Греция",
-      meetingNote: "Место прислал Димитрис; подтвердите его для выбранного выхода.",
+      meetingNote: "Точное место Димитрис присылает в WhatsApp перед выходом — стоянка меняется по сезону.",
       phoneLabel: "Телефон",
       map: "Открыть полученное место на карте",
       whatsapp: "WhatsApp",
@@ -1102,7 +1102,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Wo fährt das Boot ab?",
           answer:
-            "Der Anbieter befindet sich in Nikiti auf Chalkidiki. Der genaue Treffpunkt wird nach der Terminwahl bestätigt.",
+            "Fishing 4 You hat seinen Liegeplatz in der Marina Nikiti, dort ist in der gesamten Sommersaison auch der Treffpunkt. Zu anderen Jahreszeiten liegt das Boot woanders, deshalb schickt Dimitris den genauen Standort vor der Abfahrt per WhatsApp.",
         },
         {
           question: "Was passiert bei Wetteränderung?",
@@ -1131,7 +1131,7 @@ export const content: Record<Locale, SiteContent> = {
       description: "Nachricht senden, Details bestätigen und Dimitris in Nikiti treffen.",
       locationLabel: "Standort",
       location: "Marina Nikiti, 630 88, Chalkidiki, Griechenland",
-      meetingNote: "Von Dimitris geteilter Standort; bitte für Ihre Abfahrt bestätigen.",
+      meetingNote: "Dimitris schickt den genauen Treffpunkt vor der Abfahrt per WhatsApp — der Liegeplatz wechselt mit der Saison.",
       phoneLabel: "Telefon",
       map: "Geteilten Standort in Maps öffnen",
       whatsapp: "WhatsApp",
