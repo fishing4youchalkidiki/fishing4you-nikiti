@@ -264,7 +264,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Can children join?",
           answer:
-            "Yes. Life jackets are carried on board. No minimum age has been set, so tell Dimitris the child’s age when you book and he will confirm what suits.",
+            "Yes. Life jackets are carried on board. There is no minimum age, but guests under 16 must be accompanied by an adult.",
         },
         {
           question: "Where does the boat leave from?",
@@ -472,7 +472,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Μπορούν να συμμετέχουν παιδιά;",
           answer:
-            "Ναι. Υπάρχουν σωσίβια στο σκάφος. Δεν έχει οριστεί ελάχιστη ηλικία, οπότε πείτε στον Δημήτρη την ηλικία του παιδιού με την κράτηση και θα σας πει τι ταιριάζει.",
+            "Ναι. Υπάρχουν σωσίβια στο σκάφος. Δεν υπάρχει ελάχιστη ηλικία, αλλά όσοι είναι κάτω των 16 ετών πρέπει να συνοδεύονται από ενήλικα.",
         },
         {
           question: "Από πού φεύγει το σκάφος;",
@@ -681,7 +681,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Pot participa copiii?",
           answer:
-            "Da. La bord există veste de salvare. Nu este stabilită o vârstă minimă, așa că spune-i lui Dimitris vârsta copilului la rezervare și îți confirmă ce este potrivit.",
+            "Da. La bord există veste de salvare. Nu există o vârstă minimă, dar copiii sub 16 ani trebuie să fie însoțiți de un adult.",
         },
         {
           question: "De unde pleacă barca?",
@@ -889,7 +889,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Можно ли с детьми?",
           answer:
-            "Да. На борту есть спасательные жилеты. Минимальный возраст не установлен, поэтому сообщите Димитрису возраст ребёнка при бронировании, и он подтвердит, что подойдёт.",
+            "Да. На борту есть спасательные жилеты. Минимального возраста нет, но дети до 16 лет должны быть в сопровождении взрослого.",
         },
         {
           question: "Откуда отправляется лодка?",
@@ -1097,7 +1097,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Können Kinder teilnehmen?",
           answer:
-            "Ja. An Bord sind Rettungswesten vorhanden. Ein Mindestalter ist nicht festgelegt, nennen Sie Dimitris bei der Buchung daher das Alter des Kindes, damit er bestätigen kann, was passt.",
+            "Ja. An Bord sind Rettungswesten vorhanden. Es gibt kein Mindestalter, aber Gäste unter 16 Jahren müssen von einem Erwachsenen begleitet werden.",
         },
         {
           question: "Wo fährt das Boot ab?",
