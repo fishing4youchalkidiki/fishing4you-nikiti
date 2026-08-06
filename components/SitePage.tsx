@@ -237,6 +237,31 @@ export function SitePage({ locale }: { locale: Locale }) {
         <section className="hero">
           <div className="hero-sea-lines" aria-hidden="true" />
           <div className="shell hero-grid">
+            {/* Top right of the first screen, beside the headline — that is
+                where Dimitris sees it on his phone. Sits on the grid rather
+                than inside the photo, because on mobile the photo is far
+                below the headline. Decorative, so hidden from screen readers. */}
+            <svg
+              className="hero-buoy"
+              viewBox="0 0 100 100"
+              role="presentation"
+              aria-hidden="true"
+            >
+              <circle cx="50" cy="50" r="38" fill="none" stroke="#f4761f" strokeWidth="16" />
+              <circle
+                cx="50"
+                cy="50"
+                r="38"
+                fill="none"
+                stroke="#ffffff"
+                strokeWidth="16"
+                strokeDasharray="20 39.69"
+                transform="rotate(30 50 50)"
+              />
+              <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" />
+              <circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" />
+            </svg>
+
             <div className="hero-copy">
               <p className="eyebrow">
                 <span className="eyebrow-line" aria-hidden="true" />
@@ -279,28 +304,6 @@ export function SitePage({ locale }: { locale: Locale }) {
                   height={104}
                 />
               </div>
-              {/* Mirrors the logo across the arch: brand on the left, life ring
-                  on the right. Decorative, so it is hidden from screen readers. */}
-              <svg
-                className="hero-buoy"
-                viewBox="0 0 100 100"
-                role="presentation"
-                aria-hidden="true"
-              >
-                <circle cx="50" cy="50" r="38" fill="none" stroke="#f4761f" strokeWidth="16" />
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="38"
-                  fill="none"
-                  stroke="#ffffff"
-                  strokeWidth="16"
-                  strokeDasharray="20 39.69"
-                  transform="rotate(30 50 50)"
-                />
-                <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" />
-                <circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" />
-              </svg>
 
               <div className="hero-local-note">
                 <span className="pulse-dot" aria-hidden="true" />

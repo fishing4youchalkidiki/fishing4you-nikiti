@@ -556,8 +556,11 @@ select:focus-visible {
 
 .hero-stamp {
   position: absolute;
-  top: 8px;
-  left: 0;
+  /* Centred over the boat, up in the clouds, as Dimitris asked. The frame is
+     inset 34px on its left, so its centre is half that offset past 50%. */
+  top: 15%;
+  left: calc(50% + 17px);
+  transform: translateX(-50%);
   width: 104px;
   height: 104px;
   border-radius: 50%;
@@ -575,11 +578,13 @@ select:focus-visible {
   object-fit: cover;
 }
 
+/* Anchored to the hero grid, not to the photo: on a phone the photo sits far
+   below the headline, and the corner Dimitris means is the one beside it. */
 .hero-buoy {
   position: absolute;
-  z-index: 2;
-  top: 4px;
-  right: -14px;
+  z-index: 3;
+  top: 28px;
+  right: 0;
   width: 96px;
   height: 96px;
   filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.42));
@@ -1798,8 +1803,16 @@ select:focus-visible {
 
   .hero-grid {
     min-height: auto;
-    padding-block: 60px 48px;
+    /* A little more head room than the desktop 72px, so the life ring has a
+       clear band in the top right corner instead of sitting on the eyebrow. */
+    padding-block: 84px 48px;
     grid-template-columns: 1fr;
+  }
+
+  .hero-buoy {
+    top: 4px;
+    width: 72px;
+    height: 72px;
   }
 
   .hero h1 {
