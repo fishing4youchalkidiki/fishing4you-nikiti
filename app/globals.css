@@ -496,6 +496,17 @@ select:focus-visible {
   line-height: 1.06;
 }
 
+/* Sized off the accent span's own font-size (already 0.63em of the h1), so it
+   scales with the clamp() heading instead of needing its own breakpoints. */
+.hero h1 span .hero-buoy {
+  display: inline-block;
+  width: 0.62em;
+  height: 0.62em;
+  margin-left: 0.22em;
+  vertical-align: -0.06em;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.4));
+}
+
 .hero-description {
   max-width: 600px;
   margin: 30px 0 0;
@@ -578,17 +589,6 @@ select:focus-visible {
   object-fit: cover;
 }
 
-/* Anchored to the hero grid, not to the photo: on a phone the photo sits far
-   below the headline, and the corner Dimitris means is the one beside it. */
-.hero-buoy {
-  position: absolute;
-  z-index: 3;
-  top: 28px;
-  right: 0;
-  width: 96px;
-  height: 96px;
-  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.42));
-}
 
 .hero-local-note {
   position: absolute;
@@ -1746,12 +1746,6 @@ select:focus-visible {
     font-size: clamp(58px, 8.4vw, 84px);
   }
 
-  /* The shell gutter drops to 18px from here down, so the ring stops
-     overhanging — otherwise it sits 4px from the edge of the screen. */
-  .hero-buoy {
-    right: 0;
-  }
-
   .tour-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1809,12 +1803,6 @@ select:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .hero-buoy {
-    top: 4px;
-    width: 72px;
-    height: 72px;
-  }
-
   .hero h1 {
     font-size: clamp(56px, 17vw, 84px);
   }
@@ -1841,14 +1829,6 @@ select:focus-visible {
 
   .hero-image-frame {
     inset: 10px 0 0 18px;
-  }
-
-  /* The gutter is only 24px here, so the ring must not overhang the shell or
-     it ends up flush against the edge of the screen. */
-  .hero-buoy {
-    width: 84px;
-    height: 84px;
-    right: 0;
   }
 
   .hero-local-note {
@@ -2033,12 +2013,6 @@ select:focus-visible {
      screen at the clamp minimum. */
   .captain-lead h2 {
     font-size: 28px;
-  }
-
-  .hero-buoy {
-    width: 70px;
-    height: 70px;
-    right: 2px;
   }
 
   .fact strong {
