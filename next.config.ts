@@ -25,6 +25,10 @@ const nextConfig: NextConfig = {
               "img-src 'self' data:",
               "media-src 'self'",
               "font-src 'self' data:",
+              // Vercel Web Analytics and Speed Insights need no exception
+              // here. Vercel serves both scripts from /_vercel/ on this same
+              // origin and their beacons post back to the same path, so
+              // 'self' already covers them.
               "connect-src 'self'",
               "form-action 'self'",
               "manifest-src 'self'",
