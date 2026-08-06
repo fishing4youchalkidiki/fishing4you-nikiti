@@ -464,6 +464,10 @@ select:focus-visible {
 .bite-guide-heading h3,
 .contact-section h2,
 .tour-content h3,
+/* These read as sub-headings but are <strong>, so a scan by tag name misses
+   them. They carry the step and bite titles. */
+.journey-list strong,
+.bite-card strong,
 .real-video-card strong {
   color: var(--gold);
 }
@@ -471,6 +475,7 @@ select:focus-visible {
 /* The same headings where the section behind them is cream or white. */
 .trips-section .section-heading h2,
 .steps-card h3,
+.steps-card strong,
 .participant-guide-heading h3,
 .participant-card h4,
 .real-media-section h2,
