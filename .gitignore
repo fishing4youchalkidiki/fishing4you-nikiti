@@ -47,3 +47,7 @@ tsconfig.tsbuildinfo
 # guest photos awaiting Dimitris' approval — never publish
 /photo-review-for-dimitris/
 /website-photos-awaiting-dimitris-approval/
+
+# working notes on the client relationship (phone numbers, pending asks) —
+# the repo is public, this is not
+STATUS.md
