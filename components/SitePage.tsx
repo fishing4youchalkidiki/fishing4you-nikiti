@@ -13,6 +13,12 @@ const PHONE_LINK = "+306974139200";
 // repeated across the five locale records. Dimitris confirmed all three:
 // morning and night are per person, the barbecue cruise is a flat boat price
 // whether one guest comes or ten.
+// The meeting point Dimitris shares with guests. He sent it on 6 August 2026
+// as a Maps pin; it is 358m south-east of the coordinates the site carried
+// before. Kept as plain coordinates rather than his share link, which carries
+// a session id that expires.
+const MEETING_POINT = { lat: 40.216321, lng: 23.6653776 };
+
 const TOUR_PRICING: Record<string, { price: number; unit: "person" | "boat" }> = {
   morning: { price: 40, unit: "person" },
   cruise: { price: 600, unit: "boat" },
@@ -93,8 +99,8 @@ export function SitePage({ locale }: { locale: Locale }) {
     ],
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 40.2183941,
-      longitude: 23.6621463,
+      latitude: MEETING_POINT.lat,
+      longitude: MEETING_POINT.lng,
     },
     // Derived from the three departures the site already advertises: the first
     // leaves at 07:00 and the night trip returns at 00:30.
@@ -539,7 +545,7 @@ export function SitePage({ locale }: { locale: Locale }) {
               </div>
               <a
                 className="map-link"
-                href="https://www.google.com/maps?q=40.2183941,23.6621463&z=17&hl=en"
+                href={`https://www.google.com/maps?q=${MEETING_POINT.lat},${MEETING_POINT.lng}&z=17&hl=${locale}`}
                 target="_blank"
                 rel="noreferrer"
               >
