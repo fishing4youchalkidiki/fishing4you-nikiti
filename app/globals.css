@@ -21,10 +21,14 @@
   --cork: #8a5730;
   --cork-dark: #6f4526;
   --white: #ffffff;
-  /* Gold for the display headings Dimitris asked for. Light enough to clear
-     11:1 on the navy sections; it is deliberately not used on the tour cards,
-     where gold over the mid blues drops to 2.4:1. */
+  /* Dimitris asked for every heading in gold, "even in the white boxes".
+     Gold is a light colour, so one value cannot do both jobs: this one clears
+     11.3:1 on navy and 3.1:1 on the palest tour card, but only 1.6:1 on cream,
+     where it simply disappears. */
   --gold: #e8c86a;
+  /* So the cream and white sections get a deep gold instead: 4.5–5.0:1 there,
+     which every heading on this site clears comfortably. */
+  --gold-deep: #8a6a12;
   /* Viber's own purple is #7360F2, which only reaches 4.48:1 with white and
      misses AA. This is the darker purple from the same brand ramp: 5.7:1. */
   --viber: #665cac;
@@ -443,16 +447,39 @@ select:focus-visible {
   text-transform: uppercase;
 }
 
-/* Dimitris asked for the white lettering in gold. It is applied to the display
-   headings on the navy sections only — there gold clears 11:1. The tour cards
-   sit on mid blues where the same gold falls to 2.4:1, so their type stays
-   white. Body copy keeps its dimmed white so the hierarchy still reads. */
+/* Every heading on a navy background. All of them are 20px or larger at weight
+   900, so the 3:1 large-text threshold applies and gold clears it everywhere
+   here — 11.3:1 on the navy sections, 5.0:1 and 3.1:1 on the two lighter tour
+   cards. Body copy keeps its dimmed white so the hierarchy still reads, and
+   the price pills stay white because at 11px they need 4.5:1, not 3:1. */
 .hero h1,
 .story-section h2,
 .story-cards h3,
+.reason-panel h3,
+.reason-panel h4,
 .guide-heading h2,
-.contact-section h2 {
+.journey-title-row h3,
+.rig-card h3,
+.technique-media-block > h3,
+.bite-guide-heading h3,
+.contact-section h2,
+.tour-content h3,
+.real-video-card strong {
   color: var(--gold);
+}
+
+/* The same headings where the section behind them is cream or white. */
+.trips-section .section-heading h2,
+.steps-card h3,
+.participant-guide-heading h3,
+.participant-card h4,
+.real-media-section h2,
+.real-media-section h3,
+.gallery-section h2,
+.booking-section h2,
+.checklist-panel h3,
+.faq-heading h2 {
+  color: var(--gold-deep);
 }
 
 .hero h1 span {
@@ -758,7 +785,7 @@ select:focus-visible {
 
 .tour-time {
   margin: 0 0 10px;
-  color: #ffe0d2;
+  color: var(--gold);
   font-family: var(--display);
   font-size: 22px;
   font-weight: 900;
@@ -1046,7 +1073,7 @@ select:focus-visible {
   display: flex;
   align-items: center;
   gap: 14px;
-  color: var(--white);
+  color: var(--gold);
   font-size: 12px;
   font-weight: 800;
 }
@@ -2463,7 +2490,7 @@ select:focus-visible {
 .technique-media-block > h3 {
   max-width: 720px;
   margin: 0 0 24px;
-  color: var(--white);
+  color: var(--gold);
   font-family: var(--display);
   font-size: clamp(28px, 3.4vw, 46px);
   font-weight: 900;
@@ -2534,7 +2561,7 @@ select:focus-visible {
 .crew-media-heading h3 {
   max-width: 760px;
   margin: 0;
-  color: var(--navy-950);
+  color: var(--gold-deep);
   font-family: var(--display);
   font-size: clamp(36px, 5vw, 72px);
   font-weight: 900;
@@ -2597,7 +2624,7 @@ select:focus-visible {
 .approved-gallery-heading h3 {
   max-width: 780px;
   margin: 0;
-  color: var(--navy-950);
+  color: var(--gold-deep);
   font-family: var(--display);
   font-size: clamp(36px, 5vw, 72px);
   font-weight: 900;
@@ -2759,7 +2786,7 @@ select:focus-visible {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--white);
+  color: var(--gold);
   font-family: var(--display);
   font-size: 18px;
   font-weight: 900;
