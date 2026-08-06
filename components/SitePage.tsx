@@ -364,6 +364,41 @@ export function SitePage({ locale }: { locale: Locale }) {
           </div>
         </section>
 
+        {/* Dimitris' own three texts, in his words. Kept whole rather than
+            summarised, because that is how he asked for them. */}
+        <section className="section captain-section" id="captain">
+          <div className="shell captain-grid">
+            <div className="captain-lead">
+              <p className="eyebrow">{copy.captain.eyebrow}</p>
+              <h2>{copy.captain.title}</h2>
+              <p className="captain-intro">{copy.captain.intro}</p>
+              <ul className="captain-highlights">
+                {copy.captain.highlights.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+              <p className="captain-tagline">{copy.captain.tagline}</p>
+            </div>
+
+            <div className="captain-column">
+              <article className="captain-block">
+                <h3>{copy.captain.whyTitle}</h3>
+                {copy.captain.whyParagraphs.map((text) => (
+                  <p key={text}>{text}</p>
+                ))}
+              </article>
+
+              <article className="captain-block">
+                <h3>{copy.captain.moreTitle}</h3>
+                {copy.captain.moreParagraphs.map((text) => (
+                  <p key={text}>{text}</p>
+                ))}
+                <p className="captain-guarantee">{copy.captain.guarantee}</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <FishingGuide locale={locale} />
 
         <section className="section story-section" id="story">

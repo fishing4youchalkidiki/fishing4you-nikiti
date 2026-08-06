@@ -38,6 +38,18 @@ export type SiteContent = {
     highlights: string[];
     tone: "sunrise" | "day" | "night";
   }>;
+  captain: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    highlights: string[];
+    tagline: string;
+    whyTitle: string;
+    whyParagraphs: string[];
+    moreTitle: string;
+    moreParagraphs: string[];
+    guarantee: string;
+  };
   story: {
     eyebrow: string;
     title: string;
@@ -173,6 +185,32 @@ export const content: Record<Locale, SiteContent> = {
         tone: "night",
       },
     ],
+    captain: {
+      eyebrow: "The captain",
+      title: "Fishing adventures in Halkidiki",
+      intro:
+        "With Dimitris — Captain Chris — and the Fishing 4 You crew, everything is taken care of for you. All you need to bring is your sense of adventure. We offer you the most authentic fishing tourism experience.",
+      highlights: [
+          "No crowds.",
+          "No tourist traps.",
+          "Just you, the sea and the rod.",
+      ],
+      tagline: "Fishing tourism, twelve months a year.",
+      whyTitle: "Why choose Dimitris?",
+      whyParagraphs: [
+          "Fishing 4 You was born out of a real passion for fishing and for the sea.",
+          "The ten-metre boat is more than a working boat. It is his home on the water. Fully equipped for safety and comfort, it lets you feel like a local from the very first moment.",
+          "Dimitris has been diving and fishing in these waters since he was a child. He knows every reef, every current and every place where the fish hide.",
+      ],
+      moreTitle: "More than just fishing",
+      moreParagraphs: [
+          "Come with us for an unforgettable adventure in the crystal-clear waters of Halkidiki. With experienced guidance, quality equipment and a passion for the sea, we create experiences you will remember for ever.",
+          "The catch depends on nature, but the smiles, the scenery and the moments you share on the boat are always guaranteed. Whether you are an experienced angler or trying sea fishing for the first time, our aim is to give you a safe, enjoyable and unforgettable experience.",
+          "We use quality equipment, share local knowledge and guide you throughout the trip to give you the best chance. Nature always has the last word, but every trip offers striking views, calm and memories that last a lifetime.",
+          "Fishing success depends on the conditions at sea and on the fish. We guarantee the best possible experience, expert guidance and unforgettable moments — but we cannot guarantee how many fish will be caught.",
+      ],
+      guarantee: "We guarantee the memories you will make.",
+    },
     story: {
       eyebrow: "Local, simple, memorable",
       title: "Meet Dimitris on the water.",
@@ -381,6 +419,32 @@ export const content: Record<Locale, SiteContent> = {
         tone: "night",
       },
     ],
+    captain: {
+      eyebrow: "Ο καπετάνιος",
+      title: "Ψαρευτικές περιπέτειες στη Χαλκιδική",
+      intro:
+        "Με τον Δημήτρη — τον Captain Chris — και την ομάδα του Fishing 4 You, όλα φροντίζονται για εσάς. Το μόνο που χρειάζεται να φέρετε μαζί σας είναι η αίσθηση της περιπέτειας. Σας προσφέρουμε την πιο αυθεντική εμπειρία αλιευτικού τουρισμού.",
+      highlights: [
+          "Χωρίς πλήθη.",
+          "Χωρίς τουριστικές παγίδες.",
+          "Μόνο εσείς, η θάλασσα και το καλάμι.",
+      ],
+      tagline: "Αλιευτικός τουρισμός, δώδεκα μήνες τον χρόνο.",
+      whyTitle: "Γιατί να επιλέξετε τον Δημήτρη;",
+      whyParagraphs: [
+          "Το Fishing 4 You γεννήθηκε από το αληθινό πάθος μας για το ψάρεμα και τη θάλασσα.",
+          "Το δεκάμετρο σκάφος είναι κάτι περισσότερο από ένα απλό επαγγελματικό σκάφος. Είναι το σπίτι του στη θάλασσα. Πλήρως εξοπλισμένο για ασφάλεια και άνεση, σας επιτρέπει να νιώσετε σαν ντόπιος από την πρώτη κιόλας στιγμή.",
+          "Ο Δημήτρης κάνει καταδύσεις και ψαρεύει σε αυτά τα νερά από τότε που ήταν παιδί. Γνωρίζει κάθε ύφαλο, κάθε ρεύμα και κάθε μέρος όπου κρύβονται τα ψάρια.",
+      ],
+      moreTitle: "Κάτι παραπάνω από απλό ψάρεμα",
+      moreParagraphs: [
+          "Ελάτε μαζί μας για μια αξέχαστη περιπέτεια στα κρυστάλλινα νερά της Χαλκιδικής. Με έμπειρη καθοδήγηση, εξοπλισμό υψηλής ποιότητας και πάθος για τη θάλασσα, δημιουργούμε εμπειρίες που θα θυμάστε για πάντα.",
+          "Ενώ η αλίευση εξαρτάται από τη φύση, τα χαμόγελα, το τοπίο και οι στιγμές που μοιράζεστε στο σκάφος είναι πάντα εγγυημένα. Είτε είστε έμπειρος ψαράς είτε δοκιμάζετε ψάρεμα στη θάλασσα για πρώτη φορά, στόχος μας είναι να σας προσφέρουμε μια ασφαλή, ευχάριστη και αξέχαστη εμπειρία.",
+          "Χρησιμοποιούμε ποιοτικό εξοπλισμό, μοιραζόμαστε την τοπική γνώση και σας καθοδηγούμε σε όλο το ταξίδι για να μεγιστοποιήσουμε τις πιθανότητες επιτυχίας σας. Η φύση έχει πάντα τον τελευταίο λόγο, αλλά κάθε εκδρομή προσφέρει εκπληκτική θέα, χαλάρωση και αναμνήσεις που διαρκούν μια ζωή.",
+          "Η επιτυχία του ψαρέματος εξαρτάται από τις συνθήκες της θάλασσας και τα ψάρια. Εγγυόμαστε την καλύτερη δυνατή εμπειρία, την καθοδήγηση από ειδικούς και τις αξέχαστες στιγμές, αλλά δεν μπορούμε να εγγυηθούμε τον αριθμό των ψαριών που θα αλιευθούν.",
+      ],
+      guarantee: "Εγγυόμαστε τις αναμνήσεις που θα δημιουργήσετε!",
+    },
     story: {
       eyebrow: "Τοπικό, απλό, αξέχαστο",
       title: "Γνωρίστε τον Δημήτρη στη θάλασσα.",
@@ -590,6 +654,32 @@ export const content: Record<Locale, SiteContent> = {
         tone: "night",
       },
     ],
+    captain: {
+      eyebrow: "Căpitanul",
+      title: "Aventuri de pescuit în Halkidiki",
+      intro:
+        "Cu Dimitris — Captain Chris — și echipajul Fishing 4 You, totul e pregătit pentru tine. Singurul lucru pe care trebuie să-l aduci e pofta de aventură. Îți oferim cea mai autentică experiență de turism pescăresc.",
+      highlights: [
+          "Fără aglomerație.",
+          "Fără capcane turistice.",
+          "Doar tu, marea și lanseta.",
+      ],
+      tagline: "Turism pescăresc, douăsprezece luni pe an.",
+      whyTitle: "De ce să-l alegi pe Dimitris?",
+      whyParagraphs: [
+          "Fishing 4 You s-a născut din pasiunea noastră adevărată pentru pescuit și pentru mare.",
+          "Barca de zece metri e mai mult decât o barcă de lucru. E casa lui pe apă. Complet dotată pentru siguranță și confort, te face să te simți ca un localnic din prima clipă.",
+          "Dimitris se scufundă și pescuiește în apele astea de când era copil. Cunoaște fiecare recif, fiecare curent și fiecare loc unde se ascund peștii.",
+      ],
+      moreTitle: "Mai mult decât pescuit",
+      moreParagraphs: [
+          "Vino cu noi într-o aventură de neuitat în apele cristaline ale Halkidiki. Cu îndrumare experimentată, echipament de calitate și pasiune pentru mare, creăm experiențe pe care le vei ține minte mereu.",
+          "Captura depinde de natură, dar zâmbetele, peisajul și clipele pe care le împarți la bord sunt mereu garantate. Fie că ești pescar cu experiență, fie că încerci pescuitul pe mare prima oară, scopul nostru e să-ți oferim o experiență sigură, plăcută și de neuitat.",
+          "Folosim echipament bun, împărtășim cunoașterea locului și te îndrumăm pe tot parcursul ieșirii, ca să ai cele mai bune șanse. Natura are mereu ultimul cuvânt, dar fiecare excursie oferă priveliști uimitoare, liniște și amintiri care țin o viață.",
+          "Reușita la pescuit depinde de condițiile mării și de pești. Garantăm cea mai bună experiență posibilă, îndrumarea unui om care cunoaște locurile și clipe de neuitat — dar nu putem garanta câți pești se prind.",
+      ],
+      guarantee: "Garantăm amintirile pe care le vei crea.",
+    },
     story: {
       eyebrow: "Local, simplu, memorabil",
       title: "Îl întâlnești pe Dimitris pe mare.",
@@ -798,6 +888,32 @@ export const content: Record<Locale, SiteContent> = {
         tone: "night",
       },
     ],
+    captain: {
+      eyebrow: "Капитан",
+      title: "Рыболовные приключения на Халкидики",
+      intro:
+        "С Димитрисом — капитаном Крисом — и командой Fishing 4 You всё уже готово для вас. Взять с собой нужно только желание приключений. Мы предлагаем самый настоящий рыболовный отдых.",
+      highlights: [
+          "Без толпы.",
+          "Без туристических ловушек.",
+          "Только вы, море и удочка.",
+      ],
+      tagline: "Рыболовный туризм — двенадцать месяцев в году.",
+      whyTitle: "Почему именно Димитрис?",
+      whyParagraphs: [
+          "Fishing 4 You родился из настоящей страсти к рыбалке и к морю.",
+          "Десятиметровая лодка — больше, чем рабочее судно. Это его дом на воде. Полностью оснащённая для безопасности и удобства, она позволяет почувствовать себя местным с первой минуты.",
+          "Димитрис ныряет и рыбачит в этих водах с детства. Он знает каждый риф, каждое течение и каждое место, где прячется рыба.",
+      ],
+      moreTitle: "Больше, чем просто рыбалка",
+      moreParagraphs: [
+          "Отправляйтесь с нами в незабываемое приключение по кристальным водам Халкидики. Опытное сопровождение, качественные снасти и любовь к морю — так рождаются впечатления, которые остаются надолго.",
+          "Улов зависит от природы, но улыбки, виды и минуты, прожитые на борту, гарантированы всегда. Опытный вы рыбак или впервые пробуете морскую рыбалку — наша цель дать вам безопасный, приятный и незабываемый день.",
+          "Мы используем хорошие снасти, делимся местными знаниями и сопровождаем вас всю поездку, чтобы дать вам лучший шанс. Последнее слово всегда за природой, но каждая поездка дарит прекрасные виды, покой и воспоминания на всю жизнь.",
+          "Успех рыбалки зависит от состояния моря и от рыбы. Мы гарантируем лучший возможный день, сопровождение знающего человека и незабываемые моменты — но не можем гарантировать количество пойманной рыбы.",
+      ],
+      guarantee: "Мы гарантируем воспоминания, которые вы увезёте с собой.",
+    },
     story: {
       eyebrow: "Местно, просто, незабываемо",
       title: "Встретьтесь с Димитрисом на море.",
@@ -1006,6 +1122,32 @@ export const content: Record<Locale, SiteContent> = {
         tone: "night",
       },
     ],
+    captain: {
+      eyebrow: "Der Kapitän",
+      title: "Angelabenteuer auf Chalkidiki",
+      intro:
+        "Mit Dimitris — Captain Chris — und der Crew von Fishing 4 You ist alles für Sie vorbereitet. Mitbringen müssen Sie nur die Lust auf Abenteuer. Wir bieten Ihnen den authentischsten Angelurlaub.",
+      highlights: [
+          "Kein Gedränge.",
+          "Keine Touristenfallen.",
+          "Nur Sie, das Meer und die Rute.",
+      ],
+      tagline: "Angeltourismus, zwölf Monate im Jahr.",
+      whyTitle: "Warum Dimitris?",
+      whyParagraphs: [
+          "Fishing 4 You entstand aus echter Leidenschaft für das Angeln und für das Meer.",
+          "Das zehn Meter lange Boot ist mehr als ein Arbeitsboot. Es ist sein Zuhause auf dem Wasser. Voll ausgestattet für Sicherheit und Komfort, lässt es Sie vom ersten Moment an wie einen Einheimischen fühlen.",
+          "Dimitris taucht und angelt in diesen Gewässern, seit er ein Kind war. Er kennt jedes Riff, jede Strömung und jede Stelle, an der sich die Fische verstecken.",
+      ],
+      moreTitle: "Mehr als nur Angeln",
+      moreParagraphs: [
+          "Kommen Sie mit auf ein unvergessliches Abenteuer im kristallklaren Wasser von Chalkidiki. Mit erfahrener Führung, guter Ausrüstung und Leidenschaft für das Meer schaffen wir Erlebnisse, an die Sie sich immer erinnern werden.",
+          "Der Fang hängt von der Natur ab, doch das Lachen, die Landschaft und die gemeinsamen Stunden an Bord sind immer sicher. Ob erfahrener Angler oder zum ersten Mal auf See — unser Ziel ist ein sicherer, schöner und unvergesslicher Tag.",
+          "Wir verwenden gute Ausrüstung, teilen unser Wissen über die Gegend und begleiten Sie während der gesamten Fahrt, damit Sie die besten Chancen haben. Die Natur hat immer das letzte Wort, aber jede Ausfahrt bietet großartige Aussichten, Ruhe und Erinnerungen fürs Leben.",
+          "Der Erfolg beim Angeln hängt von den Bedingungen auf See und von den Fischen ab. Wir garantieren das bestmögliche Erlebnis, die Begleitung durch einen Kenner und unvergessliche Momente — aber nicht die Zahl der gefangenen Fische.",
+      ],
+      guarantee: "Wir garantieren die Erinnerungen, die Sie mitnehmen.",
+    },
     story: {
       eyebrow: "Lokal, einfach, unvergesslich",
       title: "Treffen Sie Dimitris auf dem Wasser.",

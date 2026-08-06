@@ -463,6 +463,8 @@ select:focus-visible {
 .technique-media-block > h3,
 .bite-guide-heading h3,
 .contact-section h2,
+.captain-lead h2,
+.captain-block h3,
 .tour-content h3,
 /* These read as sub-headings but are <strong>, so a scan by tag name misses
    them. They carry the step and bite titles. */
@@ -868,6 +870,132 @@ select:focus-visible {
   color: var(--navy-950);
   font-family: Georgia, serif;
   font-style: italic;
+}
+
+/* Sits between the cream trips section and the navy guide section. One step
+   lighter than the guide, so the two dark sections still read as separate. */
+.captain-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy-900);
+  color: var(--white);
+}
+
+.captain-section::before {
+  content: "";
+  position: absolute;
+  inset: auto -10% -55% 40%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 200, 106, 0.06), transparent 62%);
+  pointer-events: none;
+}
+
+.captain-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(340px, 1.05fr);
+  gap: 90px;
+  align-items: start;
+}
+
+.captain-lead h2 {
+  max-width: 620px;
+  font-size: clamp(36px, 3.5vw, 50px);
+  text-transform: uppercase;
+  /* The shared heading rule uses overflow-wrap: anywhere, which happily
+     splits ΨΑΡΕΥΤΙΚΕΣ across two lines to even out the ragged edge.
+     break-word only splits a word that cannot fit on a line of its own.
+     German still needs the size cap above: Angelabenteuer is one word. */
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.captain-intro {
+  max-width: 520px;
+  margin: 26px 0 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 17px;
+  line-height: 1.68;
+}
+
+.captain-highlights {
+  margin: 30px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.captain-highlights li {
+  padding-left: 22px;
+  position: relative;
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.captain-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 11px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.captain-tagline {
+  margin: 32px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--gold);
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.captain-column {
+  display: grid;
+  gap: 44px;
+}
+
+.captain-block h3 {
+  margin: 0 0 18px;
+  font-family: var(--display);
+  font-size: clamp(28px, 2.6vw, 36px);
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  text-transform: uppercase;
+}
+
+.captain-block p {
+  margin: 0 0 14px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.captain-block p:last-child {
+  margin-bottom: 0;
+}
+
+.captain-guarantee {
+  margin-top: 20px !important;
+  padding: 16px 20px;
+  border-left: 3px solid var(--gold);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--gold) !important;
+  font-family: var(--display);
+  font-size: 19px !important;
+  font-weight: 900;
+  line-height: 1.25 !important;
+  text-transform: uppercase;
 }
 
 .story-section {
@@ -1628,6 +1756,7 @@ select:focus-visible {
     min-height: 460px;
   }
 
+  .captain-grid,
   .story-grid,
   .booking-grid,
   .faq-grid,
@@ -1736,6 +1865,7 @@ select:focus-visible {
   }
 
   .section-heading,
+  .captain-grid,
   .story-grid,
   .booking-grid,
   .faq-grid,
@@ -1884,6 +2014,12 @@ select:focus-visible {
   .hero-stamp {
     width: 84px;
     height: 84px;
+  }
+
+  /* Angelabenteuer and приключения are single words wider than a 320px
+     screen at the clamp minimum. */
+  .captain-lead h2 {
+    font-size: 28px;
   }
 
   .hero-buoy {
