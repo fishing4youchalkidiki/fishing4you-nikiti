@@ -8,6 +8,16 @@ import { siteUrl } from "@/lib/metadata";
 
 const PHONE_DISPLAY = "+30 6974 139200";
 const PHONE_LINK = "+306974139200";
+
+// Prices are the same in every language, so they live here rather than being
+// repeated across the five locale records. Dimitris confirmed all three:
+// morning and night are per person, the barbecue cruise is a flat boat price
+// whether one guest comes or ten.
+const TOUR_PRICING: Record<string, { price: number; unit: "person" | "boat" }> = {
+  morning: { price: 40, unit: "person" },
+  cruise: { price: 600, unit: "boat" },
+  night: { price: 40, unit: "person" },
+};
 const interfaceLabels: Record<
   Locale,
   { skip: string; language: string; home: string; backToTop: string; createdBy: string }
@@ -60,8 +70,12 @@ export function SitePage({ locale }: { locale: Locale }) {
     description: copy.metaDescription,
     url: `${siteUrl}/${locale}`,
     telephone: PHONE_LINK,
-    priceRange: "€40 per person",
-    image: `${siteUrl}/fishing4you-boat.png`,
+    // priceRange is meant to be a coarse indicator, not a sentence. The old
+    // "€40 per person" was also wrong once the cruise became €600 per boat.
+    priceRange: "€40–€600",
+    paymentAccepted: "Cash",
+    currenciesAccepted: "EUR",
+    image: `${siteUrl}/fishing4you-boat.webp`,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Nikiti",
@@ -82,6 +96,53 @@ export function SitePage({ locale }: { locale: Locale }) {
       latitude: 40.2183941,
       longitude: 23.6621463,
     },
+    // Derived from the three departures the site already advertises: the first
+    // leaves at 07:00 and the night trip returns at 00:30.
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "07:00",
+      closes: "00:30",
+    },
+    // Without these the prices never reach the search result, however plainly
+    // the page states them.
+    makesOffer: copy.tours.map((tour) => {
+      const pricing = TOUR_PRICING[tour.id];
+
+      return {
+        "@type": "Offer",
+        name: tour.title,
+        description: tour.description,
+        url: `${siteUrl}/${locale}#trips`,
+        availability: "https://schema.org/InStock",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: pricing.price,
+          priceCurrency: "EUR",
+          // "person" prices are per guest; the cruise is one price for the
+          // whole boat, so the reference quantity says so explicitly.
+          referenceQuantity: {
+            "@type": "QuantitativeValue",
+            value: 1,
+            unitText: pricing.unit,
+          },
+        },
+        itemOffered: {
+          "@type": "Service",
+          name: tour.title,
+          serviceType: "Fishing trip",
+          provider: { "@type": "LocalBusiness", name: "Fishing 4 You" },
+        },
+      };
+    }),
   };
 
   const faqStructuredData = {
@@ -195,7 +256,7 @@ export function SitePage({ locale }: { locale: Locale }) {
             <div className="hero-visual">
               <div className="hero-image-frame">
                 <Image
-                  src="/fishing4you-boat.png"
+                  src="/fishing4you-boat.webp"
                   alt={copy.gallery.boatAlt}
                   fill
                   priority
@@ -352,7 +413,7 @@ export function SitePage({ locale }: { locale: Locale }) {
             <div className="gallery-grid">
               <figure className="gallery-boat">
                 <Image
-                  src="/fishing4you-boat.png"
+                  src="/fishing4you-boat.webp"
                   alt={copy.gallery.boatAlt}
                   fill
                   sizes="(max-width: 760px) 100vw, 66vw"
