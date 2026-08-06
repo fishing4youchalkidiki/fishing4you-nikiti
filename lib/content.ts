@@ -106,7 +106,7 @@ export const content: Record<Locale, SiteContent> = {
     languageName: "English",
     metaTitle: "Fishing 4 You Nikiti & Nea Moudania | Fishing Trips Halkidiki",
     metaDescription:
-      "Morning fishing, a fishing cruise with barbecue and night fishing with Dimitris. Nikiti and Sithonia in summer, Nea Moudania in winter. Halkidiki, Greece.",
+      "Morning fishing, a fishing cruise with barbecue and night fishing with Dimitris. Nikiti in summer, Nea Moudania in winter. Halkidiki, Greece.",
     nav: {
       trips: "Trips",
       story: "The experience",
@@ -115,7 +115,7 @@ export const content: Record<Locale, SiteContent> = {
       book: "Book now",
     },
     hero: {
-      eyebrow: "Nikiti · Sithonia · Nea Moudania · Halkidiki",
+      eyebrow: "Nikiti · Nea Moudania · Halkidiki",
       title: "Come aboard.",
       accent: "The Aegean is waiting.",
       description:
@@ -314,7 +314,7 @@ export const content: Record<Locale, SiteContent> = {
     languageName: "Ελληνικά",
     metaTitle: "Fishing 4 You Νικήτη & Νέα Μουδανιά | Εκδρομές Ψαρέματος",
     metaDescription:
-      "Πρωινό ψάρεμα, κρουαζιέρα ψαρέματος με μπάρμπεκιου και νυχτερινό ψάρεμα με τον Δημήτρη. Νικήτη και Σιθωνία το καλοκαίρι, Νέα Μουδανιά τον χειμώνα. Χαλκιδική.",
+      "Πρωινό ψάρεμα, κρουαζιέρα ψαρέματος με μπάρμπεκιου και νυχτερινό ψάρεμα με τον Δημήτρη. Νικήτη το καλοκαίρι, Νέα Μουδανιά τον χειμώνα. Χαλκιδική.",
     nav: {
       trips: "Εκδρομές",
       story: "Η εμπειρία",
@@ -323,7 +323,7 @@ export const content: Record<Locale, SiteContent> = {
       book: "Κράτηση",
     },
     hero: {
-      eyebrow: "Νικήτη · Σιθωνία · Νέα Μουδανιά · Χαλκιδική",
+      eyebrow: "Νικήτη · Νέα Μουδανιά · Χαλκιδική",
       title: "Ανεβείτε στο σκάφος.",
       accent: "Το Αιγαίο σας περιμένει.",
       description:
@@ -523,7 +523,7 @@ export const content: Record<Locale, SiteContent> = {
     languageName: "Română",
     metaTitle: "Fishing 4 You Nikiti & Nea Moudania | Excursii de pescuit",
     metaDescription:
-      "Pescuit de dimineață, croazieră de pescuit cu grătar și pescuit de noapte cu Dimitris. Nikiti și Sithonia vara, Nea Moudania iarna. Halkidiki, Grecia.",
+      "Pescuit de dimineață, croazieră de pescuit cu grătar și pescuit de noapte cu Dimitris. Nikiti vara, Nea Moudania iarna. Halkidiki, Grecia.",
     nav: {
       trips: "Excursii",
       story: "Experiența",
@@ -532,7 +532,7 @@ export const content: Record<Locale, SiteContent> = {
       book: "Rezervă",
     },
     hero: {
-      eyebrow: "Nikiti · Sithonia · Nea Moudania · Halkidiki",
+      eyebrow: "Nikiti · Nea Moudania · Halkidiki",
       title: "Urcă la bord.",
       accent: "Marea Egee te așteaptă.",
       description:
@@ -731,7 +731,7 @@ export const content: Record<Locale, SiteContent> = {
     languageName: "Русский",
     metaTitle: "Fishing 4 You Никити и Неа Мудания | Морская рыбалка",
     metaDescription:
-      "Утренняя рыбалка, рыболовный круиз с барбекю и ночная рыбалка с Димитрисом. Никити и Ситония летом, Неа Мудания зимой. Халкидики, Греция.",
+      "Утренняя рыбалка, рыболовный круиз с барбекю и ночная рыбалка с Димитрисом. Никити летом, Неа Мудания зимой. Халкидики, Греция.",
     nav: {
       trips: "Экскурсии",
       story: "О поездке",
@@ -740,7 +740,7 @@ export const content: Record<Locale, SiteContent> = {
       book: "Забронировать",
     },
     hero: {
-      eyebrow: "Никити · Ситония · Неа Мудания · Халкидики",
+      eyebrow: "Никити · Неа Мудания · Халкидики",
       title: "Поднимайтесь на борт.",
       accent: "Эгейское море ждёт.",
       description:
@@ -939,7 +939,7 @@ export const content: Record<Locale, SiteContent> = {
     languageName: "Deutsch",
     metaTitle: "Fishing 4 You Nikiti & Nea Moudania | Angeltouren Chalkidiki",
     metaDescription:
-      "Morgenangeln, Angelkreuzfahrt mit Barbecue und Nachtangeln mit Dimitris. Nikiti und Sithonia im Sommer, Nea Moudania im Winter. Chalkidiki, Griechenland.",
+      "Morgenangeln, Angelkreuzfahrt mit Barbecue und Nachtangeln mit Dimitris. Nikiti im Sommer, Nea Moudania im Winter. Chalkidiki, Griechenland.",
     nav: {
       trips: "Touren",
       story: "Das Erlebnis",
@@ -948,7 +948,7 @@ export const content: Record<Locale, SiteContent> = {
       book: "Anfragen",
     },
     hero: {
-      eyebrow: "Nikiti · Sithonia · Nea Moudania · Chalkidiki",
+      eyebrow: "Nikiti · Nea Moudania · Chalkidiki",
       title: "Kommen Sie an Bord.",
       accent: "Die Ägäis wartet.",
       description:
