@@ -101,3 +101,10 @@ Unconfirmed details use cautious wording on the site.
 hold original guest photos and are git-ignored on purpose — they must never be
 committed or published. Only files Dimitris has approved are copied into
 `public/real-trip/`, with faces blurred where he asked for it.
+
+Dimitris and his partner are crew and have consented to appearing unmasked.
+Everyone else is masked. Masking is pixelation followed by a blur, so the
+detail is destroyed rather than smeared and cannot be recovered from the
+published file. In the 5 August 2026 batch that covers the child behind the
+rail in `catch-pandora.webp` and the guest in `guest-pandora.webp`; the man
+behind that guest is Dimitris and stays visible.

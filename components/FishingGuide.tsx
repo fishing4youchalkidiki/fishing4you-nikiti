@@ -41,7 +41,7 @@ export function FishingGuide({ locale }: { locale: Locale }) {
     },
     {
       number: "11",
-      src: "/real-trip/dimitris-dogs.webp",
+      src: "/real-trip/crew-dogs-pair.webp",
       alt: guide.dogsAlt,
       caption: guide.dogsCaption,
       className: "crew-media-card-dogs",
@@ -401,7 +401,13 @@ export function FishingGuide({ locale }: { locale: Locale }) {
 
               return (
                 <figure
-                  className={`real-photo-card approved-gallery-card${item.key === "largeCatch" ? " approved-gallery-card--full-frame" : ""}`}
+                  className={[
+                    "real-photo-card approved-gallery-card",
+                    item.key === "largeCatch" ? "approved-gallery-card--full-frame" : "",
+                    "frame" in item ? `approved-gallery-card--${item.frame}` : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
                   key={item.src}
                 >
                   <Image
