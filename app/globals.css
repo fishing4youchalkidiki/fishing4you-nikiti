@@ -21,6 +21,14 @@
   --cork: #8a5730;
   --cork-dark: #6f4526;
   --white: #ffffff;
+  /* Gold for the display headings Dimitris asked for. Light enough to clear
+     11:1 on the navy sections; it is deliberately not used on the tour cards,
+     where gold over the mid blues drops to 2.4:1. */
+  --gold: #e8c86a;
+  /* Viber's own purple is #7360F2, which only reaches 4.48:1 with white and
+     misses AA. This is the darker purple from the same brand ramp: 5.7:1. */
+  --viber: #665cac;
+  --viber-dark: #564d93;
   --shell: min(1180px, calc(100vw - 48px));
   --display: "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
   --body: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -326,9 +334,13 @@ select:focus-visible {
   background: #1eb955;
 }
 
-.button-outline {
-  border-color: rgba(255, 255, 255, 0.34);
+.button-viber {
+  background: var(--viber);
   color: var(--white);
+}
+
+.button-viber:hover {
+  background: var(--viber-dark);
 }
 
 .hero {
@@ -431,6 +443,18 @@ select:focus-visible {
   text-transform: uppercase;
 }
 
+/* Dimitris asked for the white lettering in gold. It is applied to the display
+   headings on the navy sections only — there gold clears 11:1. The tour cards
+   sit on mid blues where the same gold falls to 2.4:1, so their type stays
+   white. Body copy keeps its dimmed white so the hierarchy still reads. */
+.hero h1,
+.story-section h2,
+.story-cards h3,
+.guide-heading h2,
+.contact-section h2 {
+  color: var(--gold);
+}
+
 .hero h1 span {
   display: block;
   color: var(--orange);
@@ -517,6 +541,16 @@ select:focus-visible {
   object-fit: cover;
 }
 
+.hero-buoy {
+  position: absolute;
+  z-index: 2;
+  top: 4px;
+  right: -14px;
+  width: 96px;
+  height: 96px;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.42));
+}
+
 .hero-local-note {
   position: absolute;
   right: -4px;
@@ -564,7 +598,7 @@ select:focus-visible {
 }
 
 .fact strong {
-  color: var(--white);
+  color: var(--gold);
   font-family: var(--display);
   font-size: 25px;
   letter-spacing: -0.04em;
@@ -1545,6 +1579,12 @@ select:focus-visible {
     font-size: clamp(58px, 8.4vw, 84px);
   }
 
+  /* The shell gutter drops to 18px from here down, so the ring stops
+     overhanging — otherwise it sits 4px from the edge of the screen. */
+  .hero-buoy {
+    right: 0;
+  }
+
   .tour-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1625,6 +1665,14 @@ select:focus-visible {
 
   .hero-image-frame {
     inset: 10px 0 0 18px;
+  }
+
+  /* The gutter is only 24px here, so the ring must not overhang the shell or
+     it ends up flush against the edge of the screen. */
+  .hero-buoy {
+    width: 84px;
+    height: 84px;
+    right: 0;
   }
 
   .hero-local-note {
@@ -1802,6 +1850,12 @@ select:focus-visible {
   .hero-stamp {
     width: 84px;
     height: 84px;
+  }
+
+  .hero-buoy {
+    width: 70px;
+    height: 70px;
+    right: 2px;
   }
 
   .fact strong {
@@ -2672,6 +2726,11 @@ select:focus-visible {
 
 .real-photo-coast img {
   object-position: center 63%;
+}
+
+/* Tall portraits whose subject sits near the top of the frame. */
+.approved-gallery-card--high img {
+  object-position: center 24%;
 }
 
 .trip-highlight-rods img {

@@ -104,9 +104,9 @@ export type SiteContent = {
 export const content: Record<Locale, SiteContent> = {
   en: {
     languageName: "English",
-    metaTitle: "Fishing 4 You Nikiti | Fishing Trips in Halkidiki",
+    metaTitle: "Fishing 4 You Nikiti & Nea Moudania | Fishing Trips Halkidiki",
     metaDescription:
-      "Morning fishing, a fishing cruise with barbecue and night fishing with Dimitris in Nikiti, Halkidiki. Contact directly on WhatsApp.",
+      "Morning fishing, a fishing cruise with barbecue and night fishing with Dimitris. Nikiti and Sithonia in summer, Nea Moudania in winter. Halkidiki, Greece.",
     nav: {
       trips: "Trips",
       story: "The experience",
@@ -115,7 +115,7 @@ export const content: Record<Locale, SiteContent> = {
       book: "Book now",
     },
     hero: {
-      eyebrow: "Nikiti · Sithonia · Halkidiki",
+      eyebrow: "Nikiti · Sithonia · Nea Moudania · Halkidiki",
       title: "Come aboard.",
       accent: "The Aegean is waiting.",
       description:
@@ -312,9 +312,9 @@ export const content: Record<Locale, SiteContent> = {
   },
   el: {
     languageName: "Ελληνικά",
-    metaTitle: "Fishing 4 You Νικήτη | Εκδρομές Ψαρέματος στη Χαλκιδική",
+    metaTitle: "Fishing 4 You Νικήτη & Νέα Μουδανιά | Εκδρομές Ψαρέματος",
     metaDescription:
-      "Πρωινό ψάρεμα, κρουαζιέρα ψαρέματος με μπάρμπεκιου και νυχτερινό ψάρεμα με τον Δημήτρη στη Νικήτη Χαλκιδικής.",
+      "Πρωινό ψάρεμα, κρουαζιέρα ψαρέματος με μπάρμπεκιου και νυχτερινό ψάρεμα με τον Δημήτρη. Νικήτη και Σιθωνία το καλοκαίρι, Νέα Μουδανιά τον χειμώνα. Χαλκιδική.",
     nav: {
       trips: "Εκδρομές",
       story: "Η εμπειρία",
@@ -323,7 +323,7 @@ export const content: Record<Locale, SiteContent> = {
       book: "Κράτηση",
     },
     hero: {
-      eyebrow: "Νικήτη · Σιθωνία · Χαλκιδική",
+      eyebrow: "Νικήτη · Σιθωνία · Νέα Μουδανιά · Χαλκιδική",
       title: "Ανεβείτε στο σκάφος.",
       accent: "Το Αιγαίο σας περιμένει.",
       description:
@@ -521,9 +521,9 @@ export const content: Record<Locale, SiteContent> = {
   },
   ro: {
     languageName: "Română",
-    metaTitle: "Fishing 4 You Nikiti | Excursii de pescuit în Halkidiki",
+    metaTitle: "Fishing 4 You Nikiti & Nea Moudania | Excursii de pescuit",
     metaDescription:
-      "Pescuit de dimineață, croazieră de pescuit cu grătar și pescuit de noapte cu Dimitris în Nikiti, Halkidiki.",
+      "Pescuit de dimineață, croazieră de pescuit cu grătar și pescuit de noapte cu Dimitris. Nikiti și Sithonia vara, Nea Moudania iarna. Halkidiki, Grecia.",
     nav: {
       trips: "Excursii",
       story: "Experiența",
@@ -532,7 +532,7 @@ export const content: Record<Locale, SiteContent> = {
       book: "Rezervă",
     },
     hero: {
-      eyebrow: "Nikiti · Sithonia · Halkidiki",
+      eyebrow: "Nikiti · Sithonia · Nea Moudania · Halkidiki",
       title: "Urcă la bord.",
       accent: "Marea Egee te așteaptă.",
       description:
@@ -729,9 +729,9 @@ export const content: Record<Locale, SiteContent> = {
   },
   ru: {
     languageName: "Русский",
-    metaTitle: "Fishing 4 You Никити | Морская рыбалка на Халкидики",
+    metaTitle: "Fishing 4 You Никити и Неа Мудания | Морская рыбалка",
     metaDescription:
-      "Утренняя рыбалка, рыболовный круиз с барбекю и ночная рыбалка с Димитрисом в Никити, Халкидики.",
+      "Утренняя рыбалка, рыболовный круиз с барбекю и ночная рыбалка с Димитрисом. Никити и Ситония летом, Неа Мудания зимой. Халкидики, Греция.",
     nav: {
       trips: "Экскурсии",
       story: "О поездке",
@@ -740,7 +740,7 @@ export const content: Record<Locale, SiteContent> = {
       book: "Забронировать",
     },
     hero: {
-      eyebrow: "Никити · Ситония · Халкидики",
+      eyebrow: "Никити · Ситония · Неа Мудания · Халкидики",
       title: "Поднимайтесь на борт.",
       accent: "Эгейское море ждёт.",
       description:
@@ -937,9 +937,9 @@ export const content: Record<Locale, SiteContent> = {
   },
   de: {
     languageName: "Deutsch",
-    metaTitle: "Fishing 4 You Nikiti | Angeltouren auf Chalkidiki",
+    metaTitle: "Fishing 4 You Nikiti & Nea Moudania | Angeltouren Chalkidiki",
     metaDescription:
-      "Morgenangeln, Angelkreuzfahrt mit Barbecue und Nachtangeln mit Dimitris in Nikiti auf Chalkidiki.",
+      "Morgenangeln, Angelkreuzfahrt mit Barbecue und Nachtangeln mit Dimitris. Nikiti und Sithonia im Sommer, Nea Moudania im Winter. Chalkidiki, Griechenland.",
     nav: {
       trips: "Touren",
       story: "Das Erlebnis",
@@ -948,7 +948,7 @@ export const content: Record<Locale, SiteContent> = {
       book: "Anfragen",
     },
     hero: {
-      eyebrow: "Nikiti · Sithonia · Chalkidiki",
+      eyebrow: "Nikiti · Sithonia · Nea Moudania · Chalkidiki",
       title: "Kommen Sie an Bord.",
       accent: "Die Ägäis wartet.",
       description:

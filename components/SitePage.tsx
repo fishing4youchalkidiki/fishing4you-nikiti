@@ -69,10 +69,14 @@ export function SitePage({ locale }: { locale: Locale }) {
       addressRegion: "Halkidiki",
       addressCountry: "GR",
     },
-    areaServed: {
-      "@type": "Place",
-      name: "Nikiti, Sithonia, Halkidiki",
-    },
+    // The postal address stays Nikiti — that is the summer berth. Nea Moudania
+    // is the second base Dimitris works from, so it belongs in areaServed
+    // rather than in the address.
+    areaServed: [
+      { "@type": "Place", name: "Nikiti, Halkidiki" },
+      { "@type": "Place", name: "Nea Moudania, Halkidiki" },
+      { "@type": "Place", name: "Sithonia, Halkidiki" },
+    ],
     geo: {
       "@type": "GeoCoordinates",
       latitude: 40.2183941,
@@ -208,6 +212,29 @@ export function SitePage({ locale }: { locale: Locale }) {
                   height={104}
                 />
               </div>
+              {/* Mirrors the logo across the arch: brand on the left, life ring
+                  on the right. Decorative, so it is hidden from screen readers. */}
+              <svg
+                className="hero-buoy"
+                viewBox="0 0 100 100"
+                role="presentation"
+                aria-hidden="true"
+              >
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#f4761f" strokeWidth="16" />
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="38"
+                  fill="none"
+                  stroke="#ffffff"
+                  strokeWidth="16"
+                  strokeDasharray="20 39.69"
+                  transform="rotate(30 50 50)"
+                />
+                <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" />
+                <circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" />
+              </svg>
+
               <div className="hero-local-note">
                 <span className="pulse-dot" aria-hidden="true" />
                 {copy.hero.localLabel}
@@ -443,7 +470,7 @@ export function SitePage({ locale }: { locale: Locale }) {
                   <span aria-hidden="true">↗</span>
                 </a>
                 <a
-                  className="button button-outline"
+                  className="button button-viber"
                   href={`viber://chat?number=${encodeURIComponent(PHONE_LINK)}`}
                 >
                   {copy.contact.viber}
