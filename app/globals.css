@@ -1801,7 +1801,7 @@ select:focus-visible {
 
   .hero-grid {
     min-height: auto;
-    padding-block: 60px 48px;
+    padding-block: 28px 48px;
     grid-template-columns: 1fr;
   }
 
