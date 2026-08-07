@@ -3275,3 +3275,97 @@ select:focus-visible {
     aspect-ratio: 1 / 1;
   }
 }
+
+/* 404. Navy background, so headings take --gold (11.3:1) rather than
+   --gold-deep, which is the cream-background token. */
+.not-found {
+  min-height: 100vh;
+  padding: 56px 24px 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--navy-950);
+  color: var(--white);
+  text-align: center;
+}
+
+.not-found-mark {
+  width: 72px;
+  height: 72px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.16);
+}
+
+.not-found-brand {
+  margin: 16px 0 0;
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.not-found-list {
+  width: min(560px, 100%);
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.not-found-list li {
+  padding: 24px 22px;
+  border: 1px solid rgba(185, 217, 226, 0.22);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.not-found-list h1 {
+  margin: 0;
+  color: var(--gold);
+  font-family: var(--display);
+  /* 22px at weight 900 is below the 18.66px large-text threshold only in
+     weight terms, not size, so it clears 3:1 either way -- and gold on navy
+     is 11.3:1 regardless. */
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.not-found-list p {
+  margin: 8px 0 0;
+  color: var(--sea-200);
+  font-size: 15px;
+}
+
+.not-found-list a {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  background: var(--cork);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.not-found-list a:hover {
+  background: var(--cork-dark);
+}
+
+@media (max-width: 440px) {
+  .not-found {
+    padding: 40px 16px 56px;
+  }
+
+  .not-found-list li {
+    padding: 20px 18px;
+  }
+}
