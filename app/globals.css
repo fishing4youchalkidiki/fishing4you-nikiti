@@ -497,13 +497,17 @@ select:focus-visible {
 }
 
 /* Sized off the accent span's own font-size (already 0.63em of the h1), so it
-   scales with the clamp() heading instead of needing its own breakpoints. */
+   scales with the clamp() heading instead of needing its own breakpoints.
+   1.72em is the largest size confirmed to stay on the same line as the last
+   word in all 5 languages at 9 widths from 320 to 1440px -- above ~1.76em,
+   German and Russian's longer accent lines leave no trailing room and the
+   ring wraps onto its own line instead, visually detached from the text. */
 .hero h1 span .hero-buoy {
   display: inline-block;
-  width: 0.62em;
-  height: 0.62em;
-  margin-left: 0.22em;
-  vertical-align: -0.06em;
+  width: 1.72em;
+  height: 1.72em;
+  margin-left: 0.14em;
+  vertical-align: -0.43em;
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.4));
 }
 
@@ -1797,9 +1801,7 @@ select:focus-visible {
 
   .hero-grid {
     min-height: auto;
-    /* A little more head room than the desktop 72px, so the life ring has a
-       clear band in the top right corner instead of sitting on the eyebrow. */
-    padding-block: 84px 48px;
+    padding-block: 60px 48px;
     grid-template-columns: 1fr;
   }
 
