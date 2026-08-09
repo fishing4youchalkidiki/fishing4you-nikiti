@@ -39,6 +39,47 @@ function singleLine(value: string) {
   return value.replace(/[\r\n]+/g, " ");
 }
 
+/** Every real number has six digits or more, in any country and any format. */
+function isPlausiblePhone(value: string) {
+  return (value.match(/\d/g) ?? []).length >= 6;
+}
+
+/** The calendar date behind "YYYY-MM-DD", or null if there isn't one. */
+function parseIsoDate(value: string) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (!match) return null;
+
+  const [, y, m, d] = match;
+  const stamp = Date.UTC(Number(y), Number(m) - 1, Number(d));
+  if (Number.isNaN(stamp)) return null;
+
+  // Date.UTC rolls impossible values over silently: month 13 day 45 becomes
+  // next February. Only accept what round-trips unchanged.
+  const back = new Date(stamp);
+  const same =
+    back.getUTCFullYear() === Number(y) &&
+    back.getUTCMonth() === Number(m) - 1 &&
+    back.getUTCDate() === Number(d);
+
+  return same ? stamp : null;
+}
+
+/**
+ * A real date, and one somebody could actually sail on. The window is
+ * deliberately wide — a day of slack behind so a guest whose timezone is
+ * ahead of UTC can still book today, and two years forward so nothing
+ * legitimate is ever turned away. It exists to stop junk, not to second-guess
+ * guests.
+ */
+function isBookableDate(value: string) {
+  const stamp = parseIsoDate(value);
+  if (stamp === null) return false;
+
+  const day = 24 * 60 * 60 * 1000;
+  const now = Date.now();
+  return stamp > now - 2 * day && stamp < now + 730 * day;
+}
+
 /**
  * "2026-08-26" as a Greek reader would write it, with the weekday spelled out
  * — a boat captain thinks in days of the week, not in ISO dates. Built in UTC
@@ -47,25 +88,8 @@ function singleLine(value: string) {
  * rather than risk printing "Invalid Date" over a real booking.
  */
 function formatGreekDate(value: string) {
-  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
-  if (!match) return value;
-
-  const [, y, m, d] = match;
-  const stamp = Date.UTC(Number(y), Number(m) - 1, Number(d));
-  if (Number.isNaN(stamp)) return value;
-
-  // Date.UTC rolls impossible values over silently: month 13 day 45 becomes
-  // next February. The browser cannot produce that, but the route can be
-  // posted to directly, and a confidently wrong date in a booking email is
-  // worse than an unformatted one. Only accept what round-trips unchanged.
-  const back = new Date(stamp);
-  if (
-    back.getUTCFullYear() !== Number(y) ||
-    back.getUTCMonth() !== Number(m) - 1 ||
-    back.getUTCDate() !== Number(d)
-  ) {
-    return value;
-  }
+  const stamp = parseIsoDate(value);
+  if (stamp === null) return value;
 
   try {
     return new Intl.DateTimeFormat("el-GR", {
@@ -122,7 +146,12 @@ export async function POST(request: Request) {
     ? (clean(body.locale) as Locale)
     : "en";
 
-  if (!name || !phone || !date) {
+  // Non-empty is not enough. A junk request with a phone of "1" and a date of
+  // 2026-13-45 sailed straight through the first version of this and landed
+  // in Dimitris' inbox looking like a booking. The form cannot produce either
+  // — the date input yields a real calendar date and a phone has digits — so
+  // rejecting them costs no real guest anything.
+  if (!name || !isPlausiblePhone(phone) || !isBookableDate(date)) {
     return Response.json({ ok: false }, { status: 400 });
   }
 
