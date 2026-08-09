@@ -399,6 +399,7 @@ export function SitePage({ locale }: { locale: Locale }) {
                   <p key={text}>{text}</p>
                 ))}
                 <p className="captain-guarantee">{copy.captain.guarantee}</p>
+                <p className="captain-waiting">{copy.captain.waiting}</p>
               </article>
             </div>
           </div>

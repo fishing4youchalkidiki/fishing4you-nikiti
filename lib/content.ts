@@ -49,6 +49,10 @@ export type SiteContent = {
     moreTitle: string;
     moreParagraphs: string[];
     guarantee: string;
+    // Dimitris sent this line in English on 9 August and asked for it to go
+    // "somewhere inside". "You are in" has no literal equivalent in the other
+    // four languages, so they render the sense of it — you are one of us now.
+    waiting: string;
   };
   story: {
     eyebrow: string;
@@ -128,12 +132,12 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "Nikiti · Nea Moudania · Halkidiki",
-      title: "Come aboard.",
-      accent: "The Aegean is waiting.",
+      title: "12 months a year.",
+      accent: "100% experience. From €40. Memories for a lifetime.",
       description:
         "Three ways to experience the sea with Dimitris: morning fishing, a full-day fishing cruise with barbecue, or fishing after sunset.",
-      primary: "Check availability",
-      secondary: "Explore the trips",
+      primary: "Book now",
+      secondary: "See the programmes",
       localLabel: "A local sea experience",
     },
     facts: [
@@ -210,6 +214,7 @@ export const content: Record<Locale, SiteContent> = {
           "Fishing success depends on the conditions at sea and on the fish. We guarantee the best possible experience, expert guidance and unforgettable moments — but we cannot guarantee how many fish will be caught.",
       ],
       guarantee: "We guarantee the memories you will make.",
+      waiting: "Captain Chris and his team are waiting for you. You are in.",
     },
     story: {
       eyebrow: "Local, simple, memorable",
@@ -362,12 +367,12 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "Νικήτη · Νέα Μουδανιά · Χαλκιδική",
-      title: "Ανεβείτε στο σκάφος.",
-      accent: "Το Αιγαίο σας περιμένει.",
+      title: "12 μήνες τον χρόνο.",
+      accent: "100% εμπειρία. Από 40€. Αναμνήσεις για μια ζωή.",
       description:
         "Τρεις τρόποι να ζήσετε τη θάλασσα με τον Δημήτρη: πρωινό ψάρεμα, ολοήμερη κρουαζιέρα με μπάρμπεκιου ή ψάρεμα μετά τη δύση.",
-      primary: "Έλεγχος διαθεσιμότητας",
-      secondary: "Δείτε τις εκδρομές",
+      primary: "Κλείστε τώρα",
+      secondary: "Δείτε τα προγράμματα",
       localLabel: "Μια τοπική θαλάσσια εμπειρία",
     },
     facts: [
@@ -444,6 +449,7 @@ export const content: Record<Locale, SiteContent> = {
           "Η επιτυχία του ψαρέματος εξαρτάται από τις συνθήκες της θάλασσας και τα ψάρια. Εγγυόμαστε την καλύτερη δυνατή εμπειρία, την καθοδήγηση από ειδικούς και τις αξέχαστες στιγμές, αλλά δεν μπορούμε να εγγυηθούμε τον αριθμό των ψαριών που θα αλιευθούν.",
       ],
       guarantee: "Εγγυόμαστε τις αναμνήσεις που θα δημιουργήσετε!",
+      waiting: "Ο Captain Chris και η ομάδα του σας περιμένουν. Είστε μαζί μας.",
     },
     story: {
       eyebrow: "Τοπικό, απλό, αξέχαστο",
@@ -597,12 +603,12 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "Nikiti · Nea Moudania · Halkidiki",
-      title: "Urcă la bord.",
-      accent: "Marea Egee te așteaptă.",
+      title: "12 luni pe an.",
+      accent: "100% experiență. De la 40 €. Amintiri pentru o viață.",
       description:
         "Trei moduri de a descoperi marea cu Dimitris: pescuit dimineața, croazieră de o zi cu grătar sau pescuit după apus.",
-      primary: "Verifică disponibilitatea",
-      secondary: "Vezi excursiile",
+      primary: "Rezervă acum",
+      secondary: "Vezi programele",
       localLabel: "O experiență locală pe mare",
     },
     facts: [
@@ -679,6 +685,7 @@ export const content: Record<Locale, SiteContent> = {
           "Reușita la pescuit depinde de condițiile mării și de pești. Garantăm cea mai bună experiență posibilă, îndrumarea unui om care cunoaște locurile și clipe de neuitat — dar nu putem garanta câți pești se prind.",
       ],
       guarantee: "Garantăm amintirile pe care le vei crea.",
+      waiting: "Captain Chris și echipa lui te așteaptă. Ești la bord.",
     },
     story: {
       eyebrow: "Local, simplu, memorabil",
@@ -831,12 +838,12 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "Никити · Неа Мудания · Халкидики",
-      title: "Поднимайтесь на борт.",
-      accent: "Эгейское море ждёт.",
+      title: "12 месяцев в году.",
+      accent: "100% впечатлений. От 40 €. Воспоминания на всю жизнь.",
       description:
         "Три способа увидеть море с Димитрисом: утренняя рыбалка, дневной круиз с барбекю или рыбалка после заката.",
-      primary: "Узнать о наличии мест",
-      secondary: "Посмотреть экскурсии",
+      primary: "Забронировать",
+      secondary: "Посмотреть программы",
       localLabel: "Настоящая местная морская прогулка",
     },
     facts: [
@@ -913,6 +920,7 @@ export const content: Record<Locale, SiteContent> = {
           "Успех рыбалки зависит от состояния моря и от рыбы. Мы гарантируем лучший возможный день, сопровождение знающего человека и незабываемые моменты — но не можем гарантировать количество пойманной рыбы.",
       ],
       guarantee: "Мы гарантируем воспоминания, которые вы увезёте с собой.",
+      waiting: "Captain Chris и его команда ждут вас. Вы с нами.",
     },
     story: {
       eyebrow: "Местно, просто, незабываемо",
@@ -1065,12 +1073,12 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "Nikiti · Nea Moudania · Chalkidiki",
-      title: "Kommen Sie an Bord.",
-      accent: "Die Ägäis wartet.",
+      title: "12 Monate im Jahr.",
+      accent: "100% Erlebnis. Ab 40 €. Erinnerungen fürs Leben.",
       description:
         "Drei Arten, das Meer mit Dimitris zu erleben: Morgenangeln, eine Tagestour mit Barbecue oder Angeln nach Sonnenuntergang.",
-      primary: "Verfügbarkeit prüfen",
-      secondary: "Touren entdecken",
+      primary: "Jetzt buchen",
+      secondary: "Programme ansehen",
       localLabel: "Ein lokales Erlebnis auf dem Meer",
     },
     facts: [
@@ -1147,6 +1155,7 @@ export const content: Record<Locale, SiteContent> = {
           "Der Erfolg beim Angeln hängt von den Bedingungen auf See und von den Fischen ab. Wir garantieren das bestmögliche Erlebnis, die Begleitung durch einen Kenner und unvergessliche Momente — aber nicht die Zahl der gefangenen Fische.",
       ],
       guarantee: "Wir garantieren die Erinnerungen, die Sie mitnehmen.",
+      waiting: "Captain Chris und sein Team warten auf Sie. Sie sind dabei.",
     },
     story: {
       eyebrow: "Lokal, einfach, unvergesslich",

@@ -117,9 +117,14 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 253, 248, 0.94);
+  /* Opaque, not the old rgba(255, 253, 248, 0.94). With the gold wordmark
+     the 6% that showed through mattered: scrolling the navy hero under the
+     header dragged the composite down and the wordmark fell to 4.40:1,
+     under the 4.5 it needs at 15px. Opaque pins it at 4.98:1 no matter what
+     passes underneath. At 94% the backdrop-filter was doing almost nothing
+     anyway, so it goes with it. */
+  background: var(--paper);
   border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(18px);
 }
 
 .header-inner {
@@ -166,6 +171,12 @@ img {
   font-weight: 900;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+  /* Dimitris asked for the wordmark in gold. The header sits on cream, so
+     this has to be --gold-deep; --gold is the navy-background token and
+     drops to 1.6:1 here, which is invisible rather than merely faint.
+     18px stays under the 18.66px large-text threshold, so it needs the
+     full 4.5:1 — measured, not assumed. */
+  color: var(--gold-deep);
 }
 
 .brand-copy small {
@@ -445,6 +456,14 @@ select:focus-visible {
   max-width: 690px;
   font-size: clamp(64px, 7vw, 108px);
   text-transform: uppercase;
+  /* Same fix as .captain-lead h2. The shared heading rule sets
+     overflow-wrap: anywhere, which split EXPERIENCE into EXPERIEN / CE once
+     Dimitris' longer headline arrived. break-word only splits a word that
+     cannot fit a line by itself, and hyphens: auto puts a visible hyphen
+     there when it must. The long words also live in the accent span now,
+     which renders at 0.63em and gives them far more room. */
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 /* Every heading on a navy background. All of them are 20px or larger at weight
@@ -1005,6 +1024,15 @@ select:focus-visible {
   font-weight: 900;
   line-height: 1.25 !important;
   text-transform: uppercase;
+}
+
+/* Dimitris' closing line, asked for on 9 August. Deliberately quieter than
+   the guarantee above it — sea-200 on navy is 12.4:1, so it reads clearly
+   without competing with the gold block for attention. */
+.captain-waiting {
+  margin-top: 18px !important;
+  color: var(--sea-200) !important;
+  font-size: 16px !important;
 }
 
 .story-section {
