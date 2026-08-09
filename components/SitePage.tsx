@@ -500,6 +500,7 @@ export function SitePage({ locale }: { locale: Locale }) {
 
             <BookingPanel
               copy={copy.booking}
+              locale={locale}
               tours={copy.tours.map(({ id, title, time }) => ({ id, title, time }))}
             />
           </div>

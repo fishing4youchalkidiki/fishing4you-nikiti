@@ -1333,10 +1333,76 @@ select:focus-visible {
   font-size: 13px;
 }
 
+/* "(optional)" beside a field label. Lower case and unemphasised so it reads
+   as a note rather than as part of the label itself. */
+.field span em {
+  color: var(--muted);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: none;
+}
+
+/* Honeypot. Off-screen rather than display:none — some bots skip fields that
+   are explicitly hidden, and this one is meant to be filled in. */
+.booking-trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .booking-submit {
   grid-column: 1 / -1;
   margin-top: 8px;
   border: 0;
+}
+
+.booking-submit:disabled {
+  opacity: 0.75;
+  cursor: progress;
+}
+
+/* Replaces the whole form once the request is away. */
+.booking-result {
+  padding: 36px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--cork);
+  box-shadow: 16px 16px 0 rgba(31, 124, 162, 0.08);
+}
+
+/* Shown in place of the submit button when the email could not be sent.
+   Never a dead end: the WhatsApp message is already written. */
+.booking-fallback {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  padding: 20px;
+  background: var(--sand-50);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--cork);
+}
+
+.booking-result strong,
+.booking-fallback strong {
+  display: block;
+  color: var(--gold-deep);
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.booking-result p,
+.booking-fallback p {
+  margin: 10px 0 0;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.booking-fallback .button {
+  margin-top: 16px;
 }
 
 .form-note {

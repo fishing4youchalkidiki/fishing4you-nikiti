@@ -88,6 +88,22 @@ export type SiteContent = {
     button: string;
     direct: string;
     messageTemplate: string;
+    // Dimitris asked for booking requests by email (9 August). WhatsApp
+    // carried the guest's number automatically; email carries nothing, so
+    // name and phone are now asked for outright — otherwise he receives a
+    // request he cannot answer.
+    nameLabel: string;
+    phoneLabel: string;
+    emailLabel: string;
+    emailOptional: string;
+    sending: string;
+    sentTitle: string;
+    sentBody: string;
+    // Shown when the email cannot be sent. Never a dead end: the guest is
+    // handed the WhatsApp route instead, with the message already written.
+    failedTitle: string;
+    failedBody: string;
+    failedButton: string;
   };
   checklist: {
     title: string;
@@ -267,10 +283,22 @@ export const content: Record<Locale, SiteContent> = {
       dateLabel: "Preferred date",
       adultsLabel: "Adults",
       childrenLabel: "Children",
-      button: "Continue on WhatsApp",
+      button: "Send the request",
       direct: "No payment is taken on this website.",
       messageTemplate:
         "Hello Dimitris! I am interested in {trip} on {date}. We are {adults} adult(s) and {children} child(ren). Could you please confirm availability, the final price and what is included? Thank you!",
+      nameLabel: "Your name",
+      phoneLabel: "Phone or WhatsApp",
+      emailLabel: "Email",
+      emailOptional: "optional",
+      sending: "Sending…",
+      sentTitle: "Request sent.",
+      sentBody:
+        "Dimitris has your request and will reply to confirm the date, the price and the meeting point. Nothing is booked and nothing is charged until he answers.",
+      failedTitle: "That did not go through.",
+      failedBody:
+        "The message could not be sent just now. Send it on WhatsApp instead — it is already written, you only have to press send.",
+      failedButton: "Send on WhatsApp",
     },
     checklist: {
       title: "Confirm before you set off",
@@ -502,10 +530,22 @@ export const content: Record<Locale, SiteContent> = {
       dateLabel: "Ημερομηνία",
       adultsLabel: "Ενήλικες",
       childrenLabel: "Παιδιά",
-      button: "Συνέχεια στο WhatsApp",
+      button: "Στείλτε το αίτημα",
       direct: "Δεν πραγματοποιείται πληρωμή σε αυτή την ιστοσελίδα.",
       messageTemplate:
         "Γεια σου Δημήτρη! Ενδιαφέρομαι για {trip} στις {date}. Είμαστε {adults} ενήλικες και {children} παιδιά. Μπορείς να επιβεβαιώσεις διαθεσιμότητα, τελική τιμή και τι περιλαμβάνεται; Ευχαριστώ!",
+      nameLabel: "Το όνομά σας",
+      phoneLabel: "Τηλέφωνο ή WhatsApp",
+      emailLabel: "Email",
+      emailOptional: "προαιρετικό",
+      sending: "Αποστολή…",
+      sentTitle: "Το αίτημα στάλθηκε.",
+      sentBody:
+        "Ο Δημήτρης έλαβε το αίτημά σας και θα απαντήσει για να επιβεβαιώσει την ημερομηνία, την τιμή και το σημείο συνάντησης. Τίποτα δεν κρατείται και τίποτα δεν χρεώνεται μέχρι να απαντήσει.",
+      failedTitle: "Δεν στάλθηκε.",
+      failedBody:
+        "Το μήνυμα δεν μπόρεσε να σταλεί αυτή τη στιγμή. Στείλτε το στο WhatsApp — είναι ήδη γραμμένο, αρκεί να πατήσετε αποστολή.",
+      failedButton: "Αποστολή στο WhatsApp",
     },
     checklist: {
       title: "Επιβεβαιώστε πριν φύγετε",
@@ -738,10 +778,22 @@ export const content: Record<Locale, SiteContent> = {
       dateLabel: "Data preferată",
       adultsLabel: "Adulți",
       childrenLabel: "Copii",
-      button: "Continuă pe WhatsApp",
+      button: "Trimite cererea",
       direct: "Nu se efectuează plăți pe acest website.",
       messageTemplate:
         "Salut, Dimitris! Sunt interesat de {trip} în data de {date}. Suntem {adults} adult/adulți și {children} copil/copii. Poți confirma disponibilitatea, prețul final și ce este inclus? Mulțumesc!",
+      nameLabel: "Numele tău",
+      phoneLabel: "Telefon sau WhatsApp",
+      emailLabel: "Email",
+      emailOptional: "opțional",
+      sending: "Se trimite…",
+      sentTitle: "Cererea a fost trimisă.",
+      sentBody:
+        "Dimitris are cererea ta și va răspunde pentru a confirma data, prețul și punctul de întâlnire. Nimic nu este rezervat și nimic nu se plătește până nu răspunde el.",
+      failedTitle: "Nu a mers.",
+      failedBody:
+        "Mesajul nu a putut fi trimis acum. Trimite-l pe WhatsApp — este deja scris, trebuie doar să apeși trimite.",
+      failedButton: "Trimite pe WhatsApp",
     },
     checklist: {
       title: "Confirmă înainte de plecare",
@@ -973,10 +1025,22 @@ export const content: Record<Locale, SiteContent> = {
       dateLabel: "Желаемая дата",
       adultsLabel: "Взрослые",
       childrenLabel: "Дети",
-      button: "Перейти в WhatsApp",
+      button: "Отправить заявку",
       direct: "Оплата на этом сайте не производится.",
       messageTemplate:
         "Здравствуйте, Димитрис! Меня интересует {trip} на {date}. Нас {adults} взрослых и {children} детей. Подтвердите, пожалуйста, наличие мест, итоговую цену и что включено. Спасибо!",
+      nameLabel: "Ваше имя",
+      phoneLabel: "Телефон или WhatsApp",
+      emailLabel: "Email",
+      emailOptional: "необязательно",
+      sending: "Отправка…",
+      sentTitle: "Заявка отправлена.",
+      sentBody:
+        "Димитрис получил вашу заявку и ответит, чтобы подтвердить дату, цену и место встречи. Ничего не забронировано и ничего не списывается, пока он не ответит.",
+      failedTitle: "Не отправилось.",
+      failedBody:
+        "Сообщение не удалось отправить сейчас. Отправьте его в WhatsApp — оно уже написано, нужно только нажать отправить.",
+      failedButton: "Отправить в WhatsApp",
     },
     checklist: {
       title: "Уточните перед выходом",
@@ -1208,10 +1272,22 @@ export const content: Record<Locale, SiteContent> = {
       dateLabel: "Wunschtermin",
       adultsLabel: "Erwachsene",
       childrenLabel: "Kinder",
-      button: "Weiter zu WhatsApp",
+      button: "Anfrage senden",
       direct: "Auf dieser Website erfolgt keine Zahlung.",
       messageTemplate:
         "Hallo Dimitris! Ich interessiere mich für {trip} am {date}. Wir sind {adults} Erwachsene und {children} Kinder. Kannst du bitte Verfügbarkeit, Endpreis und enthaltene Leistungen bestätigen? Danke!",
+      nameLabel: "Ihr Name",
+      phoneLabel: "Telefon oder WhatsApp",
+      emailLabel: "E-Mail",
+      emailOptional: "optional",
+      sending: "Wird gesendet…",
+      sentTitle: "Anfrage gesendet.",
+      sentBody:
+        "Dimitris hat Ihre Anfrage und meldet sich, um Datum, Preis und Treffpunkt zu bestätigen. Es ist nichts gebucht und es wird nichts berechnet, bis er antwortet.",
+      failedTitle: "Das hat nicht geklappt.",
+      failedBody:
+        "Die Nachricht konnte gerade nicht gesendet werden. Senden Sie sie über WhatsApp — sie ist bereits geschrieben, Sie müssen nur auf Senden tippen.",
+      failedButton: "Über WhatsApp senden",
     },
     checklist: {
       title: "Vor der Abfahrt bestätigen",
