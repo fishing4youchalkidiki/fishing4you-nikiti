@@ -39,6 +39,47 @@ function singleLine(value: string) {
   return value.replace(/[\r\n]+/g, " ");
 }
 
+/**
+ * "2026-08-26" as a Greek reader would write it, with the weekday spelled out
+ * — a boat captain thinks in days of the week, not in ISO dates. Built in UTC
+ * on purpose: `new Date("2026-08-26")` is midnight UTC, and formatting that in
+ * a westward timezone would print the day before. Falls back to the raw string
+ * rather than risk printing "Invalid Date" over a real booking.
+ */
+function formatGreekDate(value: string) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (!match) return value;
+
+  const [, y, m, d] = match;
+  const stamp = Date.UTC(Number(y), Number(m) - 1, Number(d));
+  if (Number.isNaN(stamp)) return value;
+
+  // Date.UTC rolls impossible values over silently: month 13 day 45 becomes
+  // next February. The browser cannot produce that, but the route can be
+  // posted to directly, and a confidently wrong date in a booking email is
+  // worse than an unformatted one. Only accept what round-trips unchanged.
+  const back = new Date(stamp);
+  if (
+    back.getUTCFullYear() !== Number(y) ||
+    back.getUTCMonth() !== Number(m) - 1 ||
+    back.getUTCDate() !== Number(d)
+  ) {
+    return value;
+  }
+
+  try {
+    return new Intl.DateTimeFormat("el-GR", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    }).format(stamp);
+  } catch {
+    return value;
+  }
+}
+
 function escapeHtml(value: string) {
   return value
     .replace(/&/g, "&amp;")
@@ -97,20 +138,23 @@ export async function POST(request: Request) {
   }
 
   // Resolve the trip from our own content rather than trusting the posted
-  // title, so the email can only ever name a trip that exists.
-  const tour = content[locale].tours.find((t) => t.id === tourId);
+  // title, so the email can only ever name a trip that exists — and always
+  // from the Greek copy, whatever language the guest used. Dimitris is the
+  // only reader; a German booking naming "Morgenangeln" would just make him
+  // work it out. Which language to answer in is its own line below.
+  const tour = content.el.tours.find((t) => t.id === tourId);
   const tourLabel = tour ? `${tour.title} (${tour.time})` : tourId || "—";
 
   const rows: Array<[string, string]> = [
-    ["Trip", tourLabel],
-    ["Date", date],
-    ["Adults", adults || "—"],
-    ["Children", children || "0"],
-    ["Name", name],
-    ["Phone", phone],
+    ["Εκδρομή", tourLabel],
+    ["Ημερομηνία", formatGreekDate(date)],
+    ["Ενήλικες", adults || "—"],
+    ["Παιδιά", children || "0"],
+    ["Όνομα", name],
+    ["Τηλέφωνο", phone],
     ["Email", email || "—"],
     // He answers in five languages; this saves him guessing which one.
-    ["Language", content[locale].languageName],
+    ["Γλώσσα", content[locale].languageName],
   ];
 
   const text = rows.map(([k, v]) => `${k}: ${v}`).join("\n");
@@ -126,7 +170,7 @@ export async function POST(request: Request) {
     const { error } = await resend.emails.send({
       from,
       to: [to],
-      subject: `Booking request — ${tourLabel} — ${date}`,
+      subject: `Κράτηση — ${tourLabel} — ${formatGreekDate(date)}`,
       text,
       html,
       // So hitting reply in his mail app writes to the guest, not to us.
