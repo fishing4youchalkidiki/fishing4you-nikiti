@@ -129,6 +129,7 @@ export type SiteContent = {
   footer: {
     tagline: string;
     rights: string;
+    privacy: string;
     verified: string;
   };
 };
@@ -378,6 +379,7 @@ export const content: Record<Locale, SiteContent> = {
     footer: {
       tagline: "Fishing trips with Dimitris in Nikiti, Halkidiki.",
       rights: "All rights reserved.",
+      privacy: "Privacy Policy",
       verified: "Details based on the current sign and information shared directly by Dimitris.",
     },
   },
@@ -626,6 +628,7 @@ export const content: Record<Locale, SiteContent> = {
     footer: {
       tagline: "Εκδρομές ψαρέματος με τον Δημήτρη στη Νικήτη Χαλκιδικής.",
       rights: "Με επιφύλαξη παντός δικαιώματος.",
+      privacy: "Πολιτική Απορρήτου",
       verified: "Οι λεπτομέρειες βασίζονται στην πινακίδα και σε πληροφορίες του Δημήτρη.",
     },
   },
@@ -873,6 +876,7 @@ export const content: Record<Locale, SiteContent> = {
     footer: {
       tagline: "Excursii de pescuit cu Dimitris în Nikiti, Halkidiki.",
       rights: "Toate drepturile rezervate.",
+      privacy: "Politica de confidențialitate",
       verified: "Detalii bazate pe afiș și pe informațiile comunicate direct de Dimitris.",
     },
   },
@@ -1120,6 +1124,7 @@ export const content: Record<Locale, SiteContent> = {
     footer: {
       tagline: "Морская рыбалка с Димитрисом в Никити, Халкидики.",
       rights: "Все права защищены.",
+      privacy: "Политика конфиденциальности",
       verified: "Сведения основаны на вывеске и информации, полученной напрямую от Димитриса.",
     },
   },
@@ -1367,6 +1372,7 @@ export const content: Record<Locale, SiteContent> = {
     footer: {
       tagline: "Angeltouren mit Dimitris in Nikiti auf Chalkidiki.",
       rights: "Alle Rechte vorbehalten.",
+      privacy: "Datenschutzerklärung",
       verified: "Details basieren auf dem Schild und direkt von Dimitris erhaltenen Angaben.",
     },
   },

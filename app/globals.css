@@ -3463,3 +3463,86 @@ select:focus-visible {
     padding: 20px 18px;
   }
 }
+
+/* Privacy policy. Cream background, so headings take --gold-deep — --gold is
+   the navy-background token and disappears here. */
+.legal-page {
+  padding: 44px 0 90px;
+  background: var(--sand-50);
+}
+
+.legal-shell {
+  max-width: 760px;
+}
+
+.legal-brand {
+  margin-bottom: 40px;
+}
+
+.legal-page h1 {
+  margin: 0;
+  color: var(--gold-deep);
+  font-family: var(--display);
+  font-size: clamp(38px, 6vw, 58px);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.legal-intro {
+  margin: 20px 0 0;
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.legal-updated {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.legal-page section {
+  margin-top: 40px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+.legal-page h2 {
+  margin: 0 0 14px;
+  color: var(--gold-deep);
+  font-family: var(--display);
+  /* 24px clears the large-text threshold, so 3:1 applies — gold-deep on this
+     cream is well past it either way. */
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.legal-page section p {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.legal-page section p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-back {
+  margin-top: 44px;
+}
+
+@media (max-width: 440px) {
+  .legal-page {
+    padding: 28px 0 64px;
+  }
+
+  .legal-page section {
+    margin-top: 30px;
+  }
+}

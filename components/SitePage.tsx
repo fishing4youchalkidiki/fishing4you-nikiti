@@ -629,6 +629,11 @@ export function SitePage({ locale }: { locale: Locale }) {
         </div>
         <div className="shell footer-bottom">
           <span>© {new Date().getFullYear()} Fishing 4 You. {copy.footer.rights}</span>
+          <span>
+            <Link className="footer-privacy" href={`/${locale}/privacy`}>
+              {copy.footer.privacy}
+            </Link>
+          </span>
           <span>{copy.footer.verified}</span>
           <span className="footer-credit">
             {labels.createdBy}{" "}
