@@ -943,6 +943,28 @@ select:focus-visible {
   pointer-events: none;
 }
 
+/* Bottom left, under the tagline — the gold glow above already occupies the
+   bottom right, so the two decorations do not stack.
+
+   Unlike the contact mark, this one cannot be anchored inside the bottom
+   padding without shrinking to a stub, so it sits ~250px into the content
+   area and clears the tagline by measurement rather than by construction.
+   Verified across all five locales at 1600 and 1200: tightest is Romanian at
+   1600 (101px). The size is what buys that margin — growing it back toward
+   420px spends the margin roughly 1:1, so if this section's copy gains a
+   line, re-check before enlarging. */
+.captain-section::after {
+  content: "";
+  position: absolute;
+  left: -90px;
+  bottom: -110px;
+  width: 380px;
+  height: 380px;
+  background: url("/brand/f4y-watermark.webp") center / contain no-repeat;
+  opacity: 0.09;
+  pointer-events: none;
+}
+
 .captain-grid {
   position: relative;
   z-index: 2;
@@ -1066,6 +1088,13 @@ select:focus-visible {
   color: var(--white);
 }
 
+/* Letterforms rather than the badge image, and deliberately so. This section
+   has no empty pocket to put a mark in: the two cards hold the right half,
+   the copy holds the left, and all that is left is the 120px padding bands
+   and two side gutters that shrink as the viewport narrows. Flat text at
+   2.5% can cross the translucent cards without touching their contrast; the
+   photographic badge cannot — its wave texture reads through them. The badge
+   goes in .captain-section and .contact-section, which have real room. */
 .story-section::before {
   content: "F4Y";
   position: absolute;
@@ -1610,6 +1639,23 @@ select:focus-visible {
   color: var(--white);
 }
 
+/* Bottom left. Sized and offset so the visible band starts 110px above the
+   section's bottom edge — inside the 120px bottom padding, which no copy can
+   enter at any width or in any language. Measuring one locale is not enough
+   here: the closing line runs to two lines in Romanian and Russian, and a
+   placement fitted to the English text sat 62px into the Romanian paragraph. */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  bottom: -150px;
+  width: 260px;
+  height: 260px;
+  background: url("/brand/f4y-watermark.webp") center / contain no-repeat;
+  opacity: 0.09;
+  pointer-events: none;
+}
+
 .contact-map-text {
   display: none;
 }
@@ -1901,6 +1947,13 @@ select:focus-visible {
 @media (max-width: 780px) {
   :root {
     --shell: calc(100vw - 30px);
+  }
+
+  /* Once the sections stack there is no empty column left for the mark to
+     sit in — it would land behind the text instead of beside it. */
+  .captain-section::after,
+  .contact-section::before {
+    display: none;
   }
 
   .header-inner {
