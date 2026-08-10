@@ -54,7 +54,7 @@ export const approvedGalleryMedia = [
 ] as const;
 
 type TechniqueKey = (typeof techniqueMedia)[number]["key"];
-type GalleryKey = (typeof approvedGalleryMedia)[number]["key"];
+export type GalleryKey = (typeof approvedGalleryMedia)[number]["key"];
 type MediaText = { alt: string; caption: string };
 
 type GalleryContent = {

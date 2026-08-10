@@ -4,6 +4,7 @@ import { BookingPanel } from "./BookingPanel";
 import { FishingGuide } from "./FishingGuide";
 import { content, locales, type Locale } from "@/lib/content";
 import { guideContent } from "@/lib/guide-content";
+import { approvedGalleryContent, type GalleryKey } from "@/lib/gallery-content";
 import { siteUrl } from "@/lib/metadata";
 
 const PHONE_DISPLAY = "+30 6974 139200";
@@ -24,6 +25,33 @@ const TOUR_PRICING: Record<string, { price: number; unit: "person" | "boat" }> =
   cruise: { price: 600, unit: "boat" },
   night: { price: 40, unit: "person" },
 };
+
+// A curated 3 photos per trip, not the whole approved gallery — picked from
+// each trip's own description so they read as "this trip", not just "the
+// boat in general". Reuses the gallery's existing masked photos and alt
+// text; nothing new to approve or translate.
+const TOUR_MEDIA: Record<string, ReadonlyArray<{ key: GalleryKey; src: string }>> = {
+  morning: [
+    { key: "rigTogether", src: "/real-trip/rig-preparation-private.webp" },
+    { key: "guestFishing", src: "/real-trip/guest-fishing.webp" },
+    { key: "catchBucket", src: "/real-trip/catch-bucket.webp" },
+  ],
+  // Mirrors the cruise description above: kakavia cooked, the meal shared,
+  // then the last swim at Kelyfos.
+  cruise: [
+    { key: "soup", src: "/real-trip/fresh-fish-soup.webp" },
+    { key: "barbecuePlatter", src: "/real-trip/barbecue-platter.webp" },
+    { key: "kelyfosTurquoise", src: "/real-trip/kelyfos-turquoise.webp" },
+  ],
+  // dimitrisNight and sonNight are tall portraits (see .tour-photo--high),
+  // the only two photos actually shot after dark.
+  night: [
+    { key: "guestsEveningRods", src: "/real-trip/guests-evening-rods.webp" },
+    { key: "dimitrisNight", src: "/real-trip/dimitris-night-pandora.webp" },
+    { key: "sonNight", src: "/real-trip/son-night-pandora.webp" },
+  ],
+};
+const TOUR_MEDIA_HIGH_FRAME = new Set<GalleryKey>(["dimitrisNight", "sonNight"]);
 const interfaceLabels: Record<
   Locale,
   { skip: string; language: string; home: string; backToTop: string; createdBy: string }
@@ -68,6 +96,7 @@ const interfaceLabels: Record<
 export function SitePage({ locale }: { locale: Locale }) {
   const copy = content[locale];
   const labels = interfaceLabels[locale];
+  const gallery = approvedGalleryContent[locale];
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -354,6 +383,25 @@ export function SitePage({ locale }: { locale: Locale }) {
                         <li key={highlight}>{highlight}</li>
                       ))}
                     </ul>
+                    <div className="tour-photos">
+                      {TOUR_MEDIA[tour.id]?.map((item) => (
+                        <div
+                          className={
+                            TOUR_MEDIA_HIGH_FRAME.has(item.key)
+                              ? "tour-photo tour-photo--high"
+                              : "tour-photo"
+                          }
+                          key={item.src}
+                        >
+                          <Image
+                            src={item.src}
+                            alt={gallery.items[item.key].alt}
+                            fill
+                            sizes="(max-width: 780px) 30vw, 110px"
+                          />
+                        </div>
+                      ))}
+                    </div>
                     <a href="#booking">
                       {copy.hero.primary}
                       <span aria-hidden="true">↗</span>

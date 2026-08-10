@@ -876,6 +876,30 @@ select:focus-visible {
   font-weight: 850;
 }
 
+.tour-photos {
+  margin: 0 0 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.tour-photo {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.tour-photo img {
+  object-fit: cover;
+}
+
+/* dimitrisNight and sonNight are tall portraits whose subject sits near the
+   top of the frame — same fix as .approved-gallery-card--high. */
+.tour-photo--high img {
+  object-position: center 24%;
+}
+
 .price-note {
   max-width: 900px;
   margin: 26px 0 0;
