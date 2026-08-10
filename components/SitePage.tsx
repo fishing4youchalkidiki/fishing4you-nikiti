@@ -82,6 +82,7 @@ export function SitePage({ locale }: { locale: Locale }) {
     paymentAccepted: "Cash",
     currenciesAccepted: "EUR",
     image: `${siteUrl}/fishing4you-boat.webp`,
+    logo: `${siteUrl}/brand/f4y-logo-192.png`,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Nikiti",
