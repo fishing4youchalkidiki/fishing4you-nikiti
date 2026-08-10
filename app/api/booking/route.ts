@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { content, locales, type Locale } from "@/lib/content";
+import { siteUrl } from "@/lib/metadata";
 
 // The only dynamic route on the site. Everything else is prerendered; this
 // exists because a static page cannot send an email.
@@ -187,7 +188,10 @@ export async function POST(request: Request) {
   ];
 
   const text = rows.map(([k, v]) => `${k}: ${v}`).join("\n");
-  const html = `<table cellpadding="6" style="font-family:sans-serif;font-size:15px;border-collapse:collapse">${rows
+  // Width/height as attributes, not just CSS — mail clients that strip
+  // styles (or block remote images until a tap) still need to reserve the
+  // right space instead of collapsing to nothing.
+  const html = `<img src="${siteUrl}/brand/f4y-logo-192.png" width="44" height="44" alt="Fishing 4 You" style="display:block;margin:0 0 14px;border-radius:50%"><table cellpadding="6" style="font-family:sans-serif;font-size:15px;border-collapse:collapse">${rows
     .map(
       ([k, v]) =>
         `<tr><td style="color:#5f6f79">${escapeHtml(k)}</td><td><strong>${escapeHtml(v)}</strong></td></tr>`,
