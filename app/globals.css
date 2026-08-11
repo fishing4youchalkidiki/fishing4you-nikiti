@@ -721,11 +721,63 @@ select:focus-visible {
   text-transform: uppercase;
 }
 
-.section-heading > p {
+/* The intro sits one level deeper wherever a .heading-aside wraps it with the
+   badge, so both depths are matched. */
+.section-heading > p,
+.section-heading > .heading-aside > p {
   margin: 0 0 4px;
   color: var(--muted);
   font-size: 16px;
   line-height: 1.7;
+}
+
+/* The badge beside a section heading, at the hero stamp's own 104px so the
+   two read as the same mark rather than two sizes of it — and from the same
+   source file at the same width, so all six share one optimised variant
+   instead of pulling their own. */
+.section-stamp {
+  width: 104px;
+  height: 104px;
+  display: block;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.section-stamp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* On navy the badge's own rim disappears into the background — the same
+   reason .hero-stamp carries a ring over the photo. */
+.section-stamp-onnavy {
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.92),
+    0 10px 26px rgba(0, 0, 0, 0.38);
+}
+
+/* The right-hand cell of a two-column heading grid. Those grids are
+   align-items: end, so a short paragraph sits on the baseline of a tall
+   heading and leaves the top of the cell empty — this stretches the cell back
+   to full height and parks the badge in that gap, without moving the text. */
+.heading-aside {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* The two that follow copy rather than filling a grid gap need their own
+   breathing room above them. */
+.captain-lead .section-stamp {
+  margin-top: 44px;
+}
+
+.faq-stamp {
+  margin-top: 34px;
 }
 
 .trips-section {
@@ -940,28 +992,6 @@ select:focus-visible {
   aspect-ratio: 1;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(232, 200, 106, 0.06), transparent 62%);
-  pointer-events: none;
-}
-
-/* Bottom left, under the tagline — the gold glow above already occupies the
-   bottom right, so the two decorations do not stack.
-
-   Unlike the contact mark, this one cannot be anchored inside the bottom
-   padding without shrinking to a stub, so it sits ~250px into the content
-   area and clears the tagline by measurement rather than by construction.
-   Verified across all five locales at 1600 and 1200: tightest is Romanian at
-   1600 (101px). The size is what buys that margin — growing it back toward
-   420px spends the margin roughly 1:1, so if this section's copy gains a
-   line, re-check before enlarging. */
-.captain-section::after {
-  content: "";
-  position: absolute;
-  left: -90px;
-  bottom: -110px;
-  width: 380px;
-  height: 380px;
-  background: url("/brand/f4y-watermark.webp") center / contain no-repeat;
-  opacity: 0.09;
   pointer-events: none;
 }
 
@@ -1951,9 +1981,19 @@ select:focus-visible {
 
   /* Once the sections stack there is no empty column left for the mark to
      sit in — it would land behind the text instead of beside it. */
-  .captain-section::after,
   .contact-section::before {
     display: none;
+  }
+
+  /* The heading grids are single-column here, so the badge stacks with the
+     copy rather than filling a gap beside it — smaller suits that. */
+  .section-stamp {
+    width: 80px;
+    height: 80px;
+  }
+
+  .heading-aside {
+    gap: 18px;
   }
 
   .header-inner {
@@ -2702,7 +2742,8 @@ select:focus-visible {
   overflow-wrap: anywhere;
 }
 
-.participant-guide-heading > p {
+.participant-guide-heading > p,
+.participant-guide-heading > .heading-aside > p {
   margin: 0;
   color: var(--muted);
   font-size: 13px;

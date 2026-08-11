@@ -231,7 +231,12 @@ export function FishingGuide({ locale }: { locale: Locale }) {
                 <p className="eyebrow">{guide.participantEyebrow}</p>
                 <h3 id="participant-guide-title">{guide.participantTitle}</h3>
               </div>
-              <p>{guide.participantIntro}</p>
+              <div className="heading-aside">
+                <span className="section-stamp" aria-hidden="true">
+                  <Image src="/brand/f4y-icon-512.png" alt="" width={104} height={104} />
+                </span>
+                <p>{guide.participantIntro}</p>
+              </div>
             </div>
 
             <div className="participant-guide-grid">
@@ -259,7 +264,12 @@ export function FishingGuide({ locale }: { locale: Locale }) {
               <p className="eyebrow eyebrow-dark">{guide.mediaEyebrow}</p>
               <h2 id="real-media-title">{guide.mediaTitle}</h2>
             </div>
-            <p>{guide.mediaIntro}</p>
+            <div className="heading-aside">
+              <span className="section-stamp" aria-hidden="true">
+                <Image src="/brand/f4y-icon-512.png" alt="" width={104} height={104} />
+              </span>
+              <p>{guide.mediaIntro}</p>
+            </div>
           </div>
 
           <div className="real-media-grid">

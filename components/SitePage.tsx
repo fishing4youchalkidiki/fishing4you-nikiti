@@ -329,8 +329,12 @@ export function SitePage({ locale }: { locale: Locale }) {
                 />
               </div>
               <div className="hero-stamp" aria-hidden="true">
+                {/* 512 source, not the 192: at 104px a retina screen asks for
+                    208 device px, which the 192 file could only upscale.
+                    Shared with the .section-stamp badges, which render at the
+                    same width and so reuse the same optimised variant. */}
                 <Image
-                  src="/brand/f4y-logo-192.png"
+                  src="/brand/f4y-icon-512.png"
                   alt=""
                   width={104}
                   height={104}
@@ -361,7 +365,12 @@ export function SitePage({ locale }: { locale: Locale }) {
                 <p className="eyebrow eyebrow-dark">{copy.tripsSection.eyebrow}</p>
                 <h2>{copy.tripsSection.title}</h2>
               </div>
-              <p>{copy.tripsSection.intro}</p>
+              <div className="heading-aside">
+                <span className="section-stamp" aria-hidden="true">
+                  <Image src="/brand/f4y-icon-512.png" alt="" width={104} height={104} />
+                </span>
+                <p>{copy.tripsSection.intro}</p>
+              </div>
             </div>
 
             <div className="tour-grid">
@@ -432,6 +441,10 @@ export function SitePage({ locale }: { locale: Locale }) {
                 ))}
               </ul>
               <p className="captain-tagline">{copy.captain.tagline}</p>
+              {/* Navy background, so this one carries the ring. */}
+              <span className="section-stamp section-stamp-onnavy" aria-hidden="true">
+                <Image src="/brand/f4y-icon-512.png" alt="" width={104} height={104} />
+              </span>
             </div>
 
             <div className="captain-column">
@@ -579,6 +592,9 @@ export function SitePage({ locale }: { locale: Locale }) {
                 <span>AEGEAN SEA</span>
                 <strong>40°13′</strong>
               </div>
+              <span className="section-stamp faq-stamp" aria-hidden="true">
+                <Image src="/brand/f4y-icon-512.png" alt="" width={104} height={104} />
+              </span>
             </div>
             <div className="faq-list">
               {copy.faq.items.map((item, index) => (
