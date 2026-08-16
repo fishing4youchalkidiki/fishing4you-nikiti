@@ -5,7 +5,13 @@ import type { Locale } from "@/lib/content";
 import { TRIP_IDS, isWholeBoat, type TripId } from "@/lib/capacity";
 import { availabilityContent } from "@/lib/availability-content";
 
-type Day = { date: string; free: number; capacity: number; closed: boolean };
+type Day = {
+  date: string;
+  free: number;
+  booked: number;
+  capacity: number;
+  closed: boolean;
+};
 type Availability = Record<TripId, Day[]>;
 
 type Props = {
@@ -70,39 +76,78 @@ export function AvailabilityCalendar({ locale, tripTitles, onPick }: Props) {
         return (
           <div className="availability-trip" key={trip}>
             <h3>{tripTitles[trip] ?? trip}</h3>
+            {!wholeBoat && <p className="availability-legend">{copy.legend}</p>}
 
             <ul className="availability-days">
               {days.map((day) => {
                 const open = day.free > 0;
-                const label = day.closed
+                // Three states, kept distinct on purpose: sold out and "the
+                // boat is not going" are different facts and a guest should
+                // not have to guess which one they are looking at.
+                const state = day.closed ? "blocked" : open ? "open" : "full";
+                // Running low earns its own colour — it is the one case where
+                // a guest benefits from acting sooner.
+                const low = state === "open" && !wholeBoat && day.free <= 3;
+
+                // Spoken aloud rather than shown: a screen reader gets the
+                // sentence the pips convey visually.
+                const spoken = day.closed
                   ? copy.closed
                   : wholeBoat
                     ? open
                       ? copy.boatFree
                       : copy.boatTaken
-                    : open
-                      ? `${day.free} / ${day.capacity}`
-                      : copy.full;
+                    : `${day.free} ${copy.freeLabel}, ${day.booked} ${copy.bookedLabel}`;
 
                 return (
                   <li key={day.date}>
                     <button
                       type="button"
-                      className={[
-                        "availability-day",
-                        open ? "is-open" : "is-closed",
-                        day.closed ? "is-blocked" : "",
-                      ]
-                        .filter(Boolean)
-                        .join(" ")}
+                      className={`availability-day is-${state}${low ? " is-low" : ""}`}
                       disabled={!open}
                       onClick={() => onPick(trip, day.date)}
-                      aria-label={`${formatDay(day.date)} — ${label}${open ? `. ${copy.pick}` : ""}`}
+                      aria-label={`${formatDay(day.date)} — ${spoken}${open ? `. ${copy.pick}` : ""}`}
                     >
                       <span className="availability-date">{formatDay(day.date)}</span>
-                      <span className="availability-count">{label}</span>
-                      {!wholeBoat && !day.closed && open && (
-                        <span className="availability-unit">{copy.seatsLabel}</span>
+
+                      {wholeBoat || day.closed ? (
+                        <span className="availability-word">
+                          {day.closed
+                            ? copy.closed
+                            : open
+                              ? copy.boatFree
+                              : copy.boatTaken}
+                        </span>
+                      ) : (
+                        <>
+                          {/* The pips carry "how many are taken" without a
+                              word in any language — countable at a glance at
+                              ten. */}
+                          <span className="availability-pips" aria-hidden="true">
+                            {Array.from({ length: day.capacity }, (_, i) => (
+                              <span
+                                key={i}
+                                className={
+                                  i < day.booked ? "pip is-taken" : "pip"
+                                }
+                              />
+                            ))}
+                          </span>
+                          {/* A sold-out day says a word, not a number, so it
+                              uses the word style — the display face sized for
+                              a single digit has no width limit and let long
+                              translations stretch the card out of the row. */}
+                          {open ? (
+                            <>
+                              <span className="availability-count">{day.free}</span>
+                              <span className="availability-unit">
+                                {copy.freeLabel}
+                              </span>
+                            </>
+                          ) : (
+                            <span className="availability-word">{copy.full}</span>
+                          )}
+                        </>
                       )}
                     </button>
                   </li>

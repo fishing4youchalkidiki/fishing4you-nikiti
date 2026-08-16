@@ -13,6 +13,12 @@ export type DayAvailability = {
   date: string;
   /** Seats left. For the whole-boat cruise this is 1 (free) or 0 (taken). */
   free: number;
+  /**
+   * Seats already taken. Derivable from capacity - free, but sent explicitly
+   * because the calendar shows it as its own figure: "how many are taken" was
+   * the half a guest could not read off a bare ratio.
+   */
+  booked: number;
   capacity: number;
   /** True when Dimitris marked the day or departure closed, not sold out. */
   closed: boolean;
@@ -88,7 +94,15 @@ export async function readAvailability(
             : 1
           : Math.max(0, capacity - used);
 
-      list.push({ date, free, capacity, closed });
+      // Capped at capacity so an over-booked day (he can record more people
+      // than seats; the boat is his to judge) still draws ten pips, not more.
+      const booked = isWholeBoat(trip)
+        ? used > 0
+          ? 1
+          : 0
+        : Math.min(capacity, used);
+
+      list.push({ date, free, booked, capacity, closed });
     }
 
     result[trip] = list;

@@ -3731,18 +3731,29 @@ select:focus-visible {
   scrollbar-width: thin;
 }
 
+.availability-legend {
+  margin: -6px 0 10px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
 .availability-day {
-  /* Wide enough that no weekday-plus-date wraps in any of the five locales.
-     A card that wraps grows taller than its neighbours and leaves the whole
-     strip ragged, so the date is held on one line and the width carries it. */
-  min-width: 104px;
-  min-height: 78px;
+  /* Wide enough that no weekday-plus-date wraps in any of the five locales,
+     with room to spare for the Russian label, which is the longest and was
+     measured fitting its box exactly — no margin at all at 104px.
+
+     The height is pinned rather than left to the content: a card showing pips
+     is naturally taller than one showing a word, so closed days sat visibly
+     short and left the strip ragged. */
+  min-width: 112px;
+  min-height: 104px;
   padding: 10px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 4px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
@@ -3760,9 +3771,90 @@ select:focus-visible {
 
 .availability-day:disabled {
   cursor: not-allowed;
-  /* Muted, not invisible: a full day is information, not an error. */
+}
+
+/* Sold out and "the boat is not going" are different facts, so they do not
+   share a look. Full keeps the card's own colour and just empties out; closed
+   is visibly set aside. */
+.availability-day.is-full {
   background: var(--sand-100);
   color: var(--muted);
+}
+
+.availability-day.is-blocked {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--sand-100),
+    var(--sand-100) 6px,
+    var(--sand-50) 6px,
+    var(--sand-50) 12px
+  );
+  color: var(--muted);
+}
+
+/* Ten pips, one per seat: the count of taken seats without a word of any
+   language, and small enough that ten still fit a 104px card. */
+.availability-pips {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3px;
+}
+
+.pip {
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--sea-500);
+  border-radius: 50%;
+}
+
+.pip.is-taken {
+  background: var(--sea-500);
+}
+
+/* "Only a few left" cannot be carried by hue alone: --sea-500 and --cork sit
+   at a greyscale contrast of 1.01, so a red-green colour-blind visitor would
+   see two identical cards. The heavier, darker border is a shape and
+   luminance cue that survives greyscale — and the pips already state the same
+   fact by being nearly all filled. box-sizing keeps the outer size unchanged,
+   so the strip does not shift. */
+.availability-day.is-low {
+  /* An outline, not a thicker border. border-box fixes the width but
+     min-height is a floor rather than a cap, so a 2px border pushed the card
+     to 106px and left it hanging below its row. An outline is drawn outside
+     layout entirely, and the negative offset paints it inside the edge. */
+  outline: 2px solid var(--cork);
+  outline-offset: -2px;
+  border-color: var(--cork);
+}
+
+.availability-day.is-low .pip {
+  border-color: var(--cork);
+}
+
+.availability-day.is-low .pip.is-taken {
+  background: var(--cork);
+}
+
+.availability-day.is-full .pip {
+  border-color: var(--muted);
+  background: var(--muted);
+}
+
+/* The whole-boat cruise and closed days say it in words — there is no count
+   to draw. */
+.availability-word {
+  /* The card is 112px wide with 8px of padding each side, so 96px is the
+     whole content box — the previous 88px clipped Russian mid-word. German
+     and Greek run longest here, so the size is set to fit them and the break
+     rule is a backstop for whatever a future translation brings. */
+  max-width: 96px;
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.15;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 .availability-date {
@@ -3783,13 +3875,20 @@ select:focus-visible {
 
 .availability-count {
   font-family: var(--display);
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 900;
   line-height: 1.05;
 }
 
+/* --sea-500 on --paper is 5.4:1, and --cork on --paper is 5.9:1 — both clear
+   4.5:1 for text this size. The "few left" amber is the cork brown already
+   used for the site's primary actions rather than a new hue. */
 .availability-day.is-open .availability-count {
   color: var(--sea-500);
+}
+
+.availability-day.is-low .availability-count {
+  color: var(--cork);
 }
 
 .availability-unit {
@@ -3797,7 +3896,7 @@ select:focus-visible {
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 /* --- Dimitris' page. Greek only, phone first. --- */
