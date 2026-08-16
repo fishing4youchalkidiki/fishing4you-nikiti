@@ -4,7 +4,25 @@ const nextConfig: NextConfig = {
   devIndicators: false,
   poweredByHeader: false,
   images: {
-    qualities: [75, 82],
+    /* Vercel bills a transformation per unique source+width+quality, and the
+       defaults are far more than a five-section brochure needs: eight device
+       widths and eight fixed widths, doubled by carrying a second quality for
+       a single image. That ran to ~988 transformations a month against a
+       5,000 limit, on 57 images.
+
+       Three device widths cover phone, laptop and desktop; three fixed widths
+       cover the only fixed-size images on the site, which are the 52, 72 and
+       104px brand marks (each needs a 1x and a 2x). A width that is not
+       listed rounds up to the next one, so dropping the in-between sizes
+       costs a few KB, not correctness.
+
+       Deliberately NOT unoptimized: f4y-icon-512.png is 524KB and renders at
+       104px in six places, so turning optimisation off would trade a bounded
+       transformation count for unbounded bandwidth on exactly the mobile
+       connections this site is read on. */
+    deviceSizes: [640, 1080, 1920],
+    imageSizes: [64, 128, 256],
+    qualities: [75],
   },
   async headers() {
     return [
