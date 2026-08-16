@@ -27,13 +27,20 @@ type BookingPanelProps = {
   copy: BookingCopy;
   locale: Locale;
   tours: Array<{ id: string; title: string; time: string }>;
+  /**
+   * Set when a guest picks a day in the availability calendar. `nonce` is
+   * what makes picking the same day twice register — without it, choosing an
+   * identical trip and date would be an unchanged prop and the form would not
+   * react, which reads as a broken button.
+   */
+  selection?: { tripId: string; date: string; nonce: number };
 };
 
 const WHATSAPP_NUMBER = "306974139200";
 
 type Status = "idle" | "sending" | "sent" | "failed";
 
-export function BookingPanel({ copy, locale, tours }: BookingPanelProps) {
+export function BookingPanel({ copy, locale, tours, selection }: BookingPanelProps) {
   const [tourId, setTourId] = useState(tours[0]?.id ?? "");
   const [date, setDate] = useState("");
   const [adults, setAdults] = useState("2");
@@ -52,6 +59,18 @@ export function BookingPanel({ copy, locale, tours }: BookingPanelProps) {
   useEffect(() => {
     openedAt.current = Date.now();
   }, []);
+
+  // A pick from the calendar fills the trip and date in. Deliberately does
+  // not touch status: if the guest already sent one request and is picking a
+  // second date, they should see the form again rather than the thank-you.
+  const pickedNonce = useRef(0);
+  useEffect(() => {
+    if (!selection || selection.nonce === pickedNonce.current) return;
+    pickedNonce.current = selection.nonce;
+    setTourId(selection.tripId);
+    setDate(selection.date);
+    setStatus("idle");
+  }, [selection]);
 
   const selectedTour = useMemo(
     () => tours.find((tour) => tour.id === tourId) ?? tours[0],

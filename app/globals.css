@@ -3664,3 +3664,308 @@ select:focus-visible {
     margin-top: 30px;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Availability calendar (public) and Dimitris' booking page (/admin)
+   --------------------------------------------------------------------------- */
+
+.availability-block {
+  margin-bottom: 54px;
+}
+
+.availability-heading {
+  max-width: 720px;
+  margin-bottom: 26px;
+}
+
+.availability-heading h3 {
+  margin: 10px 0 12px;
+  color: var(--gold-deep);
+  font-family: var(--display);
+  font-size: clamp(28px, 3.4vw, 42px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.availability-heading > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.availability-note {
+  margin: 0 0 30px;
+  padding: 16px 18px;
+  border-left: 3px solid var(--sea-500);
+  background: rgba(23, 107, 141, 0.07);
+  color: var(--navy-900);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.availability-trip + .availability-trip {
+  margin-top: 26px;
+}
+
+.availability-trip h3 {
+  margin: 0 0 12px;
+  color: var(--navy-900);
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* A horizontal strip rather than a month grid: the question is "which of the
+   next few days still has room", not "what does November look like". */
+.availability-days {
+  margin: 0;
+  padding: 0 0 8px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  list-style: none;
+  scrollbar-width: thin;
+}
+
+.availability-day {
+  /* Wide enough that no weekday-plus-date wraps in any of the five locales.
+     A card that wraps grows taller than its neighbours and leaves the whole
+     strip ragged, so the date is held on one line and the width carries it. */
+  min-width: 104px;
+  min-height: 78px;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--navy-900);
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.availability-day.is-open:hover {
+  border-color: var(--sea-500);
+  transform: translateY(-2px);
+}
+
+.availability-day:disabled {
+  cursor: not-allowed;
+  /* Muted, not invisible: a full day is information, not an error. */
+  background: var(--sand-100);
+  color: var(--muted);
+}
+
+.availability-date {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* The floating WhatsApp button sits over the bottom right on phones, so the
+   strip is given room to scroll its last card clear of it. */
+@media (max-width: 780px) {
+  .availability-days {
+    padding-right: 68px;
+  }
+}
+
+.availability-count {
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.availability-day.is-open .availability-count {
+  color: var(--sea-500);
+}
+
+.availability-unit {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* --- Dimitris' page. Greek only, phone first. --- */
+
+.admin-shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 18px 60px;
+}
+
+.admin-shell-narrow {
+  max-width: 420px;
+}
+
+.admin-topbar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.admin-title {
+  margin: 0 0 6px;
+  font-family: var(--display);
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.admin-lead {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.admin-card {
+  margin-bottom: 20px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+}
+
+.admin-card h2 {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 850;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.admin-hint {
+  margin: -6px 0 14px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.admin-form {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-field {
+  display: grid;
+  gap: 5px;
+}
+
+.admin-field span {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.admin-field input,
+.admin-field select {
+  /* 16px keeps iOS from zooming the page when a field is focused. */
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.admin-button {
+  min-height: 48px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--navy-900);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.admin-button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.admin-link {
+  border: 0;
+  background: none;
+  color: var(--sea-500);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.admin-error {
+  margin: 0;
+  color: #a2231d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.admin-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.admin-list li div {
+  display: grid;
+  gap: 2px;
+}
+
+.admin-list strong {
+  font-size: 14px;
+}
+
+.admin-list span {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.admin-delete {
+  flex: 0 0 auto;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: none;
+  color: #a2231d;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}

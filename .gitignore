@@ -32,6 +32,14 @@ yarn-error.log*
 .env*
 !.env.example
 
+# local development database. Turso is SQLite, so development runs against a
+# plain file here rather than the cloud database — which keeps test bookings
+# off the live calendar. This repo is public: the file must never be pushed.
+local.db
+local.db-journal
+local.db-wal
+local.db-shm
+
 # vercel
 .vercel
 

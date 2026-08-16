@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BookingPanel } from "./BookingPanel";
+import { BookingSection } from "./BookingSection";
 import { FishingGuide } from "./FishingGuide";
 import { content, locales, type Locale } from "@/lib/content";
 import { guideContent } from "@/lib/guide-content";
@@ -548,7 +548,11 @@ export function SitePage({ locale }: { locale: Locale }) {
         </section>
 
         <section className="section booking-section" id="booking">
-          <div className="shell booking-grid">
+          <BookingSection
+            copy={copy.booking}
+            locale={locale}
+            tours={copy.tours.map(({ id, title, time }) => ({ id, title, time }))}
+          >
             <div className="booking-copy">
               <p className="eyebrow">{copy.booking.eyebrow}</p>
               <h2>{copy.booking.title}</h2>
@@ -558,13 +562,7 @@ export function SitePage({ locale }: { locale: Locale }) {
                 {PHONE_DISPLAY}
               </a>
             </div>
-
-            <BookingPanel
-              copy={copy.booking}
-              locale={locale}
-              tours={copy.tours.map(({ id, title, time }) => ({ id, title, time }))}
-            />
-          </div>
+          </BookingSection>
 
           <div className="shell checklist-panel">
             <div>
