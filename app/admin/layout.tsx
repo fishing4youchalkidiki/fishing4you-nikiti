@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   // Dimitris' own working page. It has nothing for a search engine and
   // everything for a competitor.
   robots: { index: false, follow: false },
+  /**
+   * No manifest here, and this is not cosmetic. app/manifest.ts declares the
+   * site an installable app starting at /en, and Android honours that over
+   * whatever page you are actually on — so "add to home screen" from /admin
+   * produced a shortcut to the public site. Dimitris reported exactly that.
+   * Dropping the link makes the browser fall back to bookmarking the current
+   * URL, which is what he needs.
+   */
+  manifest: null,
 };
 
 /**
