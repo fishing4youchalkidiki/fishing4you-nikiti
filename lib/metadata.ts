@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { content, locales, type Locale } from "./content";
+import { tripPageContent } from "./trip-content";
+import { TRIP_SLUGS, type TripId } from "./trip-pages";
 
 function getSiteUrl() {
   if (process.env.NEXT_PUBLIC_SITE_URL) {
@@ -72,6 +74,57 @@ export function makeMetadata(locale: Locale): Metadata {
       card: "summary_large_image",
       title: copy.metaTitle,
       description: copy.metaDescription,
+      images: ["/og-brand.png"],
+    },
+  };
+}
+
+/** Same shape as makeMetadata, for one trip's own detail page. */
+export function makeTripMetadata(locale: Locale, tripId: TripId): Metadata {
+  const trip = tripPageContent[locale].trips[tripId];
+  const path = `/${locale}/trips/${TRIP_SLUGS[tripId]}`;
+  const languageAlternates = Object.fromEntries(
+    locales.map((entry) => [entry, `/${entry}/trips/${TRIP_SLUGS[tripId]}`]),
+  );
+
+  return {
+    metadataBase: new URL(siteUrl),
+    title: trip.metaTitle,
+    description: trip.metaDescription,
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: path,
+      languages: {
+        ...languageAlternates,
+        "x-default": `/en/trips/${TRIP_SLUGS[tripId]}`,
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: openGraphLocales[locale],
+      alternateLocale: locales
+        .filter((entry) => entry !== locale)
+        .map((entry) => openGraphLocales[entry]),
+      url: path,
+      title: trip.metaTitle,
+      description: trip.metaDescription,
+      siteName: "Fishing 4 You Nikiti",
+      images: [
+        {
+          url: "/og-brand.png",
+          width: 1200,
+          height: 630,
+          alt: "Fishing 4 You — authentic fishing trips in Nikiti",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: trip.metaTitle,
+      description: trip.metaDescription,
       images: ["/og-brand.png"],
     },
   };

@@ -34,14 +34,20 @@ type BookingPanelProps = {
    * react, which reads as a broken button.
    */
   selection?: { tripId: string; date: string; nonce: number };
+  /**
+   * Set on a trip's own detail page so the form opens with that trip already
+   * chosen, instead of always defaulting to tours[0]. Ignored once a calendar
+   * pick lands via `selection`.
+   */
+  initialTrip?: string;
 };
 
 const WHATSAPP_NUMBER = "306974139200";
 
 type Status = "idle" | "sending" | "sent" | "failed";
 
-export function BookingPanel({ copy, locale, tours, selection }: BookingPanelProps) {
-  const [tourId, setTourId] = useState(tours[0]?.id ?? "");
+export function BookingPanel({ copy, locale, tours, selection, initialTrip }: BookingPanelProps) {
+  const [tourId, setTourId] = useState(initialTrip ?? tours[0]?.id ?? "");
   const [date, setDate] = useState("");
   const [adults, setAdults] = useState("2");
   const [children, setChildren] = useState("0");

@@ -5,10 +5,11 @@ import { FishingGuide } from "./FishingGuide";
 import { content, locales, type Locale } from "@/lib/content";
 import { guideContent } from "@/lib/guide-content";
 import { approvedGalleryContent, type GalleryKey } from "@/lib/gallery-content";
+import { TRIP_SLUGS, type TripId } from "@/lib/trip-pages";
 import { siteUrl } from "@/lib/metadata";
 
-const PHONE_DISPLAY = "+30 6974 139200";
-const PHONE_LINK = "+306974139200";
+export const PHONE_DISPLAY = "+30 6974 139200";
+export const PHONE_LINK = "+306974139200";
 
 // Prices are the same in every language, so they live here rather than being
 // repeated across the five locale records. Dimitris confirmed all three:
@@ -18,9 +19,9 @@ const PHONE_LINK = "+306974139200";
 // as a Maps pin; it is 358m south-east of the coordinates the site carried
 // before. Kept as plain coordinates rather than his share link, which carries
 // a session id that expires.
-const MEETING_POINT = { lat: 40.216321, lng: 23.6653776 };
+export const MEETING_POINT = { lat: 40.216321, lng: 23.6653776 };
 
-const TOUR_PRICING: Record<string, { price: number; unit: "person" | "boat" }> = {
+export const TOUR_PRICING: Record<string, { price: number; unit: "person" | "boat" }> = {
   morning: { price: 40, unit: "person" },
   cruise: { price: 600, unit: "boat" },
   night: { price: 40, unit: "person" },
@@ -30,7 +31,7 @@ const TOUR_PRICING: Record<string, { price: number; unit: "person" | "boat" }> =
 // each trip's own description so they read as "this trip", not just "the
 // boat in general". Reuses the gallery's existing masked photos and alt
 // text; nothing new to approve or translate.
-const TOUR_MEDIA: Record<string, ReadonlyArray<{ key: GalleryKey; src: string }>> = {
+export const TOUR_MEDIA: Record<string, ReadonlyArray<{ key: GalleryKey; src: string }>> = {
   morning: [
     { key: "rigTogether", src: "/real-trip/rig-preparation-private.webp" },
     { key: "guestFishing", src: "/real-trip/guest-fishing.webp" },
@@ -52,7 +53,7 @@ const TOUR_MEDIA: Record<string, ReadonlyArray<{ key: GalleryKey; src: string }>
   ],
 };
 const TOUR_MEDIA_HIGH_FRAME = new Set<GalleryKey>(["dimitrisNight", "sonNight"]);
-const interfaceLabels: Record<
+export const interfaceLabels: Record<
   Locale,
   { skip: string; language: string; home: string; backToTop: string; createdBy: string }
 > = {
@@ -157,7 +158,7 @@ export function SitePage({ locale }: { locale: Locale }) {
         "@type": "Offer",
         name: tour.title,
         description: tour.description,
-        url: `${siteUrl}/${locale}#trips`,
+        url: `${siteUrl}/${locale}/trips/${TRIP_SLUGS[tour.id as TripId]}`,
         availability: "https://schema.org/InStock",
         priceSpecification: {
           "@type": "UnitPriceSpecification",
@@ -383,6 +384,18 @@ export function SitePage({ locale }: { locale: Locale }) {
                     <span />
                   </div>
                   <div className="tour-content">
+                    {/* Inside .tour-content, not .tour-card: it needs to share
+                        .tour-content's own stacking context so its z-index
+                        actually compares against Book Now's (a z-index on a
+                        descendant can't out-rank a sibling of its ancestor,
+                        whatever the number). Covers the title/description/
+                        photos — not the thin topline row above — which is
+                        the part worth making clickable anyway. */}
+                    <Link
+                      className="tour-card-link"
+                      href={`/${locale}/trips/${TRIP_SLUGS[tour.id as TripId]}`}
+                      aria-label={tour.title}
+                    />
                     <p className="tour-time">{tour.time}</p>
                     <h3>{tour.title}</h3>
                     <p>{tour.description}</p>
@@ -410,7 +423,7 @@ export function SitePage({ locale }: { locale: Locale }) {
                         </div>
                       ))}
                     </div>
-                    <a href="#booking">
+                    <a className="tour-book-link" href="#booking">
                       {copy.hero.primary}
                       <span aria-hidden="true">↗</span>
                     </a>

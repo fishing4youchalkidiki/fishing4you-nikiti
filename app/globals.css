@@ -485,6 +485,7 @@ select:focus-visible {
 .captain-lead h2,
 .captain-block h3,
 .tour-content h3,
+.trip-hero h1,
 /* These read as sub-headings but are <strong>, so a scan by tag name misses
    them. They carry the step and bite titles. */
 .journey-list strong,
@@ -504,7 +505,9 @@ select:focus-visible {
 .gallery-section h2,
 .booking-section h2,
 .checklist-panel h3,
-.faq-heading h2 {
+.faq-heading h2,
+.trip-section-heading h2,
+.trip-stop h3 {
   color: var(--gold-deep);
 }
 
@@ -698,6 +701,13 @@ select:focus-visible {
 
 .faq-section {
   contain-intrinsic-block-size: auto 900px;
+}
+
+/* Shared by the trip detail pages' "what happens", gallery, FAQ and "other
+   trips" sections — without this, content-visibility: auto collapses each to
+   0px until it scrolls into view, same failure mode as the sections above. */
+.trip-section {
+  contain-intrinsic-block-size: auto 800px;
 }
 
 .section-heading {
@@ -917,7 +927,14 @@ select:focus-visible {
   font-weight: 750;
 }
 
-.tour-content a {
+/* Named explicitly rather than `.tour-content > a`, now that .tour-card-link
+   is also a direct-child anchor of .tour-content (see below) — a structural
+   selector would style both. z-index: 2 keeps it clickable above
+   .tour-card-link's overlay (z-index: 1); both are compared here as
+   .tour-content's own children. */
+.tour-book-link {
+  position: relative;
+  z-index: 2;
   min-height: 44px;
   padding-top: 18px;
   display: flex;
@@ -926,6 +943,22 @@ select:focus-visible {
   border-top: 1px solid rgba(255, 255, 255, 0.22);
   font-size: 12px;
   font-weight: 850;
+}
+
+/* .tour-content becomes a link to the trip's own page via this stretched
+   overlay — covers the title, description, price pills and photos (not the
+   thin number/duration row above .tour-content, which isn't worth the
+   complication). It has to live inside .tour-content, not just inside
+   .tour-card: .tour-content already has its own stacking context
+   (position: relative + z-index: 2), so a z-index set on a sibling one level
+   up can never outrank an element inside it, whatever the number — z-index
+   only compares within the same stacking context. .tour-book-link's z-index:
+   2 (above) is what keeps it independently clickable, without nesting one
+   <a> inside another. */
+.tour-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
 .tour-photos {
@@ -3897,6 +3930,235 @@ select:focus-visible {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   opacity: 0.8;
+}
+
+/* --- Trip detail pages (/trips/[slug] under each locale). Each trip's own
+   hero reuses .tour-sunrise/.tour-day/.tour-night for its background, so the
+   same three tones already used on the home page's trip cards carry over
+   here without a new palette decision. --- */
+
+.trip-hero {
+  padding: 96px 0 110px;
+  color: var(--white);
+}
+
+.trip-hero-inner {
+  max-width: 760px;
+}
+
+.trip-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.trip-back:hover {
+  color: var(--white);
+}
+
+.trip-hero h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.trip-hero-duration {
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.trip-hero-intro {
+  max-width: 560px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Same pill treatment as .tour-content li on the home page cards, kept as
+   its own rule since the hero here isn't wrapped in .tour-content. */
+.trip-highlights {
+  margin: 26px 0 32px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.trip-highlights li {
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.trip-section-heading {
+  max-width: 780px;
+  margin-bottom: 44px;
+}
+
+.trip-section-heading h2 {
+  margin: 0;
+  font-size: clamp(36px, 4.4vw, 58px);
+  text-transform: uppercase;
+}
+
+.trip-stops {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px 30px;
+}
+
+.trip-stop {
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Same rust used for the FAQ and participant-card index numbers elsewhere on
+   cream backgrounds — not --orange, which is only checked against navy. */
+.trip-stop span {
+  color: #b74118;
+  font-family: var(--body);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.trip-stop h3 {
+  margin: 12px 0 8px;
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.trip-stop p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.trip-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.trip-gallery-card {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.trip-gallery-card img {
+  object-fit: cover;
+}
+
+/* dimitrisNight and sonNight — same fix as .tour-photo--high img. */
+.trip-gallery-card--high img {
+  object-position: center 24%;
+}
+
+.trip-gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 55% 0 0;
+  background: linear-gradient(to top, rgba(6, 21, 35, 0.85), transparent);
+  pointer-events: none;
+}
+
+.trip-gallery-card figcaption {
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  right: 14px;
+  bottom: 12px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.trip-other-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.trip-other-card {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 160ms ease;
+}
+
+.trip-other-card:hover {
+  border-color: var(--sea-500);
+}
+
+.trip-other-card .tour-time {
+  margin: 0;
+  font-size: 16px;
+}
+
+.trip-other-card strong {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.trip-other-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  color: var(--sea-500);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+@media (max-width: 780px) {
+  .trip-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trip-other-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 440px) {
+  .trip-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
 }
 
 /* --- Dimitris' page. Greek only, phone first. --- */
