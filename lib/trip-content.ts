@@ -86,9 +86,9 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
       },
       cruise: {
         heading: "Fishing Cruise & Barbecue in Halkidiki",
-        metaTitle: "Fishing Cruise & Barbecue | 11:30–18:30 | Fishing 4 You",
+        metaTitle: "Fishing Cruise & Barbecue in Halkidiki | Fishing 4 You",
         metaDescription:
-          "A full day at sea with Dimitris: swimming at Spathies, kakavia at Neos Marmaras, a barbecue meal in the Porto Carras coves and a last swim at Kelyfos. €600 for up to 10 guests.",
+          "A full day fishing cruise in Halkidiki with Dimitris: Spathies, Neos Marmaras kakavia, Porto Carras barbecue, Kelyfos swim. €600 for up to 10 guests.",
         intro:
           "A generous day at sea with four stops: swimming, a traditional kakavia, a full barbecue meal in coves reachable only by boat, and one last swim before heading home.",
       },
@@ -143,9 +143,9 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
       },
       cruise: {
         heading: "Κρουαζιέρα Ψαρέματος & Μπάρμπεκιου στη Χαλκιδική",
-        metaTitle: "Κρουαζιέρα Ψαρέματος & Μπάρμπεκιου | 11:30–18:30 | Fishing 4 You",
+        metaTitle: "Κρουαζιέρα Ψαρέματος & Μπάρμπεκιου στη Χαλκιδική | Fishing 4 You",
         metaDescription:
-          "Μια γεμάτη μέρα στη θάλασσα με τον Δημήτρη: κολύμπι στις Σπαθιές, κακαβιά στον Νέο Μαρμαρά, γεύμα μπάρμπεκιου στα Λιμανάκια του Πόρτο Καρράς και τελευταίο μπάνιο στην Κελυφό. 600€ για έως 10 άτομα.",
+          "Ολοήμερη κρουαζιέρα ψαρέματος στη Χαλκιδική με τον Δημήτρη: Σπαθιές, κακαβιά στον Νέο Μαρμαρά, μπάρμπεκιου στο Πόρτο Καρράς, μπάνιο στην Κελυφό. 600€ για έως 10 άτομα.",
         intro:
           "Μια γενναιόδωρη μέρα στη θάλασσα με τέσσερις στάσεις: κολύμπι, παραδοσιακή κακαβιά, πλούσιο γεύμα μπάρμπεκιου σε κόλπους προσβάσιμους μόνο από τη θάλασσα και ένα τελευταίο μπάνιο πριν την επιστροφή.",
       },
@@ -200,9 +200,9 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
       },
       cruise: {
         heading: "Croazieră de Pescuit & Grătar în Halkidiki",
-        metaTitle: "Croazieră de Pescuit & Grătar | 11:30–18:30 | Fishing 4 You",
+        metaTitle: "Croazieră de Pescuit & Grătar în Halkidiki | Fishing 4 You",
         metaDescription:
-          "O zi întreagă pe mare cu Dimitris: înot la Spathies, kakavia la Neos Marmaras, masă la grătar în golfurile Porto Carras și o ultimă baie la Kelyfos. 600 € pentru până la 10 persoane.",
+          "Croazieră de pescuit de o zi în Halkidiki cu Dimitris: Spathies, kakavia la Neos Marmaras, grătar la Porto Carras, baie la Kelyfos. 600 € pentru până la 10 persoane.",
         intro:
           "O zi generoasă pe mare, cu patru opriri: înot, o supă tradițională kakavia, o masă completă la grătar în golfuri accesibile doar cu barca și o ultimă baie înainte de întoarcere.",
       },
@@ -257,9 +257,9 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
       },
       cruise: {
         heading: "Круиз с рыбалкой и барбекю в Халкидики",
-        metaTitle: "Круиз с рыбалкой и барбекю | 11:30–18:30 | Fishing 4 You",
+        metaTitle: "Круиз с рыбалкой и барбекю в Халкидики | Fishing 4 You",
         metaDescription:
-          "Целый день в море с Димитрисом: купание у Спатьес, какавия в Неос-Мармарасе, обед на гриле в бухтах Порто-Каррас и последнее купание у Келифоса. 600 € за лодку, до 10 человек.",
+          "Однодневный рыболовный круиз в Халкидики с Димитрисом: Спатьес, какавия в Неос-Мармарасе, барбекю в Порто-Каррас, купание у Келифоса. 600 € за лодку, до 10 человек.",
         intro:
           "Щедрый день в море с четырьмя остановками: купание, традиционная какавия, полноценный обед на гриле в бухтах, доступных только с моря, и последнее купание перед возвращением домой.",
       },
@@ -314,9 +314,9 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
       },
       cruise: {
         heading: "Angel- & Barbecue-Kreuzfahrt in Chalkidiki",
-        metaTitle: "Angel- & Barbecue-Kreuzfahrt | 11:30–18:30 | Fishing 4 You",
+        metaTitle: "Angel- & Barbecue-Kreuzfahrt in Chalkidiki | Fishing 4 You",
         metaDescription:
-          "Ein ganzer Tag auf See mit Dimitris: Schwimmen bei Spathies, Kakavia in Neos Marmaras, ein Barbecue in den Buchten von Porto Carras und ein letztes Bad bei Kelyfos. 600 € für bis zu 10 Gäste.",
+          "Eintägige Angel-Kreuzfahrt in Chalkidiki mit Dimitris: Spathies, Kakavia in Neos Marmaras, Barbecue in Porto Carras, Bad bei Kelyfos. 600 € für bis zu 10 Gäste.",
         intro:
           "Ein großzügiger Tag auf See mit vier Stopps: Schwimmen, eine traditionelle Kakavia, ein vollständiges Barbecue in nur per Boot erreichbaren Buchten und ein letztes Bad vor der Heimfahrt.",
       },

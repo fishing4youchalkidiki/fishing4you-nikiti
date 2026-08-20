@@ -149,8 +149,8 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "Nikiti · Nea Moudania · Halkidiki",
-      title: "Fishing trips in Nikiti, Halkidiki.",
-      accent: "12 months a year. 100% experience. From €40. Memories for a lifetime.",
+      title: "12 months a year.",
+      accent: "100% experience. From €40. Memories for a lifetime.",
       description:
         "Three ways to experience the sea with Dimitris: morning fishing, a full-day fishing cruise with barbecue, or fishing after sunset.",
       primary: "Book now",
@@ -397,8 +397,8 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "Νικήτη · Νέα Μουδανιά · Χαλκιδική",
-      title: "Εκδρομές ψαρέματος στη Νικήτη, Χαλκιδική.",
-      accent: "12 μήνες τον χρόνο. 100% εμπειρία. Από 40€. Αναμνήσεις για μια ζωή.",
+      title: "12 μήνες τον χρόνο.",
+      accent: "100% εμπειρία. Από 40€. Αναμνήσεις για μια ζωή.",
       description:
         "Τρεις τρόποι να ζήσετε τη θάλασσα με τον Δημήτρη: πρωινό ψάρεμα, ολοήμερη κρουαζιέρα με μπάρμπεκιου ή ψάρεμα μετά τη δύση.",
       primary: "Κλείστε τώρα",
@@ -646,8 +646,8 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "Nikiti · Nea Moudania · Halkidiki",
-      title: "Excursii de pescuit în Nikiti, Halkidiki.",
-      accent: "12 luni pe an. 100% experiență. De la 40 €. Amintiri pentru o viață.",
+      title: "12 luni pe an.",
+      accent: "100% experiență. De la 40 €. Amintiri pentru o viață.",
       description:
         "Trei moduri de a descoperi marea cu Dimitris: pescuit dimineața, croazieră de o zi cu grătar sau pescuit după apus.",
       primary: "Rezervă acum",
@@ -894,8 +894,8 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "Никити · Неа Мудания · Халкидики",
-      title: "Рыболовные туры в Никити, Халкидики.",
-      accent: "12 месяцев в году. 100% впечатлений. От 40 €. Воспоминания на всю жизнь.",
+      title: "12 месяцев в году.",
+      accent: "100% впечатлений. От 40 €. Воспоминания на всю жизнь.",
       description:
         "Три способа увидеть море с Димитрисом: утренняя рыбалка, дневной круиз с барбекю или рыбалка после заката.",
       primary: "Забронировать",
@@ -1142,8 +1142,8 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "Nikiti · Nea Moudania · Chalkidiki",
-      title: "Angeltouren in Nikiti, Chalkidiki.",
-      accent: "12 Monate im Jahr. 100% Erlebnis. Ab 40 €. Erinnerungen fürs Leben.",
+      title: "12 Monate im Jahr.",
+      accent: "100% Erlebnis. Ab 40 €. Erinnerungen fürs Leben.",
       description:
         "Drei Arten, das Meer mit Dimitris zu erleben: Morgenangeln, eine Tagestour mit Barbecue oder Angeln nach Sonnenuntergang.",
       primary: "Jetzt buchen",
