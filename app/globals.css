@@ -687,6 +687,15 @@ select:focus-visible {
   contain-intrinsic-block-size: auto 1100px;
 }
 
+.trips-section .section-heading h2 {
+  /* Same fix as .hero h1 and .captain-lead h2. The shared heading rule uses
+     overflow-wrap: anywhere, which split ΔΙΑΦΟΡΕΤΙΚΕΣ into ΔΙΑΦΟΡΕΤΙΚ / ΕΣ
+     on a phone once this heading led with the keyword+location phrase.
+     break-word only splits a word that cannot fit a line on its own. */
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
 .story-section {
   contain-intrinsic-block-size: auto 1250px;
 }

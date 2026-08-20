@@ -153,7 +153,7 @@ export function TripPage({ locale, tripId }: { locale: Locale; tripId: TripId })
             </Link>
 
             <p className="tour-time">{trip.time}</p>
-            <h1>{trip.title}</h1>
+            <h1>{tripMeta.heading}</h1>
             <p className="trip-hero-duration">{trip.duration}</p>
             <p className="trip-hero-intro">{tripMeta.intro}</p>
 

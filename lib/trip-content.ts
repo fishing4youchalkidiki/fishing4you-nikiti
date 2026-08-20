@@ -7,6 +7,14 @@ type TripMeta = {
   metaTitle: string;
   metaDescription: string;
   intro: string;
+  /**
+   * The page's own <h1> — deliberately not the same string as tours[].title
+   * in lib/content.ts, which stays short for the home page card and the
+   * booking dropdown. This one leads with the trip's own keyword + location
+   * ("Morning Fishing in Nikiti", not just "Morning Fishing"), matching the
+   * metaTitle below it.
+   */
+  heading: string;
 };
 
 type TripPageLabels = {
@@ -69,6 +77,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
     ],
     trips: {
       morning: {
+        heading: "Morning Fishing in Nikiti",
         metaTitle: "Morning Fishing in Nikiti | 07:00–10:30 | Fishing 4 You",
         metaDescription:
           "A 3.5-hour morning fishing trip from Nikiti Marina with Dimitris. Equipment, bait, coffee and drinks included. €40 per person.",
@@ -76,6 +85,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
           "Start the day on the water while the Aegean is still quiet. Rod, rig and shrimp bait are provided, the crew finds the spot, and you fish bottom-style, vertically beside the boat.",
       },
       cruise: {
+        heading: "Fishing Cruise & Barbecue in Halkidiki",
         metaTitle: "Fishing Cruise & Barbecue | 11:30–18:30 | Fishing 4 You",
         metaDescription:
           "A full day at sea with Dimitris: swimming at Spathies, kakavia at Neos Marmaras, a barbecue meal in the Porto Carras coves and a last swim at Kelyfos. €600 for up to 10 guests.",
@@ -83,6 +93,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
           "A generous day at sea with four stops: swimming, a traditional kakavia, a full barbecue meal in coves reachable only by boat, and one last swim before heading home.",
       },
       night: {
+        heading: "Night Fishing in Nikiti",
         metaTitle: "Night Fishing in Nikiti | 21:00–00:30 | Fishing 4 You",
         metaDescription:
           "A 3.5-hour night fishing trip from Nikiti Marina with Dimitris. Equipment and bait included, plus a beer for adults. €40 per person.",
@@ -123,6 +134,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
     ],
     trips: {
       morning: {
+        heading: "Πρωινό Ψάρεμα στη Νικήτη",
         metaTitle: "Πρωινό Ψάρεμα στη Νικήτη | 07:00–10:30 | Fishing 4 You",
         metaDescription:
           "Μια εκδρομή πρωινού ψαρέματος 3,5 ωρών από τη Μαρίνα Νικήτης με τον Δημήτρη. Εξοπλισμός, δολώματα, καφές και αναψυκτικά περιλαμβάνονται. 40€ ανά άτομο.",
@@ -130,6 +142,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
           "Ξεκινήστε τη μέρα στο νερό όσο το Αιγαίο είναι ακόμη ήσυχο. Καλάμι, αρματωσιά και δόλωμα γαρίδας παρέχονται, το πλήρωμα βρίσκει το σημείο και ψαρεύετε κάθετα, δίπλα στο σκάφος.",
       },
       cruise: {
+        heading: "Κρουαζιέρα Ψαρέματος & Μπάρμπεκιου στη Χαλκιδική",
         metaTitle: "Κρουαζιέρα Ψαρέματος & Μπάρμπεκιου | 11:30–18:30 | Fishing 4 You",
         metaDescription:
           "Μια γεμάτη μέρα στη θάλασσα με τον Δημήτρη: κολύμπι στις Σπαθιές, κακαβιά στον Νέο Μαρμαρά, γεύμα μπάρμπεκιου στα Λιμανάκια του Πόρτο Καρράς και τελευταίο μπάνιο στην Κελυφό. 600€ για έως 10 άτομα.",
@@ -137,6 +150,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
           "Μια γενναιόδωρη μέρα στη θάλασσα με τέσσερις στάσεις: κολύμπι, παραδοσιακή κακαβιά, πλούσιο γεύμα μπάρμπεκιου σε κόλπους προσβάσιμους μόνο από τη θάλασσα και ένα τελευταίο μπάνιο πριν την επιστροφή.",
       },
       night: {
+        heading: "Νυχτερινό Ψάρεμα στη Νικήτη",
         metaTitle: "Νυχτερινό Ψάρεμα στη Νικήτη | 21:00–00:30 | Fishing 4 You",
         metaDescription:
           "Μια εκδρομή νυχτερινού ψαρέματος 3,5 ωρών από τη Μαρίνα Νικήτης με τον Δημήτρη. Εξοπλισμός και δολώματα περιλαμβάνονται, καθώς και μία μπύρα για ενήλικες. 40€ ανά άτομο.",
@@ -177,6 +191,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
     ],
     trips: {
       morning: {
+        heading: "Pescuit de Dimineață în Nikiti",
         metaTitle: "Pescuit de Dimineață în Nikiti | 07:00–10:30 | Fishing 4 You",
         metaDescription:
           "O excursie de pescuit de dimineață de 3,5 ore din Marina Nikiti, cu Dimitris. Echipament, momeală, cafea și băuturi incluse. 40 € de persoană.",
@@ -184,6 +199,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
           "Începeți ziua pe apă cât timp Marea Egee este încă liniștită. Undița, montura și momeala din crevete sunt asigurate, echipajul găsește locul, iar dumneavoastră pescuiți vertical, chiar lângă barcă.",
       },
       cruise: {
+        heading: "Croazieră de Pescuit & Grătar în Halkidiki",
         metaTitle: "Croazieră de Pescuit & Grătar | 11:30–18:30 | Fishing 4 You",
         metaDescription:
           "O zi întreagă pe mare cu Dimitris: înot la Spathies, kakavia la Neos Marmaras, masă la grătar în golfurile Porto Carras și o ultimă baie la Kelyfos. 600 € pentru până la 10 persoane.",
@@ -191,6 +207,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
           "O zi generoasă pe mare, cu patru opriri: înot, o supă tradițională kakavia, o masă completă la grătar în golfuri accesibile doar cu barca și o ultimă baie înainte de întoarcere.",
       },
       night: {
+        heading: "Pescuit de Noapte în Nikiti",
         metaTitle: "Pescuit de Noapte în Nikiti | 21:00–00:30 | Fishing 4 You",
         metaDescription:
           "O excursie de pescuit de noapte de 3,5 ore din Marina Nikiti, cu Dimitris. Echipament și momeală incluse, plus o bere pentru adulți. 40 € de persoană.",
@@ -231,6 +248,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
     ],
     trips: {
       morning: {
+        heading: "Утренняя рыбалка в Никити",
         metaTitle: "Утренняя рыбалка в Никити | 07:00–10:30 | Fishing 4 You",
         metaDescription:
           "Утренняя рыбалка на 3,5 часа от марины Никити с Димитрисом. Снасти, наживка, кофе и напитки включены. 40 € с человека.",
@@ -238,6 +256,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
           "Начните день на воде, пока Эгейское море ещё спокойно. Удочка, оснастка и наживка-креветка предоставляются, экипаж находит место, а вы ловите вертикально, прямо у борта лодки.",
       },
       cruise: {
+        heading: "Круиз с рыбалкой и барбекю в Халкидики",
         metaTitle: "Круиз с рыбалкой и барбекю | 11:30–18:30 | Fishing 4 You",
         metaDescription:
           "Целый день в море с Димитрисом: купание у Спатьес, какавия в Неос-Мармарасе, обед на гриле в бухтах Порто-Каррас и последнее купание у Келифоса. 600 € за лодку, до 10 человек.",
@@ -245,6 +264,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
           "Щедрый день в море с четырьмя остановками: купание, традиционная какавия, полноценный обед на гриле в бухтах, доступных только с моря, и последнее купание перед возвращением домой.",
       },
       night: {
+        heading: "Ночная рыбалка в Никити",
         metaTitle: "Ночная рыбалка в Никити | 21:00–00:30 | Fishing 4 You",
         metaDescription:
           "Ночная рыбалка на 3,5 часа от марины Никити с Димитрисом. Снасти и наживка включены, а также пиво для взрослых. 40 € с человека.",
@@ -285,6 +305,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
     ],
     trips: {
       morning: {
+        heading: "Morgenangeln in Nikiti",
         metaTitle: "Morgenangeln in Nikiti | 07:00–10:30 | Fishing 4 You",
         metaDescription:
           "Eine 3,5-stündige Morgenangeltour ab der Marina Nikiti mit Dimitris. Ausrüstung, Köder, Kaffee und Getränke inklusive. 40 € pro Person.",
@@ -292,6 +313,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
           "Starten Sie den Tag auf dem Wasser, während die Ägäis noch ruhig ist. Rute, Vorfach und Garnelenköder werden gestellt, die Crew findet die Stelle, und Sie angeln senkrecht direkt neben dem Boot.",
       },
       cruise: {
+        heading: "Angel- & Barbecue-Kreuzfahrt in Chalkidiki",
         metaTitle: "Angel- & Barbecue-Kreuzfahrt | 11:30–18:30 | Fishing 4 You",
         metaDescription:
           "Ein ganzer Tag auf See mit Dimitris: Schwimmen bei Spathies, Kakavia in Neos Marmaras, ein Barbecue in den Buchten von Porto Carras und ein letztes Bad bei Kelyfos. 600 € für bis zu 10 Gäste.",
@@ -299,6 +321,7 @@ export const tripPageContent: Record<Locale, TripPageContent> = {
           "Ein großzügiger Tag auf See mit vier Stopps: Schwimmen, eine traditionelle Kakavia, ein vollständiges Barbecue in nur per Boot erreichbaren Buchten und ein letztes Bad vor der Heimfahrt.",
       },
       night: {
+        heading: "Nachtangeln in Nikiti",
         metaTitle: "Nachtangeln in Nikiti | 21:00–00:30 | Fishing 4 You",
         metaDescription:
           "Eine 3,5-stündige Nachtangeltour ab der Marina Nikiti mit Dimitris. Ausrüstung und Köder inklusive, dazu ein Bier für Erwachsene. 40 € pro Person.",
