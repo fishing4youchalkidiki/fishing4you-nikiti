@@ -3997,7 +3997,10 @@ select:focus-visible {
 .trip-hero-intro {
   max-width: 560px;
   margin: 22px 0 0;
-  color: rgba(255, 255, 255, 0.82);
+  /* 0.82 measured at 3.93:1 on .tour-day (the lightest of the 3 hero tones,
+     used by the cruise page) — under the 4.5:1 that 15px text needs. 0.95
+     clears it at 4.67:1 there and higher still on the other two. */
+  color: rgba(255, 255, 255, 0.95);
   font-size: 15px;
   line-height: 1.7;
 }
@@ -4020,6 +4023,21 @@ select:focus-visible {
   color: var(--white);
   font-size: 12px;
   font-weight: 750;
+}
+
+/* Plain text, not a boxed warning — research on how fishing charters phrase
+   this pointed the same way the site's own existing wording already goes:
+   state the one thing that can't be promised, then what can, without
+   dwelling on it. Sits right before Book Now, not buried in prose. */
+.trip-catch-note {
+  max-width: 520px;
+  margin: 18px 0 0;
+  /* Same 4.5:1-on-.tour-day math as .trip-hero-intro just above — 0.68 only
+     cleared 3.21:1 there. 0.95 is the same fix, at a size that still reads
+     as secondary to the highlight pills next to it. */
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .trip-section-heading {

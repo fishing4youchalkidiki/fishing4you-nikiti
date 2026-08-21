@@ -163,6 +163,16 @@ export function TripPage({ locale, tripId }: { locale: Locale; tripId: TripId })
               ))}
             </ul>
 
+            {/* Same wording already used elsewhere on the site (guide-content's
+                catchNote and content.ts's captain.guarantee) — just surfaced
+                here too, right before the price and Book Now, where a guest is
+                actually deciding. It never rendered on the trip's own page
+                before; the closest it got was buried as the 4th of 4
+                paragraphs in the homepage's "why choose Dimitris" section. */}
+            <p className="trip-catch-note">
+              {guide.catchNote} {copy.captain.guarantee}
+            </p>
+
             <a className="button button-cork" href="#booking">
               {copy.hero.primary}
               <span aria-hidden="true">↗</span>
