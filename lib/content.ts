@@ -329,6 +329,11 @@ export const content: Record<Locale, SiteContent> = {
             "Yes. Fishing equipment and bait are provided on the morning and night fishing trips. The morning trip also includes espresso coffee, water and juice for children. Night fishing includes one beer per adult and juice for children.",
         },
         {
+          question: "Can I bring my own fishing equipment?",
+          answer:
+            "Yes. If you'd rather fish with your own rod or gear, you're welcome to bring it — Dimitris still provides equipment and bait for anyone who doesn't have their own.",
+        },
+        {
           question: "What happens on the barbecue cruise?",
           answer:
             "The first stop is Spathies for swimming. The second is Neos Marmaras for about one hour ashore while the captain prepares traditional kakavia fish soup. The third is the Porto Carras coves, accessible only by boat, where the remaining meal is prepared: fish, shrimp, salads, tzatziki, skordalia, feta, fried zucchini, wine, soft drinks, beer and water. The last stop is Kelyfos island, for one more swim before heading back.",
@@ -575,6 +580,11 @@ export const content: Record<Locale, SiteContent> = {
           question: "Περιλαμβάνεται ο εξοπλισμός ψαρέματος;",
           answer:
             "Ναι. Στο πρωινό και στο νυχτερινό ψάρεμα παρέχονται εξοπλισμός και δολώματα. Το πρωινό περιλαμβάνει επίσης καφέ εσπρέσο, νερό και χυμό για τα παιδιά. Το νυχτερινό ψάρεμα περιλαμβάνει μία μπύρα ανά ενήλικα και χυμό για τα παιδιά.",
+        },
+        {
+          question: "Μπορώ να φέρω τον δικό μου εξοπλισμό ψαρέματος;",
+          answer:
+            "Ναι. Αν προτιμάτε να ψαρέψετε με το δικό σας καλάμι ή εξοπλισμό, μπορείτε να το φέρετε — ο Δημήτρης παρέχει ούτως ή άλλως εξοπλισμό και δολώματα για όσους δεν έχουν δικό τους.",
         },
         {
           question: "Τι περιλαμβάνει η εκδρομή με μπάρμπεκιου;",
@@ -826,6 +836,11 @@ export const content: Record<Locale, SiteContent> = {
             "Da. La pescuitul de dimineață și de noapte sunt oferite echipamentul și momeala. Dimineața sunt incluse și cafea espresso, apă și suc pentru copii. Pescuitul de noapte include o bere pentru fiecare adult și suc pentru copii.",
         },
         {
+          question: "Pot să aduc propriul echipament de pescuit?",
+          answer:
+            "Da. Dacă preferați să pescuiți cu propria undiță sau echipament, sunteți binevenit să le aduceți — Dimitris oferă oricum echipament și momeală pentru cei care nu au propriul echipament.",
+        },
+        {
           question: "Ce include croaziera cu grătar?",
           answer:
             "Prima oprire este la Spathies pentru înot. A doua este în Neos Marmaras, pentru aproximativ o oră de plimbare, timp în care căpitanul pregătește supa tradițională de pește kakavia. A treia oprire este în golfurile Porto Carras, accesibile numai cu barca, unde sunt pregătite pește, creveți, salate, tzatziki, skordalia, feta, dovlecei prăjiți, vin, băuturi răcoritoare, bere și apă. Ultima oprire este insula Kelyfos, pentru încă o baie înainte de întoarcere.",
@@ -1074,6 +1089,11 @@ export const content: Record<Locale, SiteContent> = {
             "Да. На утренней и ночной рыбалке предоставляются снасти и наживка. Утренняя поездка также включает кофе эспрессо, воду и сок для детей. Ночная рыбалка включает одно пиво для каждого взрослого и сок для детей.",
         },
         {
+          question: "Можно ли привезти своё снаряжение для рыбалки?",
+          answer:
+            "Да. Если вы предпочитаете рыбачить со своей удочкой или снаряжением, можете взять их с собой — Димитрис всё равно предоставляет снасти и наживку тем, у кого своих нет.",
+        },
+        {
           question: "Что входит в круиз с барбекю?",
           answer:
             "Первая остановка — Спатьес для купания. Вторая — Неос-Мармарас, где можно гулять около часа, пока капитан готовит традиционный рыбный суп какавия. Третья — бухты Порто-Каррас, доступные только с моря, где готовят рыбу, креветки, салаты, дзадзики, скордалию, фету, жареные кабачки, а также подают вино, прохладительные напитки, пиво и воду. Последняя остановка — остров Келифос, где можно искупаться ещё раз перед возвращением.",
@@ -1320,6 +1340,11 @@ export const content: Record<Locale, SiteContent> = {
           question: "Ist die Angelausrüstung inklusive?",
           answer:
             "Ja. Beim Morgen- und Nachtangeln werden Ausrüstung und Köder gestellt. Der Morgenausflug umfasst außerdem Espresso, Wasser und Saft für Kinder. Beim Nachtangeln gibt es ein Bier pro Erwachsenen und Saft für Kinder.",
+        },
+        {
+          question: "Kann ich meine eigene Angelausrüstung mitbringen?",
+          answer:
+            "Ja. Wenn Sie lieber mit Ihrer eigenen Rute oder Ausrüstung angeln möchten, dürfen Sie diese gerne mitbringen — Dimitris stellt Ausrüstung und Köder trotzdem für alle bereit, die keine eigene haben.",
         },
         {
           question: "Was beinhaltet die Barbecue-Kreuzfahrt?",

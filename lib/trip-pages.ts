@@ -51,14 +51,18 @@ export const TRIP_GALLERY: Record<TripId, ReadonlyArray<GalleryKey>> = {
 };
 
 /**
- * Which of the nine FAQ answers (lib/content.ts, copy.faq.items, index order
+ * Which of the ten FAQ answers (lib/content.ts, copy.faq.items, index order
  * fixed across all five locales) belong on each trip's own page. Index 0
- * (the shared €40/€600 pricing note) and index 2 (what the cruise stops are)
+ * (the shared €40/€600 pricing note) and index 3 (what the cruise stops are)
  * are trip-specific by nature; the rest are filtered to what a guest
  * deciding on *this* trip would actually ask.
+ *
+ * Index 2 ("can I bring my own equipment?") only goes to morning and night —
+ * the cruise's own highlights never mention equipment at all, matching how
+ * index 1 (equipment included) was already excluded from cruise's set below.
  */
 export const TRIP_FAQ_INDEXES: Record<TripId, readonly number[]> = {
-  morning: [1, 5, 6, 8],
-  cruise: [2, 3, 5, 7],
-  night: [1, 5, 6, 8],
+  morning: [1, 2, 6, 7, 9],
+  cruise: [3, 4, 6, 8],
+  night: [1, 2, 6, 7, 9],
 };
