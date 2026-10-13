@@ -681,8 +681,19 @@ select:focus-visible {
   text-transform: uppercase;
 }
 
+/* content-visibility: auto is NOT set on .section itself. Every section above
+   #booking has to be laid out at its real height, or the "Book" buttons land
+   in the wrong place: on a phone the page is far taller than the
+   contain-intrinsic-block-size guesses below, the browser works out the
+   anchor's position from those guesses, and the smooth scroll stops short
+   (reported on Honor / Chrome, fine on desktop). Only sections that sit
+   below #booking on the page can safely skip rendering until needed. */
 .section {
   padding-block: 120px;
+}
+
+.faq-section,
+.trip-section#trip-other {
   content-visibility: auto;
 }
 
